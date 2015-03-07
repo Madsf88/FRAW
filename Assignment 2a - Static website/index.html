@@ -141,11 +141,20 @@
             padding: 0;
             margin: 0;
         }
-        .movieInfo .right {
-            text-align: right;
+        .movieInfo .name {
+            float: left;
+        }
+        .movieInfo .value {
+            float: right;
+        }
+        .movieInfo li:after {
+            content: "";
+            display: table;
+            clear: both;
         }
         li.icons {
             margin-top: 10px;
+            text-align: right;
         }
         .movieInfo a[href*="calendar"] {
             background: url("images/icons/AndroidL_Calendar.svg") no-repeat center bottom / contain transparent;
@@ -158,9 +167,6 @@
             height: 40px;
             width: 30px;
             display: inline-block;
-        }
-        .opacity0 {
-            opacity: 0;
         }
     </style>
 </head>
@@ -183,36 +189,28 @@
     </div>
 
     <div class="row">
-        <div class="large-2 columns opacity0">
+        <div class="large-2 columns">
             <div class="panel"></div>
         </div>
         <div class="large-8 columns movieInfo">
             <div class="panel">
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="large-12 columns">
                         <ul>
-                            <li>Director:</li>
-                            <li>Running Time:</li>
-                            <li>IMDb scrore:</li>
-                            <li>Year:</li>
-                        </ul>
-                    </div>
-                    <div class="large-6 columns right">
-                        <ul>
-                            <li>Christopher Nolan</li>
-                            <li>2pm - 4:30pm</li>
-                            <li>8.8</li>
-                            <li>2014</li>
+                            <li><span class="name">Director: </span><span class="value">Christogher Nolan</span></li>
+                            <li><span class="name">Running Time: </span><span class="value">2pm - 4:30pm</span></li>
+                            <li><span class="name">IMDb scrore: </span><span class="value">8.8</span></li>
+                            <li><span class="name">Year: </span><span class="value">2014</span></li>
                             <li class="icons">
                                 <a href="http://calendar.com" target="_blank"></a>
                                 <a href="http://facebook.com" target="_blank"></a>
                             </li>
-                       </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="large-2 columns opacity0">
+        <div class="large-2 columns">
             <div class="panel"></div>
         </div>
     </div>
