@@ -33,7 +33,7 @@ h1 {
 .trailer {
     height: 50px;
     width: 50px;
-    background: url("../images/icons/AndroidL_Play_white.svg") no-repeat center / contain transparent;
+    background: url("../img/icons/AndroidL_Play_white.svg") no-repeat center / contain transparent;
     position: fixed;
     right: 10px;
     bottom: 10px;
@@ -42,7 +42,7 @@ h1 {
 .scrollDown {
     height: 50px;
     width: 50px;
-    background: url("../images/icons/AndroidL_Arrow_down_white.svg") no-repeat center / contain transparent;
+    background: url("../img/icons/AndroidL_Arrow_down_white.svg") no-repeat center / contain transparent;
     position: fixed;
     right: 0;
     left: 0;

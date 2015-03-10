@@ -3,7 +3,7 @@
 @import url("movieInfo.css");
 
 body {
-    background: url("../images/Interstellar.jpg") no-repeat fixed center / cover transparent;
+    background: url("../img/Interstellar.jpg") no-repeat fixed center / cover transparent;
 }
 .panel {
     background: white;

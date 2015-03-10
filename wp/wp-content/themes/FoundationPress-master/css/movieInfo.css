@@ -1,10 +1,11 @@
-.movieInfo .name {
+.movieInfo dt{
+    clear: both;
     float: left;
 }
-.movieInfo .value {
+.movieInfo dd{
     float: right;
 }
-.movieInfo li:after {
+.movieInfo dl:after {
     content: "";
     display: table;
     clear: both;
@@ -14,13 +15,13 @@ li.icons {
     text-align: right;
 }
 .movieInfo a[href*="calendar"] {
-    background: url("../images/icons/AndroidL_Calendar.svg") no-repeat center bottom / contain transparent;
+    background: url("../img/icons/AndroidL_Calendar.svg") no-repeat center bottom / contain transparent;
     height: 40px;
     width: 32px;
     display: inline-block;
 }
 .movieInfo a[href*="facebook"] {
-    background: url("../images/icons/AndroidL_Facebook.svg") no-repeat center bottom / contain transparent;
+    background: url("../img/icons/AndroidL_Facebook.svg") no-repeat center bottom / contain transparent;
     height: 40px;
     width: 30px;
     display: inline-block;
