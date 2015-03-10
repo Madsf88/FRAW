@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
     
     <script>
         $(document).ready(function() {
@@ -35,140 +36,6 @@
             };
         };
     </script>
-
-    <style>
-        body {
-            background: url("images/Interstellar.jpg") no-repeat fixed center / cover transparent;
-        }
-        .heading1 {
-            height: 100vh;
-        }
-        .heading {
-            text-align: center;
-        }
-        h1 {
-            color: white;
-            border: 10px solid white;
-            padding: 10px 20px;
-            margin: 40vh 0 0 0;
-            display: inline-block;
-            font-size: 3.5em;
-            text-align: center;
-        }
-        .heading1 h2 {
-            color: white;
-            text-align: center;
-            margin: 0;
-        }
-        nav {
-            height: 50px;
-            width: 50px;
-            background: url("images/icons/AndroidL_Menu_white.svg") no-repeat center / contain transparent;
-            position: fixed;
-            left: 10px;
-            top: 10px;
-            cursor: pointer;
-        }
-        .logo {
-            height: 50px;
-            width: auto;
-            position: fixed;
-            right: 10px;
-            top: 10px;
-            cursor: pointer;
-            color: white;
-            font-size: 3em;
-            font-weight: bold;
-            text-align: right;
-        }
-        .trailer {
-            height: 50px;
-            width: 50px;
-            background: url("images/icons/AndroidL_Play_white.svg") no-repeat center / contain transparent;
-            position: fixed;
-            right: 10px;
-            bottom: 10px;
-            cursor: pointer;
-        }
-        .scrollDown {
-            height: 50px;
-            width: 50px;
-            background: url("images/icons/AndroidL_Arrow_down_white.svg") no-repeat center / contain transparent;
-            position: fixed;
-            right: 0;
-            left: 0;
-            margin: 0 auto 20px auto;
-            bottom: 20px;
-            cursor: pointer;
-            opacity: 1;
-            transition: opacity 1s;
-            
-            -webkit-animation: scrollDown 2s ease-out;
-            animation: scrollDown 2s ease-out;
-            -webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
-            animation-iteration-count: 3;
-        }
-        .scrollDown:hover {
-            transition: bottom .2s ease-out;
-            bottom: 0;
-            cursor: pointer;
-            animation: scrollDown 2s ease-out;
-        }
-        .scrollDown.hideScrollDown {
-            opacity: 0;
-        }
-
-        @-webkit-keyframes scrollDown {
-            50% { bottom: 0; }
-            100% { bottom: 20px; }
-        }
-        @keyframes scrollDown {
-            50% { bottom: 0; }
-            100% { bottom: 20px; }
-        }
-        
-        
-        
-        
-        
-        .panel {
-            background: white;
-            padding: 50px;
-            margin: 100px 0;
-        }
-        ul {
-           list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .movieInfo .name {
-            float: left;
-        }
-        .movieInfo .value {
-            float: right;
-        }
-        .movieInfo li:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        li.icons {
-            margin-top: 10px;
-            text-align: right;
-        }
-        .movieInfo a[href*="calendar"] {
-            background: url("images/icons/AndroidL_Calendar.svg") no-repeat center bottom / contain transparent;
-            height: 40px;
-            width: 32px;
-            display: inline-block;
-        }
-        .movieInfo a[href*="facebook"] {
-            background: url("images/icons/AndroidL_Facebook.svg") no-repeat center bottom / contain transparent;
-            height: 40px;
-            width: 30px;
-            display: inline-block;
-        }
-    </style>
 </head>
 
 <body>
