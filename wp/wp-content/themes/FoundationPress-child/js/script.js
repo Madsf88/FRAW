@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
     initiateScrollDown();
+    backgroundHeight();
 });
 
 // Ready - END
@@ -20,7 +21,7 @@ $(window).scroll(function () {
 // Resize
 
 $(window).resize(function() {
-    
+    backgroundHeight();
 });
 
 //Resize - END
@@ -57,8 +58,10 @@ function toggleScrollDown() {
 
 // Make height of header
 
-var windowHeight = $(window).height();
-console.log(windowHeight);
-$("#backgroundImage").css("height",windowHeight + 100 + "px");
+function backgroundHeight() {
+    var windowHeight = $(window).height();
+//    console.log(windowHeight);
+    $("#backgroundImage").css("height",windowHeight + 100 + "px");
+};
 
 // Make height of header - END
