@@ -61,7 +61,13 @@ function toggleScrollDown() {
 function backgroundHeight() {
     var windowHeight = $(window).height();
 //    console.log(windowHeight);
-    $("#backgroundImage").css("height",windowHeight + 100 + "px");
+    $("#backgroundImage").css("height", windowHeight + 0 + "px");
+    $("#title").css("height", windowHeight + 0 + "px");
 };
 
 // Make height of header - END
+
+//function centerHeaderH1() {
+//    var windowHeight = $(window).height();
+//    $("#backgroundImage").css("height", windowHeight + 100 + "px");
+//};
