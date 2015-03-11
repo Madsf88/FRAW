@@ -14,7 +14,7 @@
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ; ?>/js/script.js"></script>
 <script type="text/javascript">
       WebFontConfig = {
-        google: { families: [ 'Cabin:400,500,600,700,400italic,500italic,600italic,700italic:latin' ] }
+        google: { families: [ 'Cabin:400,500,600,700,400italic,500italic,600italic,700italic:latin', 'EB+Garamond::latin' ] }
       };
       (function() {
         var wf = document.createElement('script');

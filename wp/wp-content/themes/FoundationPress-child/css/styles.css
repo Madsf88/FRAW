@@ -2,6 +2,7 @@
 @import url("navigation.css");
 @import url("movieInfo.css");
 @import url("event_list.css");
+@import url("review.css");
 
 *, body, h1, h2, h3, h4, h5, h6 {
     font-family: cabin, sans-serif;
@@ -12,7 +13,8 @@ h1, h2 {
 .panel {
     background: white;
     padding: 50px;
-    margin-bottom: 50px;
+    margin: 0;
+    border: none;
 }
 ul {
    list-style: none;
@@ -21,4 +23,10 @@ ul {
 }
 .columns.small-12 {
     padding: 0;
+}
+
+@media screen and (min-width: 641px){
+    .panel {
+        margin-bottom: 50px;
+    }
 }

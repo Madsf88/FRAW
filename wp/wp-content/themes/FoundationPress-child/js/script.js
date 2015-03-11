@@ -38,7 +38,8 @@ function initiateScrollDown() {
 };
 function scrollDown() {
     var windowHeight = $(window).height();
-    $("html, body").animate({ scrollTop: windowHeight });
+    var buffer = 50;
+    $("html, body").animate({ scrollTop: windowHeight - buffer });
 };
 function toggleScrollDown() {
     var offset = $(window).scrollTop();

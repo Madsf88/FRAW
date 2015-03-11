@@ -94,7 +94,7 @@ get_header(); ?>
 <div class="row">
     <div class="small-12 medium-8 large-8 small-centered columns review">
         <div class="panel">
-            <h1><?php the_field('review_title'); ?></h1>
+            <h1 class="review__h1"><?php the_field('review_title'); ?> lorem ipsum dolor sit amet</h1>
             <?php the_content(); ?>
         </div>
     </div>
