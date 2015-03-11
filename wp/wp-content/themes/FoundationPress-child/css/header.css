@@ -4,16 +4,23 @@
     z-index: 0;
     background-position: center;
     position: fixed;
-    top: -100px;
+    top: 0px;
+}
+#title {
+/*    height: 100%;*/
+    display: table;
+    width: 100%;
 }
 .heading {
+    display: table-cell;
     text-align: center;
+    vertical-align: middle;
 }
 .heading__h1 {
     color: white;
     border: 10px solid white;
     padding: 10px 20px;
-    margin: 40vh 0 0 0;
+/*    margin: 40vh 0 0 0;*/
     display: inline-block;
     font-size: 3.5em;
     text-align: center;
@@ -22,6 +29,7 @@
     color: white;
     text-align: center;
     margin: 0;
+    padding-bottom: 70px; 
 }
 .logo {
     height: 50px;

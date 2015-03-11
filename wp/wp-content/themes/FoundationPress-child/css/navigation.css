@@ -1,4 +1,8 @@
-
+.tab-bar {
+    height: 0;
+    margin: 0;
+    /* Du er mere end velkommen til at ændre dette til en bedre måde at få menu-ikonet ud af flowet på. */
+}
 .inner-wrap{
     -webkit-transition: -webkit-transform 350ms ease;
     -moz-transition: -moz-transform 350ms ease;
@@ -40,7 +44,9 @@ ul.off-canvas-list li a:hover {
     top: 0;
     left: 0;
 }
-ul.off-canvas-list li a 
+ul.off-canvas-list li a {
+    
+}
 
 #facebookLink {
 
