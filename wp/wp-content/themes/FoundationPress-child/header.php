@@ -22,7 +22,7 @@
 		} ?></title>
 		
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/styles.css" />
+		
 
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
@@ -44,11 +44,8 @@
 		<section class="left-small">
 			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
 		</section>
-		<section class="middle tab-bar-section">
-			
-			<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+		<p class="right title"><?php bloginfo( 'name' ); ?></p>
 
-		</section>
 	</nav>
 
 	<?php get_template_part('parts/off-canvas-menu'); ?>

@@ -1,0 +1,77 @@
+.heading1 {
+    height: 100vh;
+}
+.heading {
+    text-align: center;
+}
+h1 {
+    color: white;
+    border: 10px solid white;
+    padding: 10px 20px;
+    margin: 40vh 0 0 0;
+    display: inline-block;
+    font-size: 3.5em;
+    text-align: center;
+}
+.heading1 h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+.logo {
+    height: 50px;
+    width: auto;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: right;
+}
+.trailer {
+    height: 50px;
+    width: 50px;
+    background: url("../img/icons/AndroidL_Play_white.svg") no-repeat center / contain transparent;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+.scrollDown {
+    height: 50px;
+    width: 50px;
+    background: url("../img/icons/AndroidL_Arrow_down_white.svg") no-repeat center / contain transparent;
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: 0 auto 20px auto;
+    bottom: 20px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1s;
+
+    -webkit-animation: scrollDown 2s ease-out;
+    animation: scrollDown 2s ease-out;
+    -webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+    animation-iteration-count: 3;
+}
+.scrollDown:hover {
+    transition: bottom .2s ease-out;
+    bottom: 0;
+    cursor: pointer;
+    animation: scrollDown 2s ease-out;
+}
+.scrollDown.hideScrollDown {
+    opacity: 0;
+}
+
+@-webkit-keyframes scrollDown {
+    50% { bottom: 0; }
+    100% { bottom: 20px; }
+}
+@keyframes scrollDown {
+    50% { bottom: 0; }
+    100% { bottom: 20px; }
+}
