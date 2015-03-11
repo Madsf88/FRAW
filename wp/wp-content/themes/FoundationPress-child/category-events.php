@@ -1,7 +1,20 @@
 <?php get_header(); ?>
-
-<div id="backgroundImage" style="background-image: url(http://localhost:8888/wp/wp-content/uploads/2015/03/Interstellar-1024x665.jpg);">
-    </div>
+<div id="backgroundImage" style="background-image: url(http://m6.paperblog.com/i/41/414061/take-shelter-L-nr56C4.jpeg);">
+</div>
+<div class="row">
+    <div class="large-12 columns">
+        <div id="title">
+            <div class="heading">
+                <h1 class="heading__h1">
+                <?php
+                    $category = get_the_category(); 
+                    echo $category[0]->cat_name;
+                ?>
+                </h1>
+            </div>
+        </div>
+    </div>        
+</div>
 <div class="row">
     <div class="small-12 medium-8 large-8 small-centered columns">
         <div class="panel">
