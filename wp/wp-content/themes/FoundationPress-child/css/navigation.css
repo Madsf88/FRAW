@@ -1,6 +1,40 @@
+
+.inner-wrap{
+    -webkit-transition: -webkit-transform 350ms ease;
+    -moz-transition: -moz-transform 350ms ease;
+    -ms-transition: -ms-transform 350ms ease;
+    -o-transition: -o-transform 350ms ease;
+    transition: transform 350ms ease;
+}
+.left-off-canvas-menu{
+}
+
+.move-right .exit-off-canvas{
+    box-shadow: none;
+    background: rgba(255,255,255,0.2);
+}
+
+.move-right .exit-off-canvas:hover{
+    background: rgba(255,255,255,0.2);
+}
+
+ul.off-canvas-list li a{
+    border-bottom: 0;
+    font-size: 1.5em;
+    color: white;
+    padding-left: 30px;
+    transition: all .1s;
+
+}
+ul.off-canvas-list li a:hover {
+    padding-left: 35px;
+}
+
 .tab-bar{
     background: transparent;
 }
 .tab-bar .left-small{
     border: none;
 }
+ul.off-canvas-list li a 
+
