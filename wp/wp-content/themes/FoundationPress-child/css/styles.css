@@ -2,8 +2,11 @@
 @import url("navigation.css");
 @import url("movieInfo.css");
 
-body {
-    background: url("../img/Interstellar.jpg") no-repeat fixed center / cover transparent;
+*, body {
+    font-family: cabin, sans-serif;
+}
+h1, h2 {
+    font-weight: 700;
 }
 .panel {
     background: white;
@@ -17,10 +20,4 @@ ul {
 }
 .columns.small-12 {
     padding: 0;
-}
-*, body {
-    font-family: cabin, sans-serif;
-}
-h1, h2 {
-    font-weight: 700;
 }
