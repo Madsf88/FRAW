@@ -40,7 +40,7 @@
 	
 	<?php do_action('foundationPress_layout_start'); ?>
 	
-	<nav class="tab-bar show-for-small-only">
+	<nav class="tab-bar">
 		<section class="left-small">
 			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
 		</section>
