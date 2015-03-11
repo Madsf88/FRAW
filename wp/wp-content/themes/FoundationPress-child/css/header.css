@@ -1,10 +1,7 @@
-.heading1 {
-    height: 100vh;
-}
 .heading {
     text-align: center;
 }
-h1 {
+.heading__h1 {
     color: white;
     border: 10px solid white;
     padding: 10px 20px;
@@ -13,7 +10,7 @@ h1 {
     font-size: 3.5em;
     text-align: center;
 }
-.heading1 h2 {
+.heading__h2 {
     color: white;
     text-align: center;
     margin: 0;
@@ -30,7 +27,7 @@ h1 {
     font-weight: bold;
     text-align: right;
 }
-.trailer {
+.trailerIcon {
     height: 50px;
     width: 50px;
     background: url("../img/icons/AndroidL_Play_white.svg") no-repeat center / contain transparent;

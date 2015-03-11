@@ -18,3 +18,9 @@ ul {
 .columns.small-12 {
     padding: 0;
 }
+*, body {
+    font-family: cabin, sans-serif;
+}
+h1, h2 {
+    font-weight: 700;
+}
