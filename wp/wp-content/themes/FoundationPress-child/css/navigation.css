@@ -32,6 +32,7 @@ ul.off-canvas-list li a:hover {
 
 .tab-bar{
     background: transparent;
+    z-index:1;
 }
 .tab-bar .left-small{
     border: none;
