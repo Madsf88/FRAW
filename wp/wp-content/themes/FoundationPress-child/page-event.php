@@ -37,7 +37,7 @@ get_header(); ?>
             </script>
              <script type="text/javascript"> 
                 ( function( $ ) {
-                    var imdbURL = "<?php  the_field('imdb_url'); ?>";
+                    var imdbURL = "<?php the_field('imdb_url'); ?>";
                     var imdbURL = imdbURL.replace('www.imdb.com/title/','')
                     var imdbURL = imdbURL.replace(imdbURL.substr(imdbURL.lastIndexOf('/')), '');
                     var imdbAPI = "http://www.omdbapi.com/?i="+imdbURL+"&plot=full&r=json";
@@ -94,6 +94,7 @@ get_header(); ?>
 <div class="row">
     <div class="small-12 medium-8 large-8 small-centered columns review">
         <div class="panel">
+            <h1><?php the_field('review_title'); ?></h1>
             <?php the_content(); ?>
         </div>
     </div>
