@@ -12,7 +12,7 @@ get_header(); ?>
     
 <div class="row">
     <div class="large-12 columns">
-        <div id="title">
+        <div id="title" class="fullHeight">
             <div class="heading">
                 <h1 class="heading__h1"><?php the_title(); ?></h1>
                 <h2 class="heading__h2"><?php the_field('date'); ?> at <?php  the_field('start_time'); ?> in <?php  the_field('location'); ?></h2>

@@ -11,8 +11,8 @@ h1, h2 {
 }
 .panel {
     background: white;
-    /*padding: 50px;*/
-    /*margin: 100px 0;*/
+    padding: 50px;
+    margin-bottom: 50px;
 }
 ul {
    list-style: none;

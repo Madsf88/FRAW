@@ -62,7 +62,13 @@ function backgroundHeight() {
     var windowHeight = $(window).height();
 //    console.log(windowHeight);
     $("#backgroundImage").css("height", windowHeight + 0 + "px");
-    $("#title").css("height", windowHeight + 0 + "px");
+    if ($("#title").hasClass("fullHeight")) {
+        $("#title").css("height", windowHeight + "px");
+        console.log("test01");
+    } else {
+        $("#title").css("height", windowHeight/2 + "px");
+        console.log("test02");
+    }
 };
 
 // Make height of header - END
