@@ -26,10 +26,11 @@
     text-align: center;
 }
 .heading__h2 {
+    font-size: 1.2rem;
     color: white;
     text-align: center;
     margin: 0;
-    padding-bottom: 70px; 
+    padding-bottom: 70px;
 }
 .logo {
     height: 50px;
