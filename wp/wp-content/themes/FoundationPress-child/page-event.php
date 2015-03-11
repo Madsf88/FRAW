@@ -38,8 +38,7 @@ get_header(); ?>
              <script type="text/javascript"> 
                 ( function( $ ) {
                     var imdbURL = "<?php the_field('imdb_url'); ?>";
-                    var imdbURL = imdbURL.replace('www.imdb.com/title/','')
-                    var imdbURL = imdbURL.replace(imdbURL.substr(imdbURL.lastIndexOf('/')), '');
+                    var imdbURL = imdbURL.replace('http://','').replace('www.imdb.com/title/','').replace(imdbURL.substr(imdbURL.lastIndexOf('/')), '');
                     var imdbAPI = "http://www.omdbapi.com/?i="+imdbURL+"&plot=full&r=json";
                     $.getJSON(imdbAPI, function (json) {
                         var rating = json.imdbRating;
