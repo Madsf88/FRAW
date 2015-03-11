@@ -89,10 +89,11 @@ get_header(); ?>
                             <var class="atc_organizer">Luke Skywalker</var>
                             <var class="atc_organizer_email">luke@starwars.com</var>
                         </var>
+                        <a class="atcb-link" id="" tabindex="1"></a>
                     </span>
                 </li>
                 <li class="icons">
-                    <a href="http://facebook.com" target="_blank"></a>
+                    <a href="https://www.facebook.com/events/1410787999180224/" target="_blank"></a>
                 </li>
             </ul>
         </div>
