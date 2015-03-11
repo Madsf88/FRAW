@@ -35,6 +35,12 @@ ul.off-canvas-list li a:hover {
 }
 .tab-bar .left-small{
     border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 ul.off-canvas-list li a 
 
+#facebookLink {
+
+}
