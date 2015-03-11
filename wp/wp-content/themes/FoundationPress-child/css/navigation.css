@@ -51,3 +51,8 @@ ul.off-canvas-list li a {
 #facebookLink {
 
 }
+
+.tab-bar .menu-icon span::after {
+    box-shadow: 0 0 0 2px #FFFFFF,0 10px 0 2px #FFFFFF,0 20px 0 2px #FFFFFF;
+    width: 2rem;
+}
