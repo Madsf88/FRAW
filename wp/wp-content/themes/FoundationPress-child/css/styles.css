@@ -1,6 +1,7 @@
 @import url("header.css");
 @import url("navigation.css");
 @import url("movieInfo.css");
+@import url("event_list.css");
 
 *, body {
     font-family: cabin, sans-serif;
