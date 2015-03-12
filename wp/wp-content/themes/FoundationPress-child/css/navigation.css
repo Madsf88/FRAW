@@ -53,6 +53,61 @@ ul.off-canvas-list li a {
 }
 
 .tab-bar .menu-icon span::after {
-    box-shadow: 0 0 0 2px #FFFFFF,0 10px 0 2px #FFFFFF,0 20px 0 2px #FFFFFF;
-    width: 2rem;
+/*    box-shadow: 0 0 0 2px #FFFFFF,0 10px 0 2px #FFFFFF,0 20px 0 2px #FFFFFF;*/
+/*    width: 2rem;*/
+    box-shadow: none;
+    width: 0;
+}
+
+.menu-icon {
+    margin: 2rem;
+}
+.menu-icon span {
+    background: url("../img/icons/AndroidL_Menu_white.svg");
+    height: 3rem;
+    width: 3rem;
+    display: block;
+}
+.tab-bar .menu-icon span:hover::after {
+    box-shadow: none;
+}
+
+
+/* Navigation Fix - http://codepen.io/alexpivtorak/pen/oyrHm */
+.move-right>.inner-wrap {
+  -ms-transform: none;
+-webkit-transform: none;
+-moz-transform: none;
+-ms-transform: none;
+-o-transform: none;
+transform: none;
+  margin-left: 250px;
+}
+
+.inner-wrap {
+  width: auto;
+}
+
+.left-off-canvas-menu {
+  -ms-transform: none;
+-webkit-transform: none;
+-moz-transform: none;
+-ms-transform: none;
+-o-transform: none;
+transform: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  right: auto;
+  width: 0;  
+  height: 100%;
+}
+
+.move-right .left-off-canvas-menu {
+  width: 250px;
+}
+
+.exit-off-canvas {
+  display: none;
 }
