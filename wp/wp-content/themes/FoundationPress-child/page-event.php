@@ -111,16 +111,18 @@ get_header(); ?>
 <?php
     if(get_field('trailer_url'))
     {
-        
-        echo 
-            '<div class="trailerContainer">
-                <video autobuffer controls id="trailer">
-                  <source id="mp4" src="' . get_field('trailer_url') . '" type="video/mp4">
-                </video>
-            </div>';
+        echo '<div class="trailerContainer" id="popupVid" data-url="' . get_field('trailer_url') . '"></div>';
     }
 
 ?>
+
+<!--
+<script>
+    var yUrl = "<?php the_field('review_title'); ?>";
+    youtube_parser(yUrl);
+</script>
+-->
+
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

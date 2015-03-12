@@ -1,11 +1,10 @@
 // Ready
-
 $(document).ready(function() {
     initiateScrollDown();
     backgroundHeight();
     videoHeight();
     trailerScroll();
-    
+    youtube_parser();
 });
 
 // Ready - END
@@ -86,22 +85,31 @@ function videoHeight() {
     
 };
 
+var flag=0;
 function videoControl() {
     var offset = $(".trailerContainer").offset().top;
     var currentPos = $(document).scrollTop();
-    var video = document.getElementById("trailer");
+    //var video = document.getElementById("trailer");
     if (offset-100 < currentPos ){
-        video.play();
-        $("video").fadeIn('slow');
+        if (flag!==1){
+            toggleVideo();
+            $("iframe").fadeIn();
+            flag = 1;
+        }
     }
     else {
-        video.pause();
+//        alert(flag);
+        if (flag==1){
+            toggleVideo('hide');
+            flag = 0;
+        }
+        //toggleVideo('hide');
     }
 };
 
 function trailerScroll(){
     $(".trailerIcon").bind('touchstart click', function(){
-        $("html, body").animate({ scrollTop: $('.trailerContainer').position().top}, 'slow');
+        $("html, body").animate({ scrollTop: $('.trailerContainer').position().top}, 1000);
     }
 )};
 
@@ -111,3 +119,24 @@ function trailerScroll(){
 //    var windowHeight = $(window).height();
 //    $("#backgroundImage").css("height", windowHeight + 100 + "px");
 //};
+
+function toggleVideo(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = state == 'hide' ? 'block' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+}
+
+function youtube_parser(){
+    var url = $(".trailerContainer").attr("data-url");
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    var match = url.match(regExp);
+    if (match&&match[7].length==11){
+        $(".trailerContainer").html('<iframe width="500" height="315" src="http://www.youtube.com/embed/' + match[7] + '?enablejsapi=1&showinfo=0&autohide=1&controls=0?modestbranding=1" frameborder="0" allowfullscreen></iframe>');
+        videoControl();
+    }else{
+        alert("Url incorrecta");
+    }
+}
