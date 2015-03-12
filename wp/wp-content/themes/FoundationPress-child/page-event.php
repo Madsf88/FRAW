@@ -108,12 +108,6 @@ get_header(); ?>
         </div>
     </div>
 </div>
-<script data-cfasync="false">
-          (function(a,b,c,d,e){var f=a+"Q";b[a]=b[a]||{};b[a][d]=b[a][d]||function(){
-          (b[f]=b[f]||[]).push(arguments)};a=c.getElementsByTagName(e)[0];c=c.createElement(e);c.async=1;
-          c.src="//static.reembed.com/data/scripts/g_5404_a2a5f05bcf96e1092fdd68f51f72e33d.js";
-          a.parentNode.insertBefore(c,a)})("reEmbed",window,document,"setupPlaylist","script");
-        </script>
 <?php
     if(get_field('trailer_url'))
     {
