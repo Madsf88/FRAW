@@ -25,6 +25,10 @@ ul {
     padding: 0;
 }
 
+footer.row {
+    margin-top: 0; /* Dette skal faktisk ikke være på undersiderne... */
+}
+
 @media screen and (min-width: 641px){
     .panel {
         margin-bottom: 50px;

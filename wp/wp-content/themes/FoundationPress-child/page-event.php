@@ -108,28 +108,19 @@ get_header(); ?>
         </div>
     </div>
 </div>
-    <?php
-
+<?php
     if(get_field('trailer_url'))
     {
-        echo '<div class="trailerContainer" style="width: 100%; none; text-align: center;">
-                <video autobuffer controls id="trailer" style="z-index: 999; position: relative; height: 100%; display: none;">
+        echo 
+            '<div class="trailerContainer" style="width: 100%; none; text-align: center;">
+                <video autobuffer controls id="trailer" style="z-index: 999; position: relative; height: 100%; display: none; background: black;
+    max-width: 100%;">
                   <source id="mp4" src="' . get_field('trailer_url') . '" type="video/mp4">
                 </video>
             </div>';
     }
 
-    ?>
-            
-    <!--<div class="trailerContainer" style="width: 100%; none; text-align: center;">
-        <video autobuffer controls id="trailer" style="z-index: 999; position: relative; height: 100%; display: none;">
-          <source id="mp4" src="<?php the_field('trailer_url'); ?>" type="video/mp4">
-        </video>
-    </div>-->
-
-<!--<video autobuffer controls autoplay style="z-index: 999; position: relative; height: 100vh">
-  <source id="mp4" src="<?php the_field('trailer_url'); ?>" type="video/mp4">
-</video>-->
+?>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

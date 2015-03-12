@@ -5,6 +5,7 @@ $(document).ready(function() {
     backgroundHeight();
     videoHeight();
     trailerScroll();
+    
 });
 
 // Ready - END
@@ -25,6 +26,8 @@ $(window).scroll(function () {
 
 $(window).resize(function() {
     backgroundHeight();
+    videoHeight();
+    trailerScroll();
 });
 
 //Resize - END
@@ -85,9 +88,9 @@ function videoHeight() {
 
 function videoControl() {
     var offset = $(".trailerContainer").offset().top;
-    var currentPos = $(document).scrollTop()
+    var currentPos = $(document).scrollTop();
     var video = document.getElementById("trailer");
-     if (offset-100 < currentPos ){
+    if (offset-100 < currentPos ){
         video.play();
         $("video").fadeIn('slow');
     }
@@ -99,7 +102,7 @@ function videoControl() {
 function trailerScroll(){
     $(".trailerIcon").bind('touchstart click', function(){
         $("html, body").animate({ scrollTop: $('.trailerContainer').position().top}, 'slow');
-  }
+    }
 )};
 
 // Make height of header - END
