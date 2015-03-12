@@ -3,6 +3,7 @@
 $(document).ready(function() {
     initiateScrollDown();
     backgroundHeight();
+    videoHeight();
 });
 
 // Ready - END
@@ -70,6 +71,13 @@ function backgroundHeight() {
         $("#title").css("height", windowHeight/2 + "px");
         console.log("test02");
     }
+};
+
+
+function videoHeight() {
+    var windowHeight = $(window).height();
+//    console.log(windowHeight);
+    $(".trailerContainer").css("height", windowHeight + 0 + "px");
 };
 
 // Make height of header - END
