@@ -4,6 +4,7 @@ $(document).ready(function() {
     initiateScrollDown();
     backgroundHeight();
     videoHeight();
+    trailerScroll();
 });
 
 // Ready - END
@@ -14,6 +15,7 @@ $(document).ready(function() {
 
 $(window).scroll(function () {
     toggleScrollDown();
+    videoControl();
 });
 
 // Scroll - END
@@ -78,7 +80,27 @@ function videoHeight() {
     var windowHeight = $(window).height();
 //    console.log(windowHeight);
     $(".trailerContainer").css("height", windowHeight + 0 + "px");
+    
 };
+
+function videoControl() {
+    var offset = $(".trailerContainer").offset().top;
+    var currentPos = $(document).scrollTop()
+    var video = document.getElementById("trailer");
+     if (offset-100 < currentPos ){
+        video.play();
+        $("video").fadeIn('slow');
+    }
+    else {
+        video.pause();
+    }
+};
+
+function trailerScroll(){
+    $(".trailerIcon").bind('touchstart click', function(){
+        $("html, body").animate({ scrollTop: $('.trailerContainer').position().top}, 'slow');
+  }
+)};
 
 // Make height of header - END
 

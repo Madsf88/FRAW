@@ -102,17 +102,30 @@ get_header(); ?>
 <div class="row">
     <div class="small-12 medium-8 large-8 small-centered columns review">
         <div class="panel">
-            <h1 class="review__h1"><?php the_field('review_title'); ?> lorem ipsum dolor sit amet</h1>
+            <h1 class="review__h1"><?php the_field('review_title'); ?></h1>
             <?php the_content(); ?>
-            <a href="#authorID<?php the_author_ID(); ?>"><?php the_author(); ?></a>
+            This review was brought to you by <a href="#authorID<?php the_author_ID(); ?>"><?php the_author(); ?></a>
         </div>
     </div>
 </div>
-    <div class="trailerContainer" style="width: 100%;">
-        <video autobuffer controls autoplay style="z-index: 999; position: relative; width: 100%;">
+    <?php
+
+    if(get_field('trailer_url'))
+    {
+        echo '<div class="trailerContainer" style="width: 100%; none; text-align: center;">
+                <video autobuffer controls id="trailer" style="z-index: 999; position: relative; height: 100%; display: none;">
+                  <source id="mp4" src="' . get_field('trailer_url') . '" type="video/mp4">
+                </video>
+            </div>';
+    }
+
+    ?>
+            
+    <!--<div class="trailerContainer" style="width: 100%; none; text-align: center;">
+        <video autobuffer controls id="trailer" style="z-index: 999; position: relative; height: 100%; display: none;">
           <source id="mp4" src="<?php the_field('trailer_url'); ?>" type="video/mp4">
         </video>
-    </div>
+    </div>-->
 
 <!--<video autobuffer controls autoplay style="z-index: 999; position: relative; height: 100vh">
   <source id="mp4" src="<?php the_field('trailer_url'); ?>" type="video/mp4">
