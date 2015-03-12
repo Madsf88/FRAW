@@ -17,6 +17,18 @@ h1, h2 {
     margin: 0;
     border: none;
 }
+
+.panel .category-events a h3{
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    margin-bottom: 0;
+} 
+
+.panel .category-events a:hover h3{
+    border-bottom-color: #333;
+    display: inline-block;
+}
+
 ul {
    list-style: none;
     padding: 0;
