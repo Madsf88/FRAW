@@ -36,6 +36,28 @@ ul {
     .heading__h2 {
         font-size: 1.25rem;
     }
+    
+    blockquote {
+        border: none;
+        width: 150px;
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: -12px;
+
+        float: right; /* put it on the right side */
+    }
+    blockquote p {
+        background: none repeat scroll 0 0 white;
+        border: 2px solid black;
+        display: block;
+        font-size: 1.75em;
+        line-height: 1.1em;
+        padding: 30px;
+        position: relative;
+        width: 300px;
+
+        left: 30px; /* put it on the right side */
+    }
 }
 @media screen and (min-width: 1025px){
     .heading__h1 {

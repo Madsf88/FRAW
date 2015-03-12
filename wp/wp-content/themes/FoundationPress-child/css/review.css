@@ -5,3 +5,14 @@
 .review p {
     font-family: "EB Garamond", serif;
 }
+blockquote {
+    border: none;
+    padding: 20px;
+    margin: 0;
+}
+.review blockquote p {
+    background: none repeat scroll 0 0 white;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    margin: 0;
+}
