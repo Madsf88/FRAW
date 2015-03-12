@@ -3,11 +3,8 @@
 Template Name: Frontpage
 */
 get_header(); ?>
-<?php $cat_id = 4; //the certain category ID
-    $latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
-    if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();
-?>
-    
+<?php while (have_posts()) : the_post(); ?>
+
 <div id="backgroundImage" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>);"></div>
     
 <div class="row">
@@ -104,7 +101,7 @@ get_header(); ?>
         <div class="panel">
             <h1 class="review__h1"><?php the_field('review_title'); ?></h1>
             <?php the_content(); ?>
-            This review was brought to you by <a href="../wp/archives/category/staff#authorid<?php the_author_ID(); ?>"><?php the_author(); ?></a>
+            This review was brought to you by <a href="../archives/category/staff#authorid<?php the_author_ID(); ?>"><?php the_author(); ?></a>
         </div>
     </div>
 </div>
@@ -123,6 +120,6 @@ get_header(); ?>
 </script>
 -->
 
-<?php endwhile; endif; ?>
+	<?php endwhile;?>
 
 <?php get_footer(); ?>
