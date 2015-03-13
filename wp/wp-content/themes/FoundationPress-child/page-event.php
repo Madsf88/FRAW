@@ -71,13 +71,13 @@ get_header(); ?>
             </script>
             <dl>
                 <dt>Director: </dt>
-                <dd id="director">test testest</dd>
+                <dd id="director"></dd>
                 <dt>Running Time: </dt>
-                <dd id="duration">12pm - 14pm</dd>
+                <dd id="duration"></dd>
                 <dt>IMDb rating: </dt>
-                <dd id="rating">1.2</dd>
+                <dd id="rating"></dd>
                 <dt>Year: </dt>
-                <dd id="year">1234</dd>
+                <dd id="year"></dd>
             </dl>
             <ul>
                 <li class="icons">
@@ -95,11 +95,11 @@ get_header(); ?>
                             <var class="atc_date_start">2015-05-04 12:00:00</var>
                             <var class="atc_date_end">2015-05-04 18:00:00</var>
                             <var class="atc_timezone">Europe/London</var>
-                            <var class="atc_title">Star Wars Day Party</var>
-                            <var class="atc_description">May the force be with you</var>
-                            <var class="atc_location">Tatooine</var>
-                            <var class="atc_organizer">Luke Skywalker</var>
-                            <var class="atc_organizer_email">luke@starwars.com</var>
+                            <var class="atc_title">ITU.film: <?php the_title(); ?></var>
+                            <var class="atc_description">Movie screening</var>
+                            <var class="atc_location"><?php  the_field('location'); ?></var>
+                            <var class="atc_organizer">ITU.film</var>
+                            <var class="atc_organizer_email">film@itu.dk</var>
                         </var>
                         <a class="atcb-link" id="" tabindex="1"></a>
                     </span>
