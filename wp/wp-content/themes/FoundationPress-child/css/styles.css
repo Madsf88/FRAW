@@ -35,6 +35,11 @@ ul {
     padding: 0;
     margin: 0;
 }
+dl{
+    margin-bottom: 0;
+}
+
+
 .columns.small-12 {
     padding: 0;
 }
