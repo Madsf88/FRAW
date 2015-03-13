@@ -137,7 +137,7 @@ function youtube_parser(){
         $(".trailerContainer").html('<iframe width="500" height="315" src="http://www.youtube.com/embed/' + match[7] + '?enablejsapi=1&showinfo=0&autohide=1&controls=0?modestbranding=1" frameborder="0" allowfullscreen></iframe>');
         videoControl();
     }else{
-        alert("Url incorrecta");
+        console-log("Error parsing trailer url");
     }
 }
 

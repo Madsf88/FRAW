@@ -49,11 +49,24 @@ get_header(); ?>
 
                         var year = json.Year;
                         $('#year').text(year);
-
+                        
                         var startTime = ("<?php  the_field('start_time'); ?>");
                         var duration = json.Runtime;
-                        $('#duration').text(duration);
+                        var duration = duration.replace(' min','');
+                        var timePrase = addMinutes(startTime, duration);
+                        $('#duration').text(startTime+" - "+timePrase);
+                        
                     }); 
+                    function addMinutes(time, minsToAdd) {
+                      function D(J){ return (J<10? '0':'') + J};
+
+                      var piece = time.split(':');
+
+                      var mins = piece[0]*60 + +piece[1] + +minsToAdd;
+
+                      return D(mins%(24*60)/60 | 0) + ':' + D(mins%60);  
+                    }  
+
                 } )( jQuery );
             </script>
             <dl>
