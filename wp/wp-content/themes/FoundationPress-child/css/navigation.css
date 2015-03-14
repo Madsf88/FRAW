@@ -123,6 +123,6 @@ transform: none;
     margin: 2rem;
     display: block;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     z-index: 2;
 }
