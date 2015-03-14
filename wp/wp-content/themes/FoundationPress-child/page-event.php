@@ -23,10 +23,7 @@ get_header(); ?>
     </div>
     <div class="row">
         <div class="small-12 medium-7 large-6 columns small-centered movieInfo removePadding">
-            <div class="panel">
-                <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
-                <!-- 2. Include script -->
-                
+            <div class="panel">                
                  <script type="text/javascript"> 
                     ( function( $ ) {
                         var imdbURL = "<?php the_field('imdb_url'); ?>";
@@ -65,14 +62,6 @@ get_header(); ?>
 
                     } )( jQuery );
                 </script>
-                <script type="text/javascript">(function () {
-                        if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
-                        if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
-                            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                            s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
-                            s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
-                            var h = d[g]('body')[0];h.appendChild(s); }})();
-                </script>
                 <dl>
                     <dt>Director: </dt>
                     <dd id="director"></dd>
@@ -93,7 +82,6 @@ get_header(); ?>
                                     s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
                                     var h = d[g]('body')[0];h.appendChild(s); }})();
                         </script>
-                        <link href="http://addtocalendar.com/atc/1.5/atc-style-menu-wb.css" rel="stylesheet" type="text/css">
                         <span class="addtocalendar atc-style-menu-wb">
                             <var class="atc_event">
                                 <var class="atc_date_start"><?php the_field('calendar_data'); ?> <?php  the_field('start_time'); ?>:00</var>

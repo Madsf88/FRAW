@@ -29,22 +29,18 @@
                 <ul id="<?php the_title(); ?>" class="f-dropdown" data-dropdown-content>
             
             <?php 
-                    
                     $var = 'category=4&author=';
                     $var2 = $post->post_author;
                     $var3= $var.$var2;
-                    $myposts = get_posts($var3);
-                    
-                        
+                    $myposts = get_posts($var3);                        
                         if($myposts){
                         echo '<ul>';
                         foreach ($myposts as $author_post)  {
-                            echo "<li><a href='#'>".$author_post->post_title."</a></li>";
+                            echo '<li><a href="'. the_permalink().'">'.$author_post->post_title.'</a></li>';
                         }
                             echo '</ul>';
                         }
                 ?>
-                  
                 </ul>
             </div>
         </div>
