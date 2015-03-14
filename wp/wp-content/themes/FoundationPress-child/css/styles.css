@@ -39,13 +39,11 @@ dl{
     margin-bottom: 0;
 }
 
-
-.columns.small-12 {
-    padding: 0;
-}
-
 footer.row {
     margin-top: 0; /* Dette skal faktisk ikke være på undersiderne... */
+}
+.columns.small-12.removePadding {
+    padding: 0;
 }
 
 @media screen and (min-width: 641px){
