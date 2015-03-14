@@ -36,7 +36,7 @@
                         if($myposts){
                         echo '<ul>';
                         foreach ($myposts as $author_post)  {
-                            echo '<li><a href="'. the_permalink().'">'.$author_post->post_title.'</a></li>';
+                            echo '<li><a href="#">'.$author_post->post_title.'</a></li>';
                         }
                             echo '</ul>';
                         }
