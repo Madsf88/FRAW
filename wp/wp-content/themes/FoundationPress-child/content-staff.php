@@ -27,15 +27,24 @@
                 </dl>
                 <a href="#" data-options="pip: center" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor">Reviews</a>
                 <ul id="<?php the_title(); ?>" class="f-dropdown" data-dropdown-content>
-                <?php                    
-                    $author_posts=  get_posts('author=1'); // author ID = 1
-                    if($author_posts){
-                    echo '<ul>';
-                    foreach ($author_posts as $author_post)  {
-                        echo "<li><a href='#'>".$author_post->post_title."</a></li>";
-                    }
-                        echo '</ul>';
-                    }
+            
+            <?php 
+                    
+                    $var = 'category=4&author=';
+                    $var2 = $post->post_author;
+                    $var3= $var.$var2;
+                    
+                    $author_posts=  get_posts($var3);
+                    $myposts = get_posts($var3);
+                    
+                        
+                        if($author_posts){
+                        echo '<ul>';
+                        foreach ($myposts as $author_post)  {
+                            echo "<li><a href='#'>".$author_post->post_title."</a></li>";
+                        }
+                            echo '</ul>';
+                        }
                 ?>
                   
                 </ul>
