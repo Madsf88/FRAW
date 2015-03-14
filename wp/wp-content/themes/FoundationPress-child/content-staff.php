@@ -25,7 +25,20 @@
                     <dd><?php  the_field('2movie'); ?></dd>
                     <dd><?php  the_field('3movie'); ?></dd>
                 </dl>
-                <a class="reviewAnchor">Reviews</a>
+                <a href="#" data-options="pip: center" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor">Reviews</a>
+                <ul id="<?php the_title(); ?>" class="f-dropdown" data-dropdown-content>
+                <?php                    
+                    $author_posts=  get_posts('author=1'); // author ID = 1
+                    if($author_posts){
+                    echo '<ul>';
+                    foreach ($author_posts as $author_post)  {
+                        echo "<li><a href='#'>".$author_post->post_title."</a></li>";
+                    }
+                        echo '</ul>';
+                    }
+                ?>
+                  
+                </ul>
             </div>
         </div>
 </article>
