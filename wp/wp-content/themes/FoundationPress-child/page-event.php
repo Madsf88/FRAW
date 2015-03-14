@@ -26,14 +26,7 @@ get_header(); ?>
             <div class="panel">
                 <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
                 <!-- 2. Include script -->
-                <script type="text/javascript">(function () {
-                        if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
-                        if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
-                            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                            s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
-                            s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
-                            var h = d[g]('body')[0];h.appendChild(s); }})();
-                </script>
+                
                  <script type="text/javascript"> 
                     ( function( $ ) {
                         var imdbURL = "<?php the_field('imdb_url'); ?>";
@@ -54,6 +47,10 @@ get_header(); ?>
                             var duration = duration.replace(' min','');
                             var timePrase = addMinutes(startTime, duration);
                             $('#duration').text(startTime+" - "+timePrase);
+                            var htmlString = $( ".atc_date_start" ).html();                            
+                            var firstPart = htmlString.substring(0, htmlString.length-8);
+                            var Full = firstPart+timePrase+":00";
+                            $( ".atc_date_end" ).html(Full);
 
                         }); 
                         function addMinutes(time, minsToAdd) {
@@ -67,6 +64,14 @@ get_header(); ?>
                         }  
 
                     } )( jQuery );
+                </script>
+                <script type="text/javascript">(function () {
+                        if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+                        if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                            s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                            s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+                            var h = d[g]('body')[0];h.appendChild(s); }})();
                 </script>
                 <dl>
                     <dt>Director: </dt>
@@ -91,9 +96,9 @@ get_header(); ?>
                         <link href="http://addtocalendar.com/atc/1.5/atc-style-menu-wb.css" rel="stylesheet" type="text/css">
                         <span class="addtocalendar atc-style-menu-wb">
                             <var class="atc_event">
-                                <var class="atc_date_start">2015-05-04 12:00:00</var>
-                                <var class="atc_date_end">2015-05-04 18:00:00</var>
-                                <var class="atc_timezone">Europe/London</var>
+                                <var class="atc_date_start"><?php the_field('calendar_data'); ?> <?php  the_field('start_time'); ?>:00</var>
+                                <var class="atc_date_end"><?php the_field('calendar_data'); ?> <?php  the_field('start_time'); ?>:00</var>
+                                <var class="atc_timezone">Europe/Copenhagen</var>
                                 <var class="atc_title">ITU.film: <?php the_title(); ?></var>
                                 <var class="atc_description">Movie screening</var>
                                 <var class="atc_location"><?php  the_field('location'); ?></var>
