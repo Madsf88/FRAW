@@ -111,3 +111,18 @@ transform: none;
 .exit-off-canvas {
   display: none;
 }
+
+
+
+/* Ny styling */
+
+.menu-icon {
+    background: url("../img/icons/AndroidL_Menu_white.svg") no-repeat;
+    height: 3rem;
+    width: 3rem;
+    margin: 2rem;
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+}

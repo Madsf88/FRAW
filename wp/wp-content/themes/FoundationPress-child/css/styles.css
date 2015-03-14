@@ -1,3 +1,7 @@
+/* Frameworks */
+@import url("slideout.css");
+
+/* Own style sheets */
 @import url("header.css");
 @import url("navigation.css");
 @import url("movieInfo.css");

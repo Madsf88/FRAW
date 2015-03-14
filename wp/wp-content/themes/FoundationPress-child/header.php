@@ -32,11 +32,16 @@
 	<body <?php body_class(); ?>>
 	<?php do_action('foundationPress_after_body'); ?>
 	
-	<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
+<!--	<div class="off-canvas-wrap" data-offcanvas>-->
+	<?php wp_nav_menu(array('container_id' => 'menu')); ?>
+	<div class="inner-wrap" id="wrapper">
+        
 	
 	<?php do_action('foundationPress_layout_start'); ?>
 	
+	
+	
+<!--
 	<nav class="tab-bar">
 		<section class="left-small">
 			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
@@ -44,10 +49,12 @@
 		<p class="right title"><?php bloginfo( 'name' ); ?></p>
 
 	</nav>
+-->
 
-	<?php get_template_part('parts/off-canvas-menu'); ?>
+	<?php get_template_part('parts/off-canvas-menuNO'); ?>
 
-	<?php get_template_part('parts/top-bar'); ?>
+	<?php get_template_part('parts/top-barNO'); ?>
 
 <section class="container" role="document">
+    <div class="menu-icon"></div>
 	<?php do_action('foundationPress_after_header'); ?>

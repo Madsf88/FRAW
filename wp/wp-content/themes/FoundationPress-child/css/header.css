@@ -1,9 +1,21 @@
+/* Første metode, med et element der var fuld højde, som lå bagved */
+/*
 #backgroundImage {
     width: 100%;
     background-size: cover;
     z-index: 0;
     background-position: center;
     position: fixed;
+    top: 0px;
+}
+*/
+#backgroundImage {
+    width: 100%;
+    background-size: cover;
+    z-index: 0;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: pink;
     top: 0px;
 }
 #title {

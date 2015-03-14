@@ -67,13 +67,13 @@ function toggleScrollDown() {
 function backgroundHeight() {
     var windowHeight = $(window).height();
 //    console.log(windowHeight);
-    $("#backgroundImage").css("height", windowHeight + 0 + "px");
+//    $("#backgroundImage").css("height", windowHeight + 0 + "px"); // Denne bliver ikke brugt længere da vi nu wrapper baggrunden rundt om alt indholdet
     if ($("#title").hasClass("fullHeight")) {
         $("#title").css("height", windowHeight + "px");
-        console.log("test01");
+//        console.log("test01");
     } else {
         $("#title").css("height", windowHeight/2 + "px");
-        console.log("test02");
+//        console.log("test02");
     }
 };
 
@@ -143,18 +143,23 @@ function youtube_parser(){
 
 // Navigation Fix - http://codepen.io/alexpivtorak/pen/oyrHm
 
-$(document).foundation();
+//$(document).foundation();
+//
+//function sideNav() {
+//  if ($(window).width() < 769) {
+//    $('.off-canvas-wrap').removeClass('move-right');
+//    $('.left-off-canvas-toggle').show();
+//  } else {
+//    $('.off-canvas-wrap').addClass('move-right');
+//    $('.left-off-canvas-toggle').hide();
+//  }  
+//}
+//
+//$(window).resize(function() {
+//  sideNav();
+//});
 
-function sideNav() {
-  if ($(window).width() < 769) {
-    $('.off-canvas-wrap').removeClass('move-right');
-    $('.left-off-canvas-toggle').show();
-  } else {
-    $('.off-canvas-wrap').addClass('move-right');
-    $('.left-off-canvas-toggle').hide();
-  }  
-}
 
-$(window).resize(function() {
-  sideNav();
-});
+
+// New navigation slideout.js
+

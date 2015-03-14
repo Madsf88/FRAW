@@ -7,9 +7,8 @@ get_header(); ?>
     $latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
     if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();
 ?>
-    
-<div id="backgroundImage" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>);"></div>
-    
+
+<div id="backgroundImage" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>);">
 <div class="row <?php the_field('brightBg'); ?>">
     <div class="large-12 columns">
         <div id="title" class="fullHeight">
@@ -130,13 +129,7 @@ get_header(); ?>
     }
 
 ?>
-
-<!--
-<script>
-    var yUrl = "<?php the_field('review_title'); ?>";
-    youtube_parser(yUrl);
-</script>
--->
+</div>
 
 <?php endwhile; endif; ?>
 

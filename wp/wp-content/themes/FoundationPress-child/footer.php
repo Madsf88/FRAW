@@ -8,10 +8,33 @@
 
 	<?php do_action('foundationPress_layout_end'); ?>
 	</div>
-</div>
+
 <?php wp_footer(); ?>
 <?php do_action('foundationPress_before_closing_body'); ?>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ; ?>/js/script.js"></script>
+
+<!-- Slideout.js navigation -->
+
+<script src="<?php echo get_stylesheet_directory_uri() ; ?>/js/slideout.js"></script>
+<script>
+    var slideout = new Slideout({
+        'panel': document.getElementById('wrapper'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70
+    });
+    
+    $(document).ready(function() {
+        $(".menu-icon").click(function() {
+            slideout.toggle();
+        });
+    });
+</script>
+
+<!-- Slideout.js navigation - END -->
+
+<!-- Web fonts -->
+
 <script type="text/javascript">
       WebFontConfig = {
         google: { families: [ 'Cabin:400,500,700,400italic:latin', 'EB+Garamond::latin' ] }
@@ -26,5 +49,8 @@
         s.parentNode.insertBefore(wf, s);
       })(); 
 </script>
+
+<!-- Web fonts - END -->
+
 </body>
 </html>
