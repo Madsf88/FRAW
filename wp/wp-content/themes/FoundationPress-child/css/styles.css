@@ -43,13 +43,17 @@ dl{
     margin-bottom: 0;
 }
 
-
-.columns.small-12 {
-    padding: 0;
-}
-
 footer.row {
     margin-top: 0; /* Dette skal faktisk ikke være på undersiderne... */
+}
+.columns.small-12.removePadding {
+    padding: 0;
+}
+.heading h2.heading__h1{
+    margin: 40px;
+}
+.category-staff img {
+    padding-bottom: 15px;
 }
 
 @media screen and (min-width: 641px){
@@ -62,6 +66,7 @@ footer.row {
     }
     .heading__h2 {
         font-size: 1.25rem;
+        border: 10px solid white;
     }
     
     blockquote {
@@ -85,6 +90,12 @@ footer.row {
 
         left: 30px; /* put it on the right side */
     }
+    .heading h2.heading__h1{
+        font-size: 3em;
+    }
+    .category-staff img {
+    padding-bottom: 0px;
+}
 }
 @media screen and (min-width: 1025px){
     .heading__h1 {
@@ -93,4 +104,5 @@ footer.row {
     .heading__h2 {
         font-size: 1.5rem;
     }
+    
 }

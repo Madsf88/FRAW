@@ -17,7 +17,7 @@
 </div>
 
 <div class="row">
-    <div class="small-12 medium-8 large-8 small-centered columns">
+    <div class="small-12 medium-8 large-8 small-centered columns removePadding">
         <div class="panel">
             <?php $id=113; $post = get_page($id); echo $post->post_content;  ?>
 
@@ -28,15 +28,15 @@
     <div class="large-12 columns">
         <div id="title">
             <div class="heading">
-                <h1 class="heading__h1">
+                <h2 class="heading__h1">
                 Crew
-                </h1>
+                </h2>
             </div>
         </div>
     </div>        
 </div>
 <div class="row">
-    <div class="small-12 medium-8 large-8 small-centered columns">
+    <div class="small-12 medium-8 large-8 small-centered columns removePadding">
         <div class="panel">
             <?php if ( have_posts() ) : ?>
 

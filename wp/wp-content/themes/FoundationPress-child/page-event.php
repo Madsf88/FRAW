@@ -22,7 +22,7 @@ get_header(); ?>
     </div>        
 </div>
 <div class="row">
-    <div class="small-12 medium-7 large-6 columns small-centered movieInfo">
+    <div class="small-12 medium-7 large-6 columns small-centered movieInfo removePadding">
         <div class="panel">
             <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
             <!-- 2. Include script -->
@@ -112,7 +112,7 @@ get_header(); ?>
 </div>
 
 <div class="row">
-    <div class="small-12 medium-8 large-8 small-centered columns review">
+    <div class="small-12 medium-8 large-8 small-centered columns review removePadding">
         <div class="panel">
             <h1 class="review__h1"><?php the_field('review_title'); ?></h1>
             <?php the_content(); ?>
