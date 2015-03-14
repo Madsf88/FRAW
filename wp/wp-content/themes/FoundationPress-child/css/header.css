@@ -37,6 +37,17 @@
     text-align: center;
 }
 .heading__h2 {
+    color: white;
+    border: 6px solid white;
+    padding: .1em .4em;
+    display: inline-block;
+    font-size: 1.75rem;
+    text-align: center;
+}
+.heading__h2{
+    margin: 40px;
+}
+.heading__p {
     font-size: 1rem;
     font-weight: 500;
     color: white;
@@ -49,6 +60,9 @@
     box-shadow: 2px 2px 0 rgba(0,0,0,.2);
 }
 .brightBg .heading__h2 {
+    text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+}
+.brightBg p.heading {
     text-shadow: 2px 2px 0 rgba(0,0,0,.3);
 }
 .logo {
