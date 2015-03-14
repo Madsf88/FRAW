@@ -28,9 +28,9 @@
     <div class="large-12 columns">
         <div id="title">
             <div class="heading">
-                <h1 class="heading__h1">
+                <h2 class="heading__h1">
                 Crew
-                </h1>
+                </h2>
             </div>
         </div>
     </div>        

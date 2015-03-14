@@ -1,9 +1,11 @@
  .category-staff{
      margin-bottom: 50px;    
  }
-.category-staff img {
-    padding-bottom: 15px;
-}
+
 .category-staff dd {
     margin-bottom: 0;
+}
+.reviewAnchor{
+    position: absolute;
+    bottom: 0px;
 }
