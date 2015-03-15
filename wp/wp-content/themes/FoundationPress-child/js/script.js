@@ -101,14 +101,16 @@ function trailerScroll() {
 //};
 
 function youtube_parser() {
-    var url = $(".trailerContainer").attr("data-url"),
-        regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/,
-        match = url.match(regExp);
-    if (match && match[7].length === 11) {
-        $(".trailerContainer").html('<iframe width="500" height="315" src="http://www.youtube.com/embed/' + match[7] + '?enablejsapi=1&showinfo=0&autohide=1&controls=0?modestbranding=1" frameborder="0" allowfullscreen></iframe>');
-        videoControl();
-    } else {
-//        console.log("Error parsing trailer url");
+    if ($(".trailerContainer").length) {
+        var url = $(".trailerContainer").attr("data-url"),
+            regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/,
+            match = url.match(regExp);
+        if (match && match[7].length === 11) {
+            $(".trailerContainer").html('<iframe width="500" height="315" src="http://www.youtube.com/embed/' + match[7] + '?enablejsapi=1&showinfo=0&autohide=1&controls=0?modestbranding=1" frameborder="0" allowfullscreen></iframe>');
+            videoControl();
+        } else {
+    //        console.log("Error parsing trailer url");
+        }
     }
 }
 
