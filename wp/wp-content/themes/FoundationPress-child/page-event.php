@@ -60,17 +60,22 @@ get_header(); ?>
 
                     } )( jQuery );
                 </script>
-                <dl>
-                    <dt>Director: </dt>
-                    <dd id="director"></dd>
-                    <dt>Running Time: </dt>
-                    <dd id="duration"></dd>
-                    <dt>IMDb rating: </dt>
-                    <dd id="rating"></dd>
-                    <dt>Year: </dt>
-                    <dd id="year"></dd>
-                    
-                </dl>
+                <?php
+                    if(get_field('imdb_url'))
+                    {
+                        echo '<dl>
+                            <dt>Director: </dt>
+                            <dd id="director"></dd>
+                            <dt>Running Time: </dt>
+                            <dd id="duration"></dd>
+                            <dt>IMDb rating: </dt>
+                            <dd id="rating"></dd>
+                            <dt>Year: </dt>
+                            <dd id="year"></dd>
+                        </dl>';
+                    }
+                ?>
+               
                 <ul>
                     <li class="icons">
                         <script type="text/javascript">(function () {
