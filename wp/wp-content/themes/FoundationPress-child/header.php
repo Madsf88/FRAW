@@ -33,8 +33,11 @@
     <?php do_action('foundationPress_after_body'); ?>
     <?php wp_nav_menu(array('container_id' => 'menu')); ?>
 
-   <?php do_action('foundationPress_layout_start'); ?>
+    <?php do_action('foundationPress_layout_start'); ?>
 
+    <div class="trailerIcon"></div>
+    <div class="scrollDown"></div>
+    
     <section class="container" id="wrapper" role="document">
         <div class="menu-icon"></div>
         <?php do_action('foundationPress_after_header'); ?>

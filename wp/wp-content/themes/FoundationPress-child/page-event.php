@@ -17,8 +17,6 @@ get_header(); ?>
                     <p class="heading__p"><?php the_field('date'); ?> at <?php  the_field('start_time'); ?> in <?php  the_field('location'); ?></p>
                 </div>
             </div>
-            <div class="trailerIcon"></div>
-            <div class="scrollDown"></div>
         </div>        
     </div>
     <div class="row">
