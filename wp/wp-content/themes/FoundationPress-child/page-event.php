@@ -8,7 +8,7 @@ get_header(); ?>
     if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();
 ?>
 
-<div id="backgroundImage" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>);">
+<div id="backgroundImage" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>); background-position: <?php the_field('background_image_position_horizontal'); ?>% <?php the_field('background_image_position_vertical'); ?>%;">
     <div class="row <?php the_field('readability'); ?>">
         <div class="large-12 columns">
             <div id="title" class="fullHeight">
