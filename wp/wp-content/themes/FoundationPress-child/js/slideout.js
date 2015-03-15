@@ -117,7 +117,11 @@ Slideout.prototype.isOpen = function() {
  */
 Slideout.prototype._translateXTo = function(translateX) {
   this._currentOffsetX = translateX;
-  this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)';
+    if(translateX === 0) {
+        this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'none';
+    } else {
+        this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)';
+    }
 };
 
 /**
