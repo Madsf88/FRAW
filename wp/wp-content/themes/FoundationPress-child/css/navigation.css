@@ -16,10 +16,23 @@ ul.menu li a:hover {
     background-color: rgba(0,0,0,.3);
 }
 
-#facebookLink {
 
+
+ul.menu li a[href*="facebook.com"]:after{
+    position: absolute;
+    background: url(../img/icons/AndroidL_Facebook_white.svg) no-repeat;
+    background-size: contain;
+    content: '';
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    bottom: 40px;
 }
 
+ul.menu li a[href*="facebook.com"]:hover{
+    padding-left: 1.2em;
+    background-color: transparent;
+}
 /* Menu bar - END */
 
 /* Menu icon */
