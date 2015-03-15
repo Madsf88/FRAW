@@ -23,6 +23,18 @@ h1, h2 {
     margin: 0;
     border: none;
 }
+.panel,
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6,
+.panel p,
+.panel li,
+.panel dl {
+    color: #222;
+}
 
 .panel .category-events a h3{
     border-bottom: 2px solid transparent;
@@ -31,7 +43,7 @@ h1, h2 {
 } 
 
 .panel .category-events a:hover h3{
-    border-bottom-color: #333;
+    border-bottom-color: #222;
     display: inline-block;
 }
 
