@@ -15,6 +15,9 @@ blockquote {
     font-size: 1.5em;
     line-height: 1.1em;
 }
+.review figure {
+    margin: 50px -50px;
+}
 .review .author {
     font-family: cabin, sans-serif;
     font-size: .8em;

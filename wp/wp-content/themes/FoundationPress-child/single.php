@@ -6,7 +6,7 @@ get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
 
 <div id="backgroundImage" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>);">
-    <div class="row <?php the_field('brightBg'); ?>">
+    <div class="row <?php the_field('readability'); ?>">
         <div class="large-12 columns">
             <div id="title" class="fullHeight">
                 <div class="heading">
@@ -14,8 +14,6 @@ get_header(); ?>
                     <p class="heading__p"><?php the_field('date'); ?> at <?php  the_field('start_time'); ?> in <?php  the_field('location'); ?></p>
                 </div>
             </div>
-            <div class="trailerIcon"></div>
-            <div class="scrollDown"></div>
         </div>        
     </div>
     <div class="row">

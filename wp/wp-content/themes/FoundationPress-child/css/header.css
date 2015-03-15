@@ -54,15 +54,26 @@
     margin: 0;
     padding-bottom: 70px;
 }
-.brightBg .heading__h1 {
+.interfaceShadow .heading__h1 {
     text-shadow: 2px 2px 0 rgba(0,0,0,.2);
     box-shadow: 2px 2px 0 rgba(0,0,0,.2);
 }
-.brightBg .heading__h2 {
+.interfaceShadow .heading__h2 {
     text-shadow: 2px 2px 0 rgba(0,0,0,.3);
 }
-.brightBg p.heading {
+.interfaceShadow .heading__p {
     text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+}
+.interfaceDark .heading__h1 {
+    color: #222;
+    border-color: #222;
+}
+.interfaceDark .heading__h2 {
+    color: #222;
+    border-color: #222;
+}
+.interfaceDark .heading__p {
+    color: #222;
 }
 .logo {
     height: 50px;
