@@ -15,8 +15,9 @@
         $now = new DateTime();
         if($date < $now) {
         }else 
-            echo '<a href="'. get_permalink().'"><div>';
-            echo ''. the_post_thumbnail('large') .'
+            echo '<a href="'. get_permalink().'">
+                <div>
+                    '. the_post_thumbnail('large') .'
                     <h3>'. get_the_title() .'</h3>
                     <p>'.  get_field('date') .'</p>
                 </div>
