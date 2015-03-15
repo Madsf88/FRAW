@@ -71,6 +71,7 @@ get_header(); ?>
                     <dd id="rating"></dd>
                     <dt>Year: </dt>
                     <dd id="year"></dd>
+                    
                 </dl>
                 <ul>
                     <li class="icons">
