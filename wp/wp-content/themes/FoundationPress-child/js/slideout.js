@@ -117,11 +117,12 @@ Slideout.prototype.isOpen = function() {
  */
 Slideout.prototype._translateXTo = function(translateX) {
   this._currentOffsetX = translateX;
-    if(translateX === 0) {
+//  this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)'; // Chris: before my editions
+    if(translateX === 0) { // Chris: after my editions
         this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'none';
     } else {
         this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)';
-    }
+    } // Chris: after my editions . END
 };
 
 /**
