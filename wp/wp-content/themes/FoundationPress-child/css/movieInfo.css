@@ -28,3 +28,13 @@ li.icons {
     height: 40px;
     width: 33px;
 }
+#rating::before {
+    background: url(../img/icons/star.svg) no-repeat;
+    background-size: contain;
+    content: '';
+    width: 21px;
+    display: inline-block;
+    height: 17px;
+    position: relative;
+    top: 2px;
+}
