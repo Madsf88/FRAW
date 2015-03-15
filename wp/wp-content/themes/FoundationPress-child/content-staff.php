@@ -28,7 +28,7 @@
                 <a href="#" data-options="pip: center" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor">Reviews</a>
                 <ul id="<?php the_title(); ?>" class="f-dropdown" data-dropdown-content>
             
-            <?php 
+                <?php 
                     $var = 'category=4&author=';
                     $var2 = $post->post_author;
                     $var3= $var.$var2;
@@ -36,7 +36,7 @@
                         if($myposts){
                         echo '<ul>';
                         foreach ($myposts as $author_post)  {
-                            echo '<li><a href="#">'.$author_post->post_title.'</a></li>';
+                            echo '<li><a href="'. get_permalink() .'">'.$author_post->post_title.'</a></li>';
                         }
                             echo '</ul>';
                         }
