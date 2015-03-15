@@ -97,17 +97,18 @@ footer.row {
     }
     blockquote {
         border: none;
-        width: 150px;
+        width: 130px;
         font-size: 18px;
         line-height: 18px;
         margin-top: -12px;
+        padding: 20px 0;
 
         float: right; /* put it on the right side */
     }
     blockquote p {
         background: none repeat scroll 0 0 white;
 /*        border: 2px solid black;*/
-        box-shadow: 0 0 0 2px rgba(0, 0, 0, .2);
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, .2);
         display: block;
         font-size: 1.75em;
         line-height: 1.1em;
