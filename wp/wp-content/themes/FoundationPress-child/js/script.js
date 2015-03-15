@@ -57,6 +57,8 @@ function videoHeight() {
 
 // Make video height - END
 
+// Youtube
+
 function toggleVideo(state) {
     // if state == 'hide', hide. Else: show video
     var div = document.getElementById("popupVid"),
@@ -74,7 +76,7 @@ function videoControl() {
     if (offset - 100 < currentPos) {
         if (flag !== 1) {
             toggleVideo();
-            $("iframe").fadeIn();
+            $("iframe").addClass("show");
             flag = 1;
         }
     } else {
@@ -93,13 +95,6 @@ function trailerScroll() {
     });
 }
 
-// Make height of header - END
-
-//function centerHeaderH1() {
-//    var windowHeight = $(window).height();
-//    $("#backgroundImage").css("height", windowHeight + 100 + "px");
-//};
-
 function youtube_parser() {
     if ($(".trailerContainer").length) {
         var url = $(".trailerContainer").attr("data-url"),
@@ -113,6 +108,8 @@ function youtube_parser() {
         }
     }
 }
+
+// Youtube - END
 
 // Navigation - Slideout.js
 

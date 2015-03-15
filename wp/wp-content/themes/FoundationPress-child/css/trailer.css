@@ -1,13 +1,19 @@
-.trailerContainer{
+.trailerContainer {
     width: 100%;
     text-align: center;
     position: relative;
 }
-iframe{
+iframe {
     z-index: 2;
     position: relative;
     height: 100%;
     background: black;
     width: 100%;
-    display: none;
+    display: block;
+    opacity: 0;
+    
+    transition: opacity .5s;
+}
+.show {
+    opacity: 1;
 }
