@@ -10,24 +10,14 @@
 
     <?php wp_footer(); ?>
     <?php do_action('foundationPress_before_closing_body'); ?>
+    <script src="<?php echo get_stylesheet_directory_uri() ; ?>/js/slideout.js"></script>
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ; ?>/js/script.js"></script>
 
     <!-- Slideout.js navigation -->
 
-    <script src="<?php echo get_stylesheet_directory_uri() ; ?>/js/slideout.js"></script>
+    
     <script>
-        var slideout = new Slideout({
-            'panel': document.getElementById('wrapper'),
-            'menu': document.getElementById('menu'),
-            'padding': 256,
-            'tolerance': 70
-        });
-
-        $(document).ready(function() {
-            $(".menu-icon").click(function() {
-                slideout.toggle();
-            });
-        });
+        
     </script>
 
     <!-- Slideout.js navigation - END -->
