@@ -17,7 +17,9 @@ ul.menu li a:hover {
 }
 
 
-
+ul.menu li a[href*="facebook.com"]{
+    padding: 0
+}
 ul.menu li a[href*="facebook.com"]:after{
     position: absolute;
     background: url(../img/icons/AndroidL_Facebook_white.svg) no-repeat;
@@ -27,6 +29,7 @@ ul.menu li a[href*="facebook.com"]:after{
     display: inline-block;
     height: 40px;
     bottom: 40px;
+    left: 1.2em;
 }
 
 ul.menu li a[href*="facebook.com"]:hover{
