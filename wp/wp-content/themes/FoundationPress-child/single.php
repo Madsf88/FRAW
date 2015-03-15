@@ -6,7 +6,7 @@ get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
 
 <div id="backgroundImage" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>);">
-    <div class="row">
+    <div class="row <?php the_field('brightBg'); ?>">
         <div class="large-12 columns">
             <div id="title" class="fullHeight">
                 <div class="heading">
