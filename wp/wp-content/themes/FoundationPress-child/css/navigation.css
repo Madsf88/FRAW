@@ -1,128 +1,43 @@
-.tab-bar {
-    height: 0;
-    margin: 0;
-    /* Du er mere end velkommen til at ændre dette til en bedre måde at få menu-ikonet ud af flowet på. */
-}
-.inner-wrap{
-    -webkit-transition: -webkit-transform 350ms ease;
-    -moz-transition: -moz-transform 350ms ease;
-    -ms-transition: -ms-transform 350ms ease;
-    -o-transition: -o-transform 350ms ease;
-    transition: transform 350ms ease;
-}
-.left-off-canvas-menu{
-}
+/* Menu bar */
 
-.move-right .exit-off-canvas{
-    box-shadow: none;
-    background: rgba(255,255,255,0.2);
+.slideout-menu {
+    background-color: #333;
 }
-
-.move-right .exit-off-canvas:hover{
-    background: rgba(255,255,255,0.2);
-}
-
-ul.off-canvas-list li a{
+ul.menu li a{
     border-bottom: 0;
     font-size: 1.5em;
     color: white;
-    padding-left: 30px;
+    padding: 0.6em 0.6em 0.6em 1.2em;
     transition: all .1s;
-
+    display: block;
 }
-ul.off-canvas-list li a:hover {
-    padding-left: 35px;
-}
-
-.tab-bar{
-    background: transparent;
-    z-index:1;
-}
-.tab-bar .left-small{
-    border: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-ul.off-canvas-list li a {
-    
+ul.menu li a:hover {
+    padding-left: 1.5em;
+    background-color: #242424;
 }
 
 #facebookLink {
 
 }
 
-.tab-bar .menu-icon span::after {
-/*    box-shadow: 0 0 0 2px #FFFFFF,0 10px 0 2px #FFFFFF,0 20px 0 2px #FFFFFF;*/
-/*    width: 2rem;*/
-    box-shadow: none;
-    width: 0;
-}
+/* Menu bar - END */
+
+/* Menu icon */
 
 .menu-icon {
-    margin: 2rem;
-}
-.menu-icon span {
-    background: url("../img/icons/AndroidL_Menu_white.svg");
-    height: 3rem;
-    width: 3rem;
-    display: block;
-}
-.tab-bar .menu-icon span:hover::after {
-    box-shadow: none;
-}
-
-
-/* Navigation Fix - http://codepen.io/alexpivtorak/pen/oyrHm */
-.move-right>.inner-wrap {
-  -ms-transform: none;
--webkit-transform: none;
--moz-transform: none;
--ms-transform: none;
--o-transform: none;
-transform: none;
-  margin-left: 250px;
-}
-
-.inner-wrap {
-  width: auto;
-}
-
-.left-off-canvas-menu {
-  -ms-transform: none;
--webkit-transform: none;
--moz-transform: none;
--ms-transform: none;
--o-transform: none;
-transform: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: auto;
-  right: auto;
-  width: 0;  
-  height: 100%;
-}
-
-.move-right .left-off-canvas-menu {
-  width: 250px;
-}
-
-.exit-off-canvas {
-  display: none;
-}
-
-
-
-/* Ny styling */
-
-.menu-icon {
-    background: url("../img/icons/AndroidL_Menu_white.svg") no-repeat;
-    height: 3rem;
-    width: 3rem;
+    background: url("../img/icons/AndroidL_Menu_white.svg") no-repeat center / 80%;
+    height: 4rem;
+    width: 4rem;
     margin: 2rem;
     display: block;
     cursor: pointer;
     position: absolute;
     z-index: 2;
+    
+    transition: background-size .1s ease;
 }
+.menu-icon:hover {
+    background-size: 100%;
+}
+
+/* Menu icon - END */

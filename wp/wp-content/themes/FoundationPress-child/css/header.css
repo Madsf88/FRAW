@@ -77,18 +77,24 @@
     text-align: right;
 }
 .trailerIcon {
-    height: 50px;
-    width: 50px;
-    background: url("../img/icons/AndroidL_Play_white.svg") no-repeat center / contain transparent;
+    height: 4em;
+    width: 4em;
+    margin: 2em;
+    background: url("../img/icons/AndroidL_Play_white.svg") no-repeat center / 80% transparent;
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    right: 0;
+    bottom: 0;
     cursor: pointer;
+    
+    transition: background-size .1s ease;
+}
+.trailerIcon:hover {
+    background-size: 100%;
 }
 .scrollDown {
-    height: 50px;
-    width: 50px;
-    background: url("../img/icons/AndroidL_Arrow_down_white.svg") no-repeat center / contain transparent;
+    height: 4em;
+    width: 4em;
+    background: url("../img/icons/AndroidL_Arrow_down_white.svg") no-repeat center / 80% transparent;
     position: fixed;
     right: 0;
     left: 0;
@@ -98,7 +104,7 @@
     padding: 10px 0;
     cursor: pointer;
     opacity: 1;
-    transition: opacity 1s, bottom .2s ease-out, padding .2s;
+    transition: opacity 1s, bottom .2s ease-out, background-size .1s ease;
 
     -webkit-animation: scrollDown 2s ease-out;
     animation: scrollDown 2s ease-out;
@@ -108,8 +114,7 @@
 .scrollDown:hover {
 /*    transition: bottom .2s ease-out;*/
 /*    bottom: 0;*/
-    padding: 10px;
-    cursor: pointer;
+    background-size: 100%;
 /*    animation: scrollDown 2s ease-out;*/
 }
 .scrollDown.hideScrollDown {

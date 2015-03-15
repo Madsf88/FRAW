@@ -69,7 +69,20 @@ footer.row {
     .heading__p {
         font-size: 1.25rem;
     }
-    
+    .category-staff img {
+    padding-bottom: 0px;
+    }
+}
+@media screen and (min-width: 1025px){
+    .heading__h1 {
+        font-size: 6rem;
+    }
+    .heading__h2 {
+        font-size: 5rem;
+    }
+    .heading__p {
+        font-size: 1.5rem;
+    }
     blockquote {
         border: none;
         width: 150px;
@@ -91,22 +104,4 @@ footer.row {
 
         left: 30px; /* put it on the right side */
     }
-    .heading h2.heading__h1{
-        font-size: 3em;
-    }
-    .category-staff img {
-    padding-bottom: 0px;
-}
-}
-@media screen and (min-width: 1025px){
-    .heading__h1 {
-        font-size: 6rem;
-    }
-    .heading__h2 {
-        font-size: 5rem;
-    }
-    .heading__p {
-        font-size: 1.5rem;
-    }
-    
 }
