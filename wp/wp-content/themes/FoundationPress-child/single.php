@@ -11,7 +11,7 @@ get_header(); ?>
             <div id="title" class="fullHeight">
                 <div class="heading">
                     <h1 class="heading__h1"><?php the_title(); ?></h1>
-                    <h2 class="heading__h2"><?php the_field('date'); ?> at <?php  the_field('start_time'); ?> in <?php  the_field('location'); ?></h2>
+                    <p class="heading__p"><?php the_field('date'); ?> at <?php  the_field('start_time'); ?> in <?php  the_field('location'); ?></p>
                 </div>
             </div>
             <div class="trailerIcon"></div>
