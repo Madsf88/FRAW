@@ -1,3 +1,6 @@
 article.category-events {
     margin-bottom: 40px;
 }
+article.category-events p {
+    margin-bottom: 0;
+}

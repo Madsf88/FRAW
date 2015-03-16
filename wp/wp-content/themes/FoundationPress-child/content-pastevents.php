@@ -7,21 +7,20 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
     <?php
         $eventdate = get_field('calendar_data');
         $date = new DateTime($eventdate);
         $now = new DateTime();
         if($date < $now) {
-            echo '<a href="'. get_permalink().'">
+            echo '<article class="category-events"><a href="'. get_permalink().'">
             <div>
                 '. the_post_thumbnail('large') .'
                 <h3>'. get_the_title() .'</h3>
                 <p>'.  get_field('date') .'</p>
             </div>
 
-           </a>';
+           </a></article>';
         }else 
                 
     ?>
