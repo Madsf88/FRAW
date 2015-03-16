@@ -17,7 +17,7 @@ get_header(); ?>
         </div>        
     </div>
     <div class="row">
-        <div class="small-12 medium-7 large-6 columns small-centered movieInfo removePadding">
+        <div class="small-12 medium-6 large-5 columns small-centered movieInfo removePadding">
             <div class="panel">                
                  <script type="text/javascript"> 
                     ( function( $ ) {

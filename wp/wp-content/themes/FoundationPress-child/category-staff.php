@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="backgroundImage" style="background-image: url(http://filmgarb.com/wp-content/uploads/film-napoleon_dynamite-2004-napoleon_dynamite-jonheder-tshirts-ricks_college_tshirt.jpg);">
+<div id="backgroundImage" style="background-image: url(http://migogwilbur.com/wp-content/uploads/2014/09/teenage_mutant_ninja_turtles_wallpaper_1920x1080_by_sachso74-d7sdt0z.jpg);">
     <div class="row">
         <div class="large-12 columns">
             <div id="title">

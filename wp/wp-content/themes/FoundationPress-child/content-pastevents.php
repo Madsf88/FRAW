@@ -5,9 +5,7 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0
  */
-?>
-
-    
+?> 
     <?php
         $eventdate = get_field('calendar_data');
         $date = new DateTime($eventdate);
@@ -24,6 +22,3 @@
         }else 
                 
     ?>
-    
-    
-</article>
