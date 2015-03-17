@@ -118,18 +118,22 @@ Slideout.prototype.isOpen = function() {
 Slideout.prototype._translateXTo = function(translateX) {
   this._currentOffsetX = translateX;
 //  this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)'; // Chris: before my editions
-    if(translateX === 0) { // Chris: after my editions
-        this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'none';
-    } else {
-        this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)';
-    } // Chris: after my editions . END
+//    if(translateX === 0) { // Chris: after my editions
+//        this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'none';
+//    } else {
+//        this.panel.style[prefix + 'transform'] = this.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)';
+//    } // Chris: after my editions - END
+    // Chris: New version using left
+    this.panel.style['left'] = this.panel.style.transform = translateX + 'px';
+    // Chris: New version using left - END
 };
 
 /**
  * Set transition properties
  */
 Slideout.prototype._setTransition = function() {
-  this.panel.style[prefix + 'transition'] = this.panel.style.transition = prefix + 'transform ' + this._duration + 'ms ' + this._fx;
+//  this.panel.style[prefix + 'transition'] = this.panel.style.transition = prefix + 'transform ' + this._duration + 'ms ' + this._fx;
+  this.panel.style[prefix + 'transition'] = this.panel.style.transition = 'left ' + this._duration + 'ms ' + this._fx;
 };
 
 /**
@@ -214,7 +218,8 @@ Slideout.prototype._initTouchEvents = function() {
         self._opening = false;
       }
 
-      self.panel.style[prefix + 'transform'] = self.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)';
+//      self.panel.style[prefix + 'transform'] = self.panel.style.transform = 'translate3d(' + translateX + 'px, 0, 0)';
+      self.panel.style['left'] = self.panel.style.transform = translateX + 'px';
 
       self._moved = true;
     }

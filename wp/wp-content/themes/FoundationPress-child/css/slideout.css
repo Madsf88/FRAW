@@ -19,6 +19,7 @@ body {
 .slideout-panel {
   position:relative;
   z-index: 1;
+  left: 0; /* Chris: My addition */
 }
 
 .slideout-open,

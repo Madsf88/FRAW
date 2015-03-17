@@ -35,9 +35,14 @@
 
     <?php do_action('foundationPress_layout_start'); ?>
 
+<!--
     <div class="trailerIcon"></div>
     <div class="scrollDown"></div>
+-->
     
     <section class="container" id="wrapper" role="document">
-        <div class="menu-icon"></div>
+<!--
+        <div class="menu-icon burger"></div>
+        <div class="menu-icon close"></div>
+-->
         <?php do_action('foundationPress_after_header'); ?>
