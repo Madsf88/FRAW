@@ -146,11 +146,12 @@
 }
 
 @-webkit-keyframes scrollDown {
+    0% { margin-bottom: 20px; }
     50% { margin-bottom: 0; }
     100% { margin-bottom: 20px; }
 }
 @keyframes scrollDown {
-    0% { margin-bottom: 20; }
+    0% { margin-bottom: 20px; }
     50% { margin-bottom: 0; }
     100% { margin-bottom: 20px; }
 }
