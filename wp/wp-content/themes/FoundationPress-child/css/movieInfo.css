@@ -17,24 +17,17 @@ li.icons {
     display: inline-block;
 }
 
-.movieInfo a[href*="facebook"] {
-    background: url("../img/icons/AndroidL_Facebook.svg") no-repeat center bottom / contain transparent;
-    height: 30px;
-    width: 30px;
-    display: block;
+.movieInfo li a span {
+    font-size: 2em;
+    color: #333;
 }
-.movieInfo .atcb-link{
-    background: url("../img/icons/AndroidL_Calendar.svg") no-repeat center bottom / contain transparent;
-    height: 40px;
-    width: 33px;
+.movieInfo li a span.icon-cal {
+    font-size: 2.2em;
 }
+
 #rating::before {
-    background: url(../img/icons/star.svg) no-repeat;
-    background-size: contain;
-    content: '';
-    width: 21px;
-    display: inline-block;
-    height: 17px;
+    padding: 5px;
+    color: #FFD700;
     position: relative;
-    top: 2px;
+    top: 1px;
 }

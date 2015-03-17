@@ -72,7 +72,7 @@ get_header(); ?>
                             <dt>Running Time: </dt>
                             <dd id="duration"></dd>
                             <dt>IMDb rating: </dt>
-                            <dd id="rating"></dd>
+                            <dd id="rating" class="icon-star"></dd>
                             <dt>Year: </dt>
                             <dd id="year"></dd>
                         </dl>';
@@ -100,11 +100,11 @@ get_header(); ?>
                                 <var class="atc_organizer">ITU.film</var>
                                 <var class="atc_organizer_email">film@itu.dk</var>
                             </var>
-                            <a class="atcb-link" id="" tabindex="1"></a>
+                            <a class="atcb-link" id="" tabindex="1"><span class="icon-cal"></span></a>
                         </span>
                     </li>
                     <li class="icons">
-                        <a href="<?php the_field('facebook_event_link'); ?>" target="_blank"></a>
+                        <a href="<?php the_field('facebook_event_link'); ?>" target="_blank"><span class="icon-facebook"></span></a>
                     </li>
                 </ul>
             </div>
