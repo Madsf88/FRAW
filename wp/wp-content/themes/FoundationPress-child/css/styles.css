@@ -16,6 +16,7 @@
 }
 h1, h2 {
     font-weight: 700;
+    line-height: 1.1em;
 }
 .panel {
     background: white;
