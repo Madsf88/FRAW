@@ -25,7 +25,7 @@
                     <dd><?php  the_field('2movie'); ?></dd>
                     <dd><?php  the_field('3movie'); ?></dd>
                 </dl>
-                <a href="#" data-options="align: top" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor">Reviews</a>
+                <a href="#" data-options="align: top" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor"><span class="icon-comments"></span>Reviews</a>
                 <ul id="<?php the_title(); ?>" class="f-dropdown" data-dropdown-content>
             
                 <?php 

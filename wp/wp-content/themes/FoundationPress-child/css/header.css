@@ -107,7 +107,6 @@
 .scrollDown {
     height: 4em;
     width: 4em;
-    background: url("../img/icons/AndroidL_Arrow_down_white.svg") no-repeat center / 80% transparent;
     position: fixed;
     right: 0;
     left: 0;
@@ -120,7 +119,6 @@
     z-index: 2;
     display: none;
     
-    transition: opacity .3s 0s, background-size .1s ease, height 0s 0s;
 
     -webkit-animation: scrollDown 2s ease-out;
     animation: scrollDown 2s ease-out;
@@ -128,7 +126,7 @@
     animation-iteration-count: 3;
 }
 .scrollDown:hover {
-    background-size: 100%;
+    background-size: 100%; /* slet?*/ 
 }
 
 .slideout-open .trailerIcon,
