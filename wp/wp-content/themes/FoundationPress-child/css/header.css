@@ -28,7 +28,7 @@
     vertical-align: middle;
 }
 .heading__h1 {
-    color: inherit;
+    color: white;
     border: 6px solid white;
     padding: .2em .4em;
     display: inline-block;
@@ -36,7 +36,7 @@
     text-align: center;
 }
 .heading__h2 {
-    color: inherit;
+    color: white;
     border: 6px solid white;
     padding: .2em .4em;
     display: inline-block;
@@ -69,6 +69,15 @@
 .interfaceShadow .logo {
     text-shadow: 2px 2px 0 rgba(0,0,0,.2);
 }
+.interfaceShadow .heading__h1,
+.interfaceShadow .heading__h2 {
+    box-shadow: 2px 2px 0 rgba(0,0,0,.2);
+}
 .interfaceDark {
     color: #222;
+}
+.interfaceDark .heading__h1,
+.interfaceDark .heading__h2 {
+    border-color: #222;
+    color: inherit;
 }

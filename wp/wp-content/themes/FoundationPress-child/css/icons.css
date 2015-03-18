@@ -42,7 +42,6 @@
 
 .icon:before{
     font-family: 'icomoon';
-    color: white;
     vertical-align: middle;
     transition: font-size .1s;
     height: 1em;
@@ -117,7 +116,9 @@
     top: 10px;
     cursor: pointer;
     color: inherit;
-    font-size: 3em;
+    margin: 2rem 2.5rem;
+    line-height: 1em;
+    font-size: 2rem;
     font-weight: bold;
     text-align: right;
 }
