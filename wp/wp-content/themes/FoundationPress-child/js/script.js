@@ -128,10 +128,25 @@ function initiateSlideout() {
 
 // Navigation - Slideout.js - END
 
+// Load the right background size
+
+function BackgroundImageSrc() {
+    var bgSrc = 0;
+    if ($(window).width() > 1023) {
+        bgSrc = $("#backgroundImage").attr("data-bg-full");
+    } else {
+        bgSrc = $("#backgroundImage").attr("data-bg-large");
+    }
+    $("#backgroundImage").css("background-image", "url(" + bgSrc + ")");
+}
+
+// Load the right background size - END
+
 // Ready
 $(document).ready(function () {
-    initiateScrollDown();
+    BackgroundImageSrc();
     backgroundHeight();
+    initiateScrollDown();
     videoHeight();
     trailerScroll();
     youtube_parser();
