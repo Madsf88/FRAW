@@ -122,13 +122,17 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <?php
-        if(get_field('trailer_url'))
-        {
-            echo '<div class="trailerContainer" id="popupVid" data-url="' . get_field('trailer_url') . '"></div>';
-        }
+    <div class="row">
+        <div class="small-12 medium-8 large-8 small-centered columns review removePadding">
+            <?php
+                if(get_field('trailer_url'))
+                {
+                    echo '<div class="trailerContainer flex-video" id="popupVid" data-url="' . get_field('trailer_url') . '"></div>';
+                }
 
-    ?>
+            ?>
+        </div>
+    </div>
 </div>
 
 <?php endwhile; endif; ?>

@@ -47,16 +47,6 @@ function backgroundHeight() {
 
 // Position Heading 1 on header - END
 
-// Make video height
-
-function videoHeight() {
-    var windowHeight = $(window).height();
-//    console.log(windowHeight);
-    $(".trailerContainer").css("height", windowHeight + "px");
-}
-
-// Make video height - END
-
 // Youtube
 
 function toggleVideo(state) {
@@ -70,22 +60,24 @@ function toggleVideo(state) {
 
 var flag = 0;
 function videoControl() {
-    var offset = $(".trailerContainer").offset().top,
-        currentPos = $(document).scrollTop();
-    //var video = document.getElementById("trailer");
-    if (offset - 100 < currentPos) {
-        if (flag !== 1) {
-            toggleVideo();
-            $("iframe").addClass("show");
-            flag = 1;
+    if (Modernizr.touch) {
+            
+    }else{
+        var pos = $(window).scrollTop() + $(window).height();
+        var bottomCheck = pos == $(document).height();
+        if(bottomCheck) {
+            if (flag !== 1) {
+                toggleVideo();
+                $("iframe").addClass("show");
+                flag = 1;
+            }
         }
-    } else {
-//        alert(flag);
-        if (flag === 1) {
-            toggleVideo('hide');
-            flag = 0;
+        if (pos < $(document).height()-150) {
+           if (flag === 1) {
+                toggleVideo('hide');
+                flag = 0;
+            }
         }
-        //toggleVideo('hide');
     }
 }
 
@@ -102,7 +94,6 @@ function youtube_parser() {
             match = url.match(regExp);
         if (match && match[7].length === 11) {
             $(".trailerContainer").html('<iframe width="500" height="315" src="http://www.youtube.com/embed/' + match[7] + '?enablejsapi=1&showinfo=0&autohide=1&controls=0?modestbranding=1" frameborder="0" allowfullscreen></iframe>');
-            videoControl();
         } else {
     //        console.log("Error parsing trailer url");
         }
@@ -150,10 +141,8 @@ $(document).ready(function () {
     BackgroundImageSrc();
     backgroundHeight();
     initiateScrollDown();
-    videoHeight();
     trailerScroll();
     youtube_parser();
-    initiateSlideout();
 });
 
 // Ready - END
@@ -174,7 +163,6 @@ $(window).scroll(function () {
 
 $(window).resize(function () {
     backgroundHeight();
-    videoHeight();
     trailerScroll();
 });
 
