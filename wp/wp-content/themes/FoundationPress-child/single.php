@@ -5,8 +5,11 @@ Template Name: Frontpage
 get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
 
-<div id="backgroundImage" data-bg-large="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "large", false )[0]; ?>" data-bg-full="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" style="background-position: <?php the_field('background_image_position_horizontal'); ?>% <?php the_field('background_image_position_vertical'); ?>%;">
-    <div class="row <?php the_field('readability'); ?>">
+<div id="backgroundImage" class="<?php the_field('readability'); ?>" data-bg-large="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "large", false )[0]; ?>" data-bg-full="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" style="background-position: <?php the_field('background_image_position_horizontal'); ?>% <?php the_field('background_image_position_vertical'); ?>%;">
+    <div class="icon menu"></div>
+    <div class="icon trailer"></div>
+    <div class="icon scrollDown"></div>
+    <div class="row">
         <div class="large-12 columns">
             <div id="title" class="fullHeight">
                 <div class="heading">

@@ -83,8 +83,7 @@ function videoControl() {
 
 function trailerScroll() {
     $(".icon.trailer").bind('touchstart click', function () {
-        $("html, body").animate({ scrollTop: $('.trailerContainer').position().top}, 1000);
-//        console.log($('.trailerContainer').position().top);
+        $("html, body").animate({ scrollTop: $('.trailerWrapper').position().top}, 1000);
     });
 }
 
@@ -173,7 +172,7 @@ $(window).scroll(function () {
 
 $(window).resize(function () {
     backgroundHeight();
-    trailerScroll();
+//    trailerScroll();
 });
 
 //Resize - END
