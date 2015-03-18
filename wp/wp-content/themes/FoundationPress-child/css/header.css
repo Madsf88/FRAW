@@ -28,7 +28,7 @@
     vertical-align: middle;
 }
 .heading__h1 {
-    color: white;
+    color: inherit;
     border: 6px solid white;
     padding: .2em .4em;
     display: inline-block;
@@ -36,7 +36,7 @@
     text-align: center;
 }
 .heading__h2 {
-    color: white;
+    color: inherit;
     border: 6px solid white;
     padding: .2em .4em;
     display: inline-block;
@@ -47,31 +47,28 @@
     margin: 40px;
 }
 .heading__p {
+    color: inherit;
     font-size: 1rem;
     font-weight: 500;
-    color: white;
     text-align: center;
     margin: 0;
     padding-bottom: 70px;
 }
-.interfaceShadow .heading__h1 {
+
+
+.interfaceWhite {
+    color: white;
+}
+.interfaceShadow {
+    color: white;
+}
+.interfaceShadow .heading__h1,
+.interfaceShadow .heading__h2,
+.interfaceShadow .heading__p,
+.interfaceShadow .icon,
+.interfaceShadow .logo {
     text-shadow: 2px 2px 0 rgba(0,0,0,.2);
-    box-shadow: 2px 2px 0 rgba(0,0,0,.2);
 }
-.interfaceShadow .heading__h2 {
-    text-shadow: 2px 2px 0 rgba(0,0,0,.3);
-}
-.interfaceShadow .heading__p {
-    text-shadow: 2px 2px 0 rgba(0,0,0,.3);
-}
-.interfaceDark .heading__h1 {
-    color: #222;
-    border-color: #222;
-}
-.interfaceDark .heading__h2 {
-    color: #222;
-    border-color: #222;
-}
-.interfaceDark .heading__p {
+.interfaceDark {
     color: #222;
 }

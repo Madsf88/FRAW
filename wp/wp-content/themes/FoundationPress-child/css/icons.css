@@ -32,11 +32,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.interfaceShadow .icon {
+.interfaceShadow .icon,
+.interfaceShadow .logo {
     text-shadow: 2px 2px 0 rgba(0,0,0,.2);
     box-shadow: none;
 }
-.interfaceDark .icon {
+.interfaceDark .icon,
+.interfaceDark .logo {
     color: inherit;
 }
 
@@ -108,14 +110,14 @@
 /* Menu icon - END */
 
 
-.logo {
+.logo.ituFilm {
     height: 50px;
     width: auto;
     position: fixed;
     right: 10px;
     top: 10px;
     cursor: pointer;
-    color: white;
+    color: inherit;
     font-size: 3em;
     font-weight: bold;
     text-align: right;

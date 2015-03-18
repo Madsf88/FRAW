@@ -7,6 +7,7 @@ get_header(); ?>
 
 <div id="backgroundImage" class="<?php the_field('readability'); ?>" data-bg-large="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "large", false )[0]; ?>" data-bg-full="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" style="background-position: <?php the_field('background_image_position_horizontal'); ?>% <?php the_field('background_image_position_vertical'); ?>%;">
     <div class="icon menu"></div>
+    <a class="logo ituFilm" href="../index.php">ITU.film</a>
     <div class="icon trailer"></div>
     <div class="icon scrollDown"></div>
     <div class="row">
@@ -119,13 +120,17 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <?php
-        if(get_field('trailer_url'))
-        {
-            echo '<div class="trailerContainer" id="popupVid" data-url="' . get_field('trailer_url') . '"></div>';
-        }
+    <div class="row">
+        <div class="small-12 medium-8 large-8 small-centered columns trailerWrapper removePadding">
+            <?php
+                if(get_field('trailer_url'))
+                {
+                    echo '<div class="trailerContainer flex-video" id="popupVid" data-url="' . get_field('trailer_url') . '"></div>';
+                }
 
-    ?>
+            ?>
+        </div>
+    </div>
 </div>
 
 <?php endwhile;?>
