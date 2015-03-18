@@ -163,7 +163,7 @@
     transition: opacity .3s 0s, height 0s .3s;
 }
 .page-template-page-event .icon.trailer,
-.single-post .trailerIcon,
+.single-post .icon.trailer,
 .page-template-page-event .icon.scrollDown,
 .single-post .scrollDown {
     display: block;
