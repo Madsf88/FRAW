@@ -113,18 +113,18 @@ function youtube_parser() {
 
 // Navigation - Slideout.js
 
-var slideout = new Slideout({
-    'panel': document.getElementById('wrapper'),
-    'menu': document.getElementById('menu'),
-    'padding': 256,
-    'tolerance': 70
-});
-
-function initiateSlideout() {
-    $(".menu-icon").click(function () {
-        slideout.toggle();
-    });
-}
+//var slideout = new Slideout({
+//    'panel': document.getElementById('wrapper'),
+//    'menu': document.getElementById('menu'),
+//    'padding': 256,
+//    'tolerance': 70
+//});
+//
+//function initiateSlideout() {
+//    $(".menu-icon").click(function () {
+//        slideout.toggle();
+//    });
+//}
 
 // Navigation - Slideout.js - END
 

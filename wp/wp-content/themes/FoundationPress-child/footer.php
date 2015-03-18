@@ -10,7 +10,7 @@
 
     <?php wp_footer(); ?>
     <?php do_action('foundationPress_before_closing_body'); ?>
-    <script src="<?php echo get_stylesheet_directory_uri() ; ?>/js/slideout.js"></script>
+<!--    <script src="<?php echo get_stylesheet_directory_uri() ; ?>/js/slideout.js"></script>-->
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ; ?>/js/script.js"></script>
 
     <!-- Slideout.js navigation -->
