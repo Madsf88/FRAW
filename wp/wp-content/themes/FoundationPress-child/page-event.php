@@ -9,7 +9,7 @@ get_header(); ?>
 ?>
 
 <div id="backgroundImage" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>); background-position: <?php the_field('background_image_position_horizontal'); ?>% <?php the_field('background_image_position_vertical'); ?>%;">
-<div class="menu-icon icon-burger stdIconSize"></div>
+<div class="menu-icon stdIconSize"></div>
 <span class="trailerIcon icon-play stdIconSize"></span>
 <div class="scrollDown icon-arrowDown stdIconSize"></div>
     <div class="row <?php the_field('readability'); ?>">
