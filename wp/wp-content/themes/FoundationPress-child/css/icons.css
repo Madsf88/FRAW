@@ -9,7 +9,8 @@
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+/*[class^="icon"], [class*=" icon"] {*/
+.icon {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -17,17 +18,44 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    
+    z-index: 2;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.interfaceShadow .icon {
+    text-shadow: 2px 2px 0 rgba(0,0,0,.2);
+    box-shadow: none;
+}
+.interfaceDark .icon {
+    color: inherit;
+}
+
+.icon:before{
+/*    font-size: 4rem;*/
+    vertical-align: middle;
+    transition: font-size .1s;
+    height: 1em;
+    width: 1em;
+}
+.icon:hover:before{
+    font-size: 1.2em;
+}
+
 .icon-comments:before {
 	content: "\61";
 }
 
-.icon-arrowDown:before {
+.icon.scrollDown:before {
 	content: "\62";
 }
 
@@ -43,14 +71,111 @@
 	content: "\65";
 }
 
-.icon-play:before {
+.icon.trailer:before {
 	content: "\66";
 }
 
 .icon-star:before {
 	content: "\67";
 }
-.icon-burger:before {
-	content: "\e9bd";
+.icon.menu:before {
+/*	content: "\e9bd";*/
+    content: "\66";
+}
+.menu-active .icon.menu:before {
+	content: "\63";
 }
 
+
+
+/* Menu icon */
+
+.icon.menu {
+/*    background: url("../img/icons/AndroidL_Menu_white.svg") no-repeat center / 80%;*/
+    margin: 2rem;
+    display: block;
+    position: fixed;
+}
+.menu-active .icon.menu {
+    left: 250px;
+}
+/*
+.icon.menu:hover {
+    background-size: 100%;
+}
+*/
+
+/* Menu icon - END */
+
+
+.logo {
+    height: 50px;
+    width: auto;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: right;
+}
+.icon.trailer {
+    margin: 2rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: none;
+    
+    transition: opacity .3s 0s, height 0s 0s;
+}
+.icon.trailer:hover {
+    background-size: 100%;
+}
+.icon.scrollDown {
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: 0 auto 2rem auto;
+    bottom: 0;
+/*    box-sizing: content-box;*/
+/*    padding: 10px 0;*/
+    opacity: 1;
+    z-index: 2;
+    display: none;
+    
+    transition: opacity .3s 0s, height 0s 0s;
+
+    -webkit-animation: scrollDown 2s ease-out;
+    animation: scrollDown 2s ease-out;
+    -webkit-animation-iteration-count: 3;
+    animation-iteration-count: 3;
+}
+.icon.scrollDown:hover {
+    background-size: 100%; /* slet?*/ 
+}
+
+.menu-active .icon.trailer,
+.menu-active .icon.scrollDown,
+.scrollDown.hideScrollDown {
+    opacity: 0;
+    height: 0;
+    transition: opacity .3s 0s, height 0s .3s;
+}
+.page-template-page-event .icon.trailer,
+.single-post .trailerIcon,
+.page-template-page-event .icon.scrollDown,
+.single-post .scrollDown {
+    display: block;
+}
+
+@-webkit-keyframes scrollDown {
+    0% { margin-bottom: 2rem; }
+    50% { margin-bottom: 0; }
+    100% { margin-bottom: 2rem; }
+}
+@keyframes scrollDown {
+    0% { margin-bottom: 2rem; }
+    50% { margin-bottom: 0; }
+    100% { margin-bottom: 2rem; }
+}

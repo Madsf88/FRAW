@@ -82,8 +82,9 @@ function videoControl() {
 }
 
 function trailerScroll() {
-    $(".trailerIcon").bind('touchstart click', function () {
+    $(".icon.trailer").bind('touchstart click', function () {
         $("html, body").animate({ scrollTop: $('.trailerContainer').position().top}, 1000);
+//        console.log($('.trailerContainer').position().top);
     });
 }
 
@@ -118,6 +119,15 @@ function youtube_parser() {
 //}
 
 // Navigation - Slideout.js - END
+
+function menuToggle() {
+    $("html").toggleClass("menu-active");
+}
+$(document).ready(function () {
+    $(".icon.menu").click(function () {
+        menuToggle();
+    });
+});
 
 // Load the right background size
 

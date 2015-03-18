@@ -1,8 +1,10 @@
 /* Menu bar */
 
+/*
 .slideout-menu {
     background-color: #222;
 }
+*/
 ul.menu li a{
     border-bottom: 0;
     font-size: 1.5em;
@@ -41,35 +43,22 @@ ul.menu li a[href*="facebook.com"]:hover:after{
 }
 /* Menu bar - END */
 
-/* Menu icon */
 
-.menu-icon.burger {
-    background: url("../img/icons/AndroidL_Menu_white.svg") no-repeat center / 80%;
-    height: 4rem;
-    width: 4rem;
-    margin: 2rem;
-    display: block;
-    cursor: pointer;
-    position: fixed;
-    z-index: 2;
-    
-    transition: background-size .1s ease;
-}
-.menu-icon:hover {
-    background-size: 100%;
-}
-.menu-icon.close {
-    background: url("../img/icons/AndroidL_Menu_white.svg") no-repeat center / 80%;
-    height: 4rem;
-    width: 4rem;
-    margin: 2rem;
-    display: block;
-    cursor: pointer;
-    position: fixed;
-    z-index: 2;
-    left: 250px;
-    
-    transition: background-size .1s ease;
-}
 
-/* Menu icon - END */
+.menu-main-container {
+    background: none repeat scroll 0 0 #222;
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    z-index: 3;
+/*
+    left: -250px;
+    transition: left .3s;
+*/
+    transform: translateX(-250px);
+    transition: transform .3s;
+}
+.menu-active .menu-main-container {
+/*    left: 0;*/
+    transform: translateX(0);
+}

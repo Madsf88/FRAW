@@ -9,9 +9,9 @@ get_header(); ?>
 ?>
 
 <div id="backgroundImage" data-bg-large="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "large", false )[0]; ?>" data-bg-full="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" style="background-position: <?php the_field('background_image_position_horizontal'); ?>% <?php the_field('background_image_position_vertical'); ?>%;">
-<div class="menu-icon icon-burger stdIconSize"></div>
-<span class="trailerIcon icon-play stdIconSize"></span>
-<div class="scrollDown icon-arrowDown stdIconSize"></div>
+<div class="icon menu"></div>
+<span class="icon trailer"></span>
+<div class="icon scrollDown"></div>
     <div class="row <?php the_field('readability'); ?>">
         <div class="large-12 columns">
             <div id="title" class="fullHeight">
