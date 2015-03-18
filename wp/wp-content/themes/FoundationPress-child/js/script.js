@@ -131,13 +131,16 @@ function initiateSlideout() {
 // Load the right background size
 
 function BackgroundImageSrc() {
-    var bgSrc = 0;
-    if ($(window).width() > 1023) {
-        bgSrc = $("#backgroundImage").attr("data-bg-full");
-    } else {
-        bgSrc = $("#backgroundImage").attr("data-bg-large");
+    var attr = $("#backgroundImage").attr('data-bg-large');
+    if (typeof attr !== undefined && typeof attr !== false) {
+        var bgSrc = 0;
+        if ($(window).width() > 1023) {
+            bgSrc = $("#backgroundImage").attr("data-bg-full");
+        } else {
+            bgSrc = $("#backgroundImage").attr("data-bg-large");
+        }
+        $("#backgroundImage").css("background-image", "url(" + bgSrc + ")");
     }
-    $("#backgroundImage").css("background-image", "url(" + bgSrc + ")");
 }
 
 // Load the right background size - END
