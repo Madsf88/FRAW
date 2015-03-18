@@ -17,9 +17,10 @@ li.icons {
     display: inline-block;
 }
 
-.icon.cal:before,
-.icon.facebook:before {
+.movieInfo .icon.cal:before,
+.movieInfo .icon.facebook:before {
     color: #222;
+    text-shadow: none;
 }
 .movieInfo li a span {
     font-size: 2em;
