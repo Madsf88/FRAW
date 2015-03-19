@@ -21,7 +21,6 @@
     text-align: center;
     width: 5rem;
     height: 5rem;
-    cursor: pointer;
     
     z-index: 2;
 
@@ -32,8 +31,14 @@
 
 .interfaceShadow .icon,
 .interfaceShadow .logo {
+    text-shadow: none;
+    box-shadow: none;
+}
+.interfaceShadow .icon.header,
+.interfaceShadow .logo.header {
     text-shadow: 2px 2px 0 rgba(0,0,0,.2);
     box-shadow: none;
+    cursor: pointer;
 }
 .interfaceDark .icon,
 .interfaceDark .logo {
@@ -47,14 +52,9 @@
     height: 1em;
     width: 1em;
 }
-.icon:hover:before {
+.icon.header:hover:before {
     font-size: 1.2em;
 }
-.logo:hover {
-    font-size: 1.2em;
-}
-
-
 
 .icon.close:before {
 	content: "\e600";
