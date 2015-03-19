@@ -88,6 +88,16 @@ footer.row {
     }
     .trailerWrapper {
         margin-bottom: 50px;
+    
+    @-webkit-keyframes scrollDown {
+        0% { margin-bottom: 0rem; }
+        50% { margin-bottom: -2rem; }
+        100% { margin-bottom: 0rem; }
+    }
+    @keyframes scrollDown {
+        0% { margin-bottom: 0rem; }
+        50% { margin-bottom: -2rem; }
+        100% { margin-bottom: 0rem; }
     }
 }
 @media screen and (min-width: 1025px){
@@ -123,4 +133,5 @@ footer.row {
 
         left: 30px; /* put it on the right side */
     }
+    
 }
