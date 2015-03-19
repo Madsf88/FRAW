@@ -23,7 +23,7 @@
                         var imdbAPI = "http://www.omdbapi.com/?i="+imdbURL+"&plot=full&r=json";
                         $.getJSON(imdbAPI, function (json) {
                             var rating = json.imdbRating;
-                            $('#rating').text(rating);
+                            $('#rating').text(rating+"/10");
 
                             var director = json.Director;
                             $('#director').text(director);
