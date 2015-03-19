@@ -128,7 +128,7 @@
 .logo.ituFilm {
     height: 50px;
     width: auto;
-    position: fixed;
+    position: absolute;
     right: 10px;
     top: 10px;
     cursor: pointer;
