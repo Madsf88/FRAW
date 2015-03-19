@@ -40,18 +40,19 @@
     color: inherit;
 }
 
-.icon:before{
+.icon:before {
     font-family: 'icomoon';
     vertical-align: middle;
     transition: font-size .1s;
     height: 1em;
     width: 1em;
 }
-.icon:hover:before{
+.icon:hover:before {
     font-size: 1.2em;
 }
-
-
+.logo:hover {
+    font-size: 1.2em;
+}
 
 
 
