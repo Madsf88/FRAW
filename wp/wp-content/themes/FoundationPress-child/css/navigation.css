@@ -52,19 +52,31 @@ ul.menu li a[href*="facebook.com"]:hover:after{
     position: fixed;
     width: 250px;
     z-index: 3;
-/*
-    left: -250px;
-    transition: left .3s;
-*/
     transform: translateX(-250px);
     transition: transform .3s;
 }
+
+.menu-active{
+    overflow: hidden;
+}
 .menu-active .menu-main-container {
-/*    left: 0;*/
     transform: translateX(0);
 }
 
 html.menu-active #wrapper{
     cursor: url(../img/icons/AndroidL_x.svg), pointer;
 
+}
+.overlay{
+    opacity: 0;
+    transition: opacity .3s;
+}
+.menu-active .overlay{
+    opacity: 0.3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: white;    
 }

@@ -139,7 +139,7 @@ function menuToggle() {
 }
 
 function initiateToggleMenu() {
-    $("#backgroundImage").click(function () {
+    $(".overlay").click(function () {
         if($("html").hasClass("menu-active")) {
             menuToggle();
             
