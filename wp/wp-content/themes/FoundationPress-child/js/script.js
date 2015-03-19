@@ -132,8 +132,7 @@ $(document).ready(function () {
     });
     $(".icon.menu").click(function () {
         menuToggle();
-        event.cancelBubble = true; if (event.stopPropagation)           event.stopPropagation(); return false;
-        
+        return false;
     });
 });
 
