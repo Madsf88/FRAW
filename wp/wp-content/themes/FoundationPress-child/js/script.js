@@ -122,9 +122,18 @@ function youtube_parser() {
 function menuToggle() {
     $("html").toggleClass("menu-active");
 }
+
 $(document).ready(function () {
+    $("#backgroundImage").click(function () {
+        if($("html").hasClass("menu-active")) {
+            menuToggle();
+            
+        }
+    });
     $(".icon.menu").click(function () {
         menuToggle();
+        event.cancelBubble = true; if (event.stopPropagation)           event.stopPropagation(); return false;
+        
     });
 });
 

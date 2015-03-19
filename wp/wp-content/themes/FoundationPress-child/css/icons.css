@@ -91,7 +91,7 @@
     content: "\e601";
 }
 .menu-active .icon.menu:before {
-	content: "\e600";;
+	content: "";;
 }
 
 
@@ -104,9 +104,9 @@
     display: block;
     position: fixed;
 }
-.menu-active .icon.menu {
+/*.menu-active .icon.menu {
     left: 250px;
-}
+}*/
 /*
 .icon.menu:hover {
     background-size: 100%;

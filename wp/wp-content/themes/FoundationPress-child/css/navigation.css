@@ -63,3 +63,8 @@ ul.menu li a[href*="facebook.com"]:hover:after{
 /*    left: 0;*/
     transform: translateX(0);
 }
+
+html.menu-active #wrapper{
+    cursor: pointer;
+
+}
