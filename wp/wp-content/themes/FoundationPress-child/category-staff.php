@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<div class="icon menu header"></div>
+<a class="logo ituFilm header" href="../index.php">ITU.film</a>
 <div id="backgroundImage" style="background-image: url(http://migogwilbur.com/wp-content/uploads/2014/09/teenage_mutant_ninja_turtles_wallpaper_1920x1080_by_sachso74-d7sdt0z.jpg);">
     <div class="row">
         <div class="large-12 columns">
