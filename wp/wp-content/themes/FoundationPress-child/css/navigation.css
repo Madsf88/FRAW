@@ -24,8 +24,9 @@ ul.menu li a[href*="facebook.com"] {
 }
 ul.menu li a[href*="facebook.com"]:after{
     position: absolute;
-    background: url(../img/icons/AndroidL_Facebook_white.svg) no-repeat center / 80%;
-    content: '';
+    font-family: 'icomoon';
+    font-size: 2.5em;
+    content: '\65';
     width: 4rem;
     display: inline-block;
     height: 4rem;
