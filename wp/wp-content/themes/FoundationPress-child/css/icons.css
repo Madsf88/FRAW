@@ -175,6 +175,7 @@
 
 .menu-active .icon.trailer,
 .menu-active .icon.scrollDown,
+.icon.trailer.hideScrollDown,
 .scrollDown.hideScrollDown {
     opacity: 0;
     height: 0;

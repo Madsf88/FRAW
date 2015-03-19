@@ -15,9 +15,24 @@ function toggleScrollDown() {
 //    console.log(hasHide);
     if (offset > treshold) {
         $(".scrollDown").addClass("hideScrollDown");
+        if ($(window).width() < 641) {
+            console.log("test 1.1");
+            $(".icon.trailer").addClass("hideScrollDown");
+        }
     } else if (offset < treshold) {
         $(".scrollDown").removeClass("hideScrollDown");
+        $(".icon.trailer").removeClass("hideScrollDown");
+        console.log("test 1.2");
     }
+    
+//    console.log("test 1");
+//    if ($(window).width() > 641) {
+//        console.log("test 1.1");
+//        $(".scrollDown").addClass("hideScrollDown");
+//    } else {
+//        console.log("test 1.2");
+//        $(".scrollDown").removeClass("hideScrollDown");
+//    }
 }
 function initiateScrollDown() {
     $(".scrollDown").click(function () {
@@ -123,7 +138,7 @@ function menuToggle() {
     $("html").toggleClass("menu-active");
 }
 
-$(document).ready(function () {
+function initiateToggleMenu() {
     $("#backgroundImage").click(function () {
         if($("html").hasClass("menu-active")) {
             menuToggle();
@@ -134,7 +149,7 @@ $(document).ready(function () {
         menuToggle();
         return false;
     });
-});
+}
 
 // Load the right background size
 
@@ -158,6 +173,8 @@ $(document).ready(function () {
     BackgroundImageSrc();
     backgroundHeight();
     initiateScrollDown();
+    initiateToggleMenu();
+    // After the fold
     trailerScroll();
     youtube_parser();
 });
@@ -180,7 +197,6 @@ $(window).scroll(function () {
 
 $(window).resize(function () {
     backgroundHeight();
-//    trailerScroll();
 });
 
 //Resize - END
