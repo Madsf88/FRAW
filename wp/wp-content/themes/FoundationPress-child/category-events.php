@@ -63,4 +63,5 @@
         </div>
     </div>
 </div>
+<div class="overlay"></div>
 <?php get_footer(); ?>
