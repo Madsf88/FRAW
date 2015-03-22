@@ -28,19 +28,24 @@
             <a href="#" data-options="align: top" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor icon comments"></span>Reviews</a>
             <ul id="<?php the_title(); ?>" class="f-dropdown" data-dropdown-content>
 
-            <?php 
+            
+            
+            
+            <?php
                 $var = 'category=4&author=';
                 $var2 = $post->post_author;
                 $var3= $var.$var2;
-                $myposts = get_posts($var3);                        
-                    if($myposts){
-                    echo '<ul>';
-                    foreach ($myposts as $author_post)  {
-                        echo '<li><a href="'. get_permalink() .'">'.$author_post->post_title.'</a></li>';
-                    }
-                        echo '</ul>';
-                    }
-            ?>
+                $lastposts = get_posts($var3);
+                foreach($lastposts as $post) :
+                setup_postdata($post); ?>
+
+                <li<?php if ( $post->ID == $wp_query->post->ID ) { echo ' class="current"'; } else {} ?>>
+
+                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+
+                </li>
+
+            <?php endforeach; ?>
             </ul>
         </div>
     </div>
