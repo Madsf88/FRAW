@@ -173,6 +173,18 @@ function BackgroundImageSrc() {
 
 // Load the right background size - END
 
+// Change default scroll to hashtag behavior
+function animateHashtagScroll(){
+    if(window.location.hash)
+    {
+        $('html, body').animate({
+            scrollTop: $(window.location.hash).offset().top-80
+        }, 1000);
+    }
+}
+
+
+
 // Ready
 $(document).ready(function () {
     BackgroundImageSrc();
@@ -182,6 +194,7 @@ $(document).ready(function () {
     // After the fold
     trailerScroll();
     youtube_parser();
+    animateHashtagScroll();
 });
 
 // Ready - END
@@ -203,5 +216,6 @@ $(window).scroll(function () {
 $(window).resize(function () {
     backgroundHeight();
 });
+
 
 //Resize - END
