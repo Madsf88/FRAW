@@ -36,7 +36,7 @@
     </div>
     <div class="row">
         <div class="large-12 columns">
-            <div id="title">
+            <div id="titleSecondary">
                 <div class="heading">
                     <h2 class="heading__h2">
                     Past events
