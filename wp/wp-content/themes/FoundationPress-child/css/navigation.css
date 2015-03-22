@@ -60,7 +60,7 @@ ul.menu li a[href*="facebook.com"]:hover:after{
     overflow: hidden;
 }
 .menu-active .menu-main-container {
-    transform: translateX(0);
+    transform: none;
 }
 
 html.menu-active #wrapper{
