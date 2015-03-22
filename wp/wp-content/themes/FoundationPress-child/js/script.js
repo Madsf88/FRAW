@@ -50,7 +50,7 @@ function initiateScrollDown() {
 function backgroundHeight() {
     var windowHeight = $(window).height();
 //    console.log(windowHeight);
-//    $("#backgroundImage").css("height", windowHeight + 0 + "px"); // Denne bliver ikke brugt længere da vi nu wrapper baggrunden rundt om alt indholdet
+    $("#backgroundImage").css("height", windowHeight + 0 + "px");
     if ($("#title").hasClass("fullHeight")) {
         $("#title").css("height", windowHeight + "px");
 //        console.log("test01");

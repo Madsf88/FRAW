@@ -1,4 +1,5 @@
-<div id="backgroundImage" class="<?php the_field('readability'); ?>" data-bg-large="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "large", false )[0]; ?>" data-bg-full="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" style="background-position: <?php the_field('background_image_position_horizontal'); ?>% <?php the_field('background_image_position_vertical'); ?>%;">
+<div class="<?php the_field('readability'); ?>">
+    <div id="backgroundImage" data-bg-large="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "large", false )[0]; ?>" data-bg-full="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" style="background-position: <?php the_field('background_image_position_horizontal'); ?>% <?php the_field('background_image_position_vertical'); ?>%;"></div>
     <div class="icon menu header"></div>
     <a class="logo ituFilm header" href="../index.php">ITU.film</a>
     <div class="icon trailer header"></div>    
@@ -23,7 +24,7 @@
                         var imdbAPI = "http://www.omdbapi.com/?i="+imdbURL+"&plot=full&r=json";
                         $.getJSON(imdbAPI, function (json) {
                             var rating = json.imdbRating;
-                            $('#rating').text(rating+"/10");
+                            $('#rating').text(rating+" / 10");
 
                             var director = json.Director;
                             $('#director').text(director);

@@ -12,9 +12,10 @@
 #backgroundImage {
     width: 100%;
     background-size: cover;
-/*    z-index: 0;*/
+    z-index: 0;
     background-position: center;
     background-attachment: fixed;
+    position: fixed;
 /*    top: 0px;*/
 }
 #title {

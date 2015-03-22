@@ -1,7 +1,8 @@
 <?php get_header(); ?>
-<div class="icon menu header"></div>
-<a class="logo ituFilm header" href="../index.php">ITU.film</a>
-<div id="backgroundImage" style="background-image: url(http://migogwilbur.com/wp-content/uploads/2014/09/teenage_mutant_ninja_turtles_wallpaper_1920x1080_by_sachso74-d7sdt0z.jpg);">
+<div class="<?php the_field('readability'); ?>">
+    <div id="backgroundImage" style="background-image: url(http://m6.paperblog.com/i/41/414061/take-shelter-L-nr56C4.jpeg);"></div>
+    <div class="icon menu header"></div>
+    <a class="logo ituFilm header" href="../index.php">ITU.film</a>
     <div class="row">
         <div class="large-12 columns">
             <div id="title">
