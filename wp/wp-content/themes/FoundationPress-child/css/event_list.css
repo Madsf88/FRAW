@@ -1,6 +1,26 @@
 article.category-events {
-    margin-bottom: 40px;
+/*    margin-bottom: 40px;*/
 }
 article.category-events p {
     margin-bottom: 0;
+}
+.eventList figure {
+    margin: -50px -50px 30px -50px;
+}
+.eventList .panel {
+    padding: 0;
+}
+.eventList .panel a {
+    display: block;
+    padding: 50px;
+}
+.panel .category-events a h3{
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    margin-bottom: 0;
+} 
+
+.panel .category-events a:hover h3{
+    border-bottom-color: #222;
+    display: inline-block;
 }

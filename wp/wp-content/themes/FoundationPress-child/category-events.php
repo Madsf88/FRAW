@@ -18,7 +18,7 @@
         </div>        
     </div>
     <div class="row">
-        <div class="small-12 medium-8 large-8 small-centered columns removePadding">
+        <div class="small-12 medium-8 large-8 small-centered columns eventList removePadding">
             <div class="panel">
                 <?php if ( have_posts() ) : ?>
 
@@ -46,7 +46,7 @@
         </div>        
     </div>
     <div class="row">
-        <div class="small-12 medium-8 large-8 small-centered columns removePadding">
+        <div class="small-12 medium-8 large-8 small-centered columns eventList removePadding">
             <div class="panel">
                 <?php if ( have_posts() ) : ?>
 

@@ -40,23 +40,12 @@ h1, h2 {
     color: #222;
 }
 
-.panel .category-events a h3{
-    border-bottom: 2px solid transparent;
-    display: inline-block;
-    margin-bottom: 0;
-} 
-
-.panel .category-events a:hover h3{
-    border-bottom-color: #222;
-    display: inline-block;
-}
-
 ul {
    list-style: none;
     padding: 0;
     margin: 0;
 }
-dl{
+dl b{
     margin-bottom: 0;
 }
 
