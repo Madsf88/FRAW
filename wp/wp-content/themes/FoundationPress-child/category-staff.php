@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="<?php the_field('readability'); ?>">
-    <div id="backgroundImage" style="background-image: url(http://m6.paperblog.com/i/41/414061/take-shelter-L-nr56C4.jpeg);"></div>
+    <div id="backgroundImage" style="background-image: url(http://localhost:8888/wp/wp-content/uploads/2015/03/moonrisekingdom3.jpg);"></div>
     <div class="icon menu header"></div>
     <a class="logo ituFilm header" href="../index.php">ITU.film</a>
     <div class="row">
@@ -8,10 +8,7 @@
             <div id="title">
                 <div class="heading">
                     <h1 class="heading__h1">
-                    <?php
-                        $category = get_the_category(); 
-                        echo $category[0]->cat_name;
-                    ?>
+                        <?php $category = get_the_category(); echo $category[0]->cat_name; ?>
                     </h1>
                 </div>
             </div>
@@ -21,8 +18,7 @@
     <div class="row">
         <div class="small-12 medium-8 large-8 small-centered columns removePadding">
             <div class="panel">
-                <?php $id=113; $post = get_page($id); echo $post->post_content;  ?>
-
+                <?php $id=113; $post = get_page($id); echo $post->post_content; ?>
             </div>
         </div>
     </div>
@@ -30,9 +26,7 @@
         <div class="large-12 columns">
             <div id="title">
                 <div class="heading">
-                    <h2 class="heading__h2">
-                    Crew
-                    </h2>
+                    <h2 class="heading__h2">Crew</h2>
                 </div>
             </div>
         </div>        
