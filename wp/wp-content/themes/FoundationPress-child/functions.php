@@ -6,4 +6,18 @@ function theme_enqueue_styles() {
         array('parent-style')
     );
 }
+
+function k99_image_link_void( $content ) {
+    $content =
+        preg_replace(
+            array('{<a(.*?)(wp-att|wp-content\/uploads)[^>]*><img}',
+                '{ wp-image-[0-9]*" /></a>}'),
+            array('<img','" />'),
+            $content
+        );
+    return $content;
+}
+
+
+    add_filter( 'the_content', 'k99_image_link_void' );
 ?>
