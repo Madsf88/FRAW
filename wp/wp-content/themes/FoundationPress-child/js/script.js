@@ -69,11 +69,13 @@ function backgroundHeight() {
 
 function toggleVideo(state) {
     // if state == 'hide', hide. Else: show video
+    if ($("#popupVid")[0]){
     var div = document.getElementById("popupVid"),
         iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-    div.style.display = state === 'hide' ? 'block' : '';
-    func = state === 'hide' ? 'pauseVideo' : 'playVideo';
-    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+        div.style.display = state === 'hide' ? 'block' : '';
+        func = state === 'hide' ? 'pauseVideo' : 'playVideo';
+        iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
 }
 
 var flag = 0;
