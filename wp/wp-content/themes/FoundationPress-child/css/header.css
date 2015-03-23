@@ -29,16 +29,20 @@
     vertical-align: middle;
 }
 .heading__h1 {
-    color: white;
-    border: 6px solid white;
+    color: inherit;
+    border-width: 6px;
+    border-style: solid;
+    border-color: inherit;
     padding: .2em .4em;
     display: inline-block;
     font-size: 2rem;
     text-align: center;
 }
 .heading__h2 {
-    color: white;
-    border: 6px solid white;
+    color: inherit;
+    border-width: 6px;
+    border-style: solid;
+    border-color: inherit;
     padding: .2em .4em;
     display: inline-block;
     font-size: 1.75rem;
@@ -76,9 +80,4 @@
 }
 .interfaceDark {
     color: #222;
-}
-.interfaceDark .heading__h1,
-.interfaceDark .heading__h2 {
-    border-color: #222;
-    color: inherit;
 }

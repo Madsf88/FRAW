@@ -65,11 +65,11 @@ footer.row {
     }
     .heading__h1 {
         font-size: 3.5rem;
-        border: 10px solid white;
+        border-width: 10px;
     }
     .heading__h2 {
         font-size: 3rem;
-        border: 10px solid white;
+        border-width: 10px;
     }
     .heading__p {
         font-size: 1.25rem;

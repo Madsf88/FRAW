@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="<?php the_field('readability'); ?>">
+<div class="interfaceWhite <?php the_field('readability'); ?>"> <!-- interfaceWhite is hardcoded right now. Should be changed -->
     <div id="backgroundImage" style="background-image: url(http://localhost:8888/wp/wp-content/uploads/2015/03/moonrisekingdom3.jpg);"></div>
     <div class="icon menu header"></div>
     <a class="logo ituFilm header" href="../index.php">ITU.film</a>
