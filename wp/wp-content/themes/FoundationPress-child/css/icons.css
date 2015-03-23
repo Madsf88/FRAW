@@ -29,28 +29,8 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-
-.interfaceWhite .icon,
-.interfaceWhite .logo {
-    cursor: pointer;
-}
-.interfaceShadow .icon,
-.interfaceShadow .logo {
-    text-shadow: none;
-    box-shadow: none;
-}
-.interfaceShadow .icon.header,
-.interfaceShadow .logo.header {
-    text-shadow: 2px 2px 0 rgba(0,0,0,.2);
-    box-shadow: none;
-    cursor: pointer;
-}
-.interfaceDark .icon,
-.interfaceDark .logo {
-    color: inherit;
-}
-.interfaceDark .icon,
-.interfaceDark .logo {
+.icon.header,
+.logo.header {
     cursor: pointer;
 }
 

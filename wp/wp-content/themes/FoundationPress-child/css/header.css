@@ -70,8 +70,8 @@
 .interfaceShadow .heading__h1,
 .interfaceShadow .heading__h2,
 .interfaceShadow .heading__p,
-.interfaceShadow .icon,
-.interfaceShadow .logo {
+.interfaceShadow .icon.header,
+.interfaceShadow .logo.header {
     text-shadow: 2px 2px 0 rgba(0,0,0,.2);
 }
 .interfaceShadow .heading__h1,
