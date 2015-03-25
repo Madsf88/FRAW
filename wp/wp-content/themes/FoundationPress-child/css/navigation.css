@@ -44,8 +44,6 @@ ul.menu li a[href*="facebook.com"]:hover:after{
 }
 /* Menu bar - END */
 
-
-
 .menu-main-container {
     background: none repeat scroll 0 0 #222;
     height: 100%;
@@ -65,7 +63,6 @@ ul.menu li a[href*="facebook.com"]:hover:after{
 
 html.menu-active #wrapper{
     cursor: url(../img/icons/AndroidL_x.svg), pointer;
-
 }
 .overlay{
     opacity: 0;

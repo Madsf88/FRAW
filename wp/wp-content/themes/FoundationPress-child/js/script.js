@@ -183,6 +183,16 @@ function animateHashtagScroll(){
     }
 }
 
+function hamburgerBG(){
+    var scrollTop     = $(window).scrollTop(),
+        treshold = 40,
+        elementOffset = $('.movieInfo,.eventList,.staff').offset().top;
+    if (scrollTop>elementOffset-treshold){
+        $('.icon.menu').addClass("bgFix");
+    }else{
+        $('.icon.menu').removeClass("bgFix");  
+    }
+}
 
 
 // Ready
@@ -206,6 +216,7 @@ $(document).ready(function () {
 $(window).scroll(function () {
     toggleScrollDown();
     videoControl();
+    hamburgerBG();
 });
 
 // Scroll - END

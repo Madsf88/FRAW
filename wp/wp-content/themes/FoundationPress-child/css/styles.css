@@ -52,11 +52,30 @@ dl b{
 footer.row {
     margin-top: 0; /* Dette skal faktisk ikke være på undersiderne... */
 }
-.columns.small-12.removePadding {
+.columns.small-12.removePadding{
     padding: 0;
 }
 .category-staff img {
     padding-bottom: 15px;
+}
+
+
+.icon.menu{
+    margin: 0rem;
+    display: block;
+    position: fixed;
+    width: 4rem;
+    height: 3.8rem;
+    transition: background .5s, opacity .5s;
+}
+.icon.menu.bgFix{
+    margin: 0rem;
+    display: block;
+    position: fixed;
+    width: 4rem;
+    height: 3.8rem;
+    background: #222;
+    opacity: 0.4;
 }
 
 @media screen and (min-width: 641px){
@@ -75,10 +94,31 @@ footer.row {
         font-size: 1.25rem;
     }
     .category-staff img {
-    padding-bottom: 0px;
+        padding-bottom: 0px;
     }
     .trailerWrapper {
         margin-bottom: 50px;
+    }
+    
+    .icon.menu {
+        margin: 1rem;
+        display: block;
+        position: fixed;
+        background: transparent;
+        opacity: 1;
+    }
+    .icon.menu.bgFix{
+        margin: 1rem;
+        display: block;
+        position: fixed;
+        width: 4rem;
+        height: 3.8rem;
+        background: transparent;
+        opacity: 1;
+    }
+    .logo.ituFilm {
+        margin: 1rem 1.5rem;
+    }
     
     @-webkit-keyframes scrollDown {
         0% { margin-bottom: 0rem; }
