@@ -119,6 +119,13 @@ footer.row {
     .logo.ituFilm {
         margin: 1rem 1.5rem;
     }
+    .icon.trailer {
+        margin: 1rem;
+        position: fixed;
+        right: 10px;
+        bottom: 0;
+        display: none;
+    }
     
     @-webkit-keyframes scrollDown {
         0% { margin-bottom: 0rem; }

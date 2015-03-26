@@ -101,11 +101,13 @@
     text-align: right;
 }
 .icon.trailer {
-    margin: 1rem;
+    margin: 0rem;
     position: fixed;
-    right: 0;
-    bottom: -15px;
+    right: 10px;
+    bottom: 10px;
     display: none;
+    width: 3.5rem;
+    height: 3.5rem;
     
     transition: opacity .3s 0s, height 0s 0s;
 }
