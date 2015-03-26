@@ -21,6 +21,9 @@ ul.menu li a:hover {
 
 ul.menu li a[href*="facebook.com"] {
     padding: 0 0 0 1.2rem;
+    height: 0;
+    width: 0;
+    overflow: hidden;
 }
 ul.menu li a[href*="facebook.com"]:after{
     position: absolute;
