@@ -7,7 +7,7 @@ article.category-events p {
 .eventList figure {
     margin: -50px -50px 30px -50px;
 }
-.eventList .panel {
+.eventList .panel, .crewList .panel {
     padding: 0;
 }
 .eventList .panel a {

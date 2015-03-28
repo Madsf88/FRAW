@@ -8,6 +8,7 @@
 ul.menu li a{
     border-bottom: 0;
     font-size: 1.5em;
+    font-weight: 400;
     color: white;
     padding: 0.6rem 0.6rem 0.6rem 1.2rem;
     transition: all .1s;
@@ -53,6 +54,7 @@ ul.menu li a[href*="facebook.com"]:hover:after{
     position: fixed;
     width: 250px;
     z-index: 3;
+    -webkit-transform: translateX(-250px);
     transform: translateX(-250px);
     transition: transform .3s;
 }
@@ -61,6 +63,7 @@ ul.menu li a[href*="facebook.com"]:hover:after{
     overflow: hidden;
 }
 .menu-active .menu-main-container {
+    -webkit-transform: none;
     transform: none;
 }
 

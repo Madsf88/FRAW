@@ -57,7 +57,7 @@ function backgroundHeight() {
     } else {
         $("#title").css("height", windowHeight / 2 + "px");
         $("#title").css("margin-top", windowHeight / 4 + "px");
-        $("#titleSecondary").css("height", windowHeight / 3 + "px");
+        $("#titleSecondary").css("height", windowHeight / 2 + "px");
 //        $("#titleSecondary").css("margin-top", windowHeight / 10 + "px");
 //        console.log("test02");
     }
@@ -179,17 +179,17 @@ function animateHashtagScroll(){
     {
         $('html, body').animate({
             scrollTop: $(window.location.hash).offset().top-80
-        }, 1000);
+        }, 500);
     }
 }
 
 function hamburgerBG(){
-    var scrollTop     = $(window).scrollTop(),
+    var scrollTop = $(window).scrollTop(),
         treshold = 40,
-        elementOffset = $('.movieInfo,.eventList,.staff').offset().top;
-    if (scrollTop>elementOffset-treshold){
+        elementOffset = $('.movieInfo, .eventList, .staff').offset().top;
+    if (scrollTop > elementOffset - treshold) {
         $('.icon.menu').addClass("bgFix");
-    }else{
+    } else {
         $('.icon.menu').removeClass("bgFix");  
     }
 }

@@ -16,15 +16,17 @@
     </div>
 
     <div class="row">
-        <div class="small-12 medium-8 large-8 small-centered columns removePadding staff">
+        <div class="small-12 medium-8 large-8 small-centered columns removePadding aboutItufilm">
             <div class="panel">
-                <?php $id=113; $post = get_page($id); echo $post->post_content; ?>
+                <p>
+                    <?php $id=113; $post = get_page($id); echo $post->post_content; ?>
+                </p>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="large-12 columns">
-            <div id="title">
+            <div id="titleSecondary">
                 <div class="heading">
                     <h2 class="heading__h2">Crew</h2>
                 </div>
@@ -32,7 +34,7 @@
         </div>        
     </div>
     <div class="row">
-        <div class="small-12 medium-8 large-8 small-centered columns removePadding">
+        <div class="small-12 medium-8 large-8 small-centered columns removePadding crewList">
             <div class="panel">
                 <?php if ( have_posts() ) : ?>
 
