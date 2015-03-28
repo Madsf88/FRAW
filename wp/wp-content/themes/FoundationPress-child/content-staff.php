@@ -6,7 +6,7 @@
  * @since FoundationPress 1.0
  */
 ?>
-
+<div class="panel">
 <article id="authorid<?php the_author_ID(); ?>" <?php post_class(); ?>>
     <div class="row"  data-equalizer>
         <div class="small-12 medium-12 large-6 columns portrait" data-equalizer-watch>
@@ -46,3 +46,4 @@
         </div>
     </div>
 </article>
+</div>

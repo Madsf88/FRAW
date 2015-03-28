@@ -35,7 +35,6 @@
     </div>
     <div class="row">
         <div class="small-12 medium-8 large-8 small-centered columns removePadding crewList">
-            <div class="panel">
                 <?php if ( have_posts() ) : ?>
 
                     <?php /* Start the Loop */ ?>
@@ -48,7 +47,6 @@
 
                 <?php endif; // end have_posts() check ?>
 
-            </div>
         </div>
     </div>
 </div>
