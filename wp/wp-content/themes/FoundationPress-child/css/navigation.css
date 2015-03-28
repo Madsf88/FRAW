@@ -56,6 +56,7 @@ ul.menu li a[href*="facebook.com"]:hover:after{
     z-index: 3;
     -webkit-transform: translateX(-250px);
     transform: translateX(-250px);
+    -webkit-transition: -webkit-transform .3s;
     transition: transform .3s;
 }
 
