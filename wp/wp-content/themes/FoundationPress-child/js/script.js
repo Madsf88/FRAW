@@ -55,8 +55,8 @@ function backgroundHeight() {
         $("#title").css("height", windowHeight + "px");
 //        console.log("test01");
     } else {
-        $("#title").css("height", windowHeight / 2 + "px");
-        $("#title").css("margin-top", windowHeight / 4 + "px");
+        $("#title").css("height", windowHeight + "px");
+//        $("#title").css("margin-top", windowHeight / 4 + "px");
         $("#titleSecondary").css("height", windowHeight / 2 + "px");
 //        $("#titleSecondary").css("margin-top", windowHeight / 10 + "px");
 //        console.log("test02");

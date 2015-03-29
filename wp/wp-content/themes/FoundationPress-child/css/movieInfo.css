@@ -1,10 +1,18 @@
-.movieInfo dt{
+.movieInfo dl {
+    margin-bottom: .5rem;
+}
+.movieInfo dt,
+.movieInfo dd {
+    line-height: 1em;
+}
+.movieInfo dt {
     clear: both;
     float: left;
 }
-.movieInfo dd{
+.movieInfo dd {
     float: right;
 }
+
 .movieInfo dl:after {
     content: "";
     display: table;
