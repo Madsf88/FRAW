@@ -1,6 +1,7 @@
 <?php get_header(); ?>
-<div class="<?php the_field('readability'); ?>">
-    <div id="backgroundImage" style="background-image: url(http://m6.paperblog.com/i/41/414061/take-shelter-L-nr56C4.jpeg);"></div>
+<?php $pageid = 49; ?>
+<div class="<?php the_field('readability', $pageid); ?>">
+    <div id="backgroundImage" data-bg-large="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($pageid), "large", false )[0]; ?>" data-bg-full="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($pageid), "full", false )[0]; ?>" style="background-position: <?php the_field('background_image_position_horizontal', $pageid); ?>% <?php the_field('background_image_position_vertical', $pageid); ?>%;"></div>
     <div class="icon menu header"></div>
     <a class="logo ituFilm header" href="../index.php">ITU.film</a>
     <div class="row">
@@ -8,10 +9,8 @@
             <div id="title">
                 <div class="heading">
                     <h1 class="heading__h1">
-                    <?php
-                        $category = get_the_category(); 
-                        echo $category[0]->cat_name;
-                    ?>
+<!--                    <?php $category = get_the_category(); echo $category[0]->cat_name; ?>-->
+                        <?php echo get_the_title($pageid); ?>
                     </h1>
                 </div>
             </div>
@@ -36,9 +35,7 @@
         <div class="large-12 columns">
             <div id="titleSecondary">
                 <div class="heading">
-                    <h2 class="heading__h2">
-                    Past events
-                    </h2>
+                    <h2 class="heading__h2"><?php the_field('secondary_title', $pageid); ?></h2>
                 </div>
             </div>
         </div>        

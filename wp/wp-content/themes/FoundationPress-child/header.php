@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 <head>
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ; ?>/js/jquery.js"></script> <!-- jQuery defined locally for train ride coding over Easter (: -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php if ( is_category() ) {
