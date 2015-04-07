@@ -186,7 +186,7 @@ function animateHashtagScroll(){
 function hamburgerBG(){
     var scrollTop = $(window).scrollTop(),
         treshold = 40,
-        elementOffset = $('.movieInfo, .eventList, .staff').offset().top;
+        elementOffset = $('.panel').offset().top;
     if (scrollTop > elementOffset - treshold) {
         $('.icon.menu').addClass("bgFix");
     } else {
