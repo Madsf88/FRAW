@@ -9,7 +9,6 @@
             <div id="title">
                 <div class="heading">
                     <h1 class="heading__h1">
-<!--                        <?php $category = get_the_category(); echo $category[0]->cat_name; ?>-->
                         <?php echo get_the_title($pageid); ?>
                     </h1>
                 </div>
