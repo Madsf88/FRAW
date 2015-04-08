@@ -64,25 +64,6 @@ footer.row {
     padding-bottom: 15px;
 }
 
-
-.icon.menu{
-    margin: 0rem;
-    display: block;
-    position: fixed;
-    width: 4rem;
-    height: 3.8rem;
-    transition: background .5s, opacity .5s;
-}
-.icon.menu.bgFix{
-    margin: 0rem;
-    display: block;
-    position: fixed;
-    width: 4rem;
-    height: 3.8rem;
-    background: #222;
-    opacity: 0.4;
-}
-
 @media screen and (min-width: 641px){
     .panel {
         margin-bottom: 50px;
@@ -122,12 +103,14 @@ footer.row {
         opacity: 1;
     }
     .logo.ituFilm {
-        margin: 1rem 1.5rem;
+        margin: 1.3rem;
     }
     .icon.trailer {
         margin: 1rem;
-        right: 10px;
-        bottom: 0;
+    }
+    
+    .icon.scrollDown {
+        margin-bottom: 1rem;
     }
     
     /* Event list */
@@ -154,6 +137,7 @@ footer.row {
     .heading__p {
         font-size: 1.5rem;
     }
+    
     blockquote {
         border: none;
         width: 130px;

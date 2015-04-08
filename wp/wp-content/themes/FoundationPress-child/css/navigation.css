@@ -1,10 +1,5 @@
 /* Menu bar */
 
-/*
-.slideout-menu {
-    background-color: #222;
-}
-*/
 ul.menu li a{
     border-bottom: 0;
     font-size: 1.5em;
@@ -18,8 +13,6 @@ ul.menu li a:hover {
     padding-left: 1.5rem;
     background-color: rgba(0,0,0,.3);
 }
-
-
 ul.menu li a[href*="facebook.com"] {
     padding: 0 0 0 1.2rem;
     height: 0;
@@ -46,6 +39,7 @@ ul.menu li a[href*="facebook.com"]:hover{
 ul.menu li a[href*="facebook.com"]:hover:after{
     background-size: 100%;
 }
+
 /* Menu bar - END */
 
 .menu-main-container {

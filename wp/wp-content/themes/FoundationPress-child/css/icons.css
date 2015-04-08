@@ -19,8 +19,8 @@
 	line-height: 1;
     font-size: 3rem;
     text-align: center;
-    width: 5rem;
-    height: 5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     
     z-index: 2;
 
@@ -83,31 +83,51 @@
 	content: "";;
 }
 
-/* Menu icon - END */
+.icon.menu{
+    margin: 0rem;
+    display: block;
+    position: fixed;
+    width: 4rem;
+    height: 3.8rem;
+    line-height: .85em;
+    transition: background .5s, opacity .5s;
+}
 
+.icon.menu.bgFix{
+    margin: 0rem;
+    display: block;
+    position: fixed;
+    width: 4rem;
+    height: 3.8rem;
+    background: #222;
+    opacity: 0.4;
+}
 
 .logo.ituFilm {
     height: 50px;
     width: auto;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 0;
+    top: 0;
     cursor: pointer;
     color: inherit;
-    margin: 0.3rem 0.3rem;
+    margin: 0.6rem;
     line-height: 1em;
     font-size: 2rem;
     font-weight: bold;
     text-align: right;
+    z-index: 2;
 }
 .icon.trailer {
     margin: 0rem;
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    right: 0;
+    bottom: 0;
     display: none;
+/*
     width: 3.5rem;
     height: 3.5rem;
+*/
     
     transition: opacity .3s 0s, height 0s 0s;
 }
@@ -146,14 +166,12 @@
 }
 
 @-webkit-keyframes scrollDown {
-    0% { margin-bottom: 0rem; }
-    25% { margin-bottom: -1rem; }
-    75% { margin-bottom: 1rem; }
-    100% { margin-bottom: 0rem; }
+    0% { bottom: 0rem; }
+    50% { bottom: 1.5rem; }
+    100% { bottom: 0rem; }
 }
 @keyframes scrollDown {
-    0% { margin-bottom: 0rem; }
-    25% { margin-bottom: -1rem; }
-    75% { margin-bottom: 1rem; }
-    100% { margin-bottom: 0rem; }
+    0% { bottom: 0rem; }
+    50% { bottom: 1.5rem; }
+    100% { bottom: 0rem; }
 }
