@@ -5,7 +5,7 @@
     <div class="icon trailer header"></div>    
     <div class="icon scrollDown header"></div>
     <div class="row">
-        <div class="large-12 columns">
+        <div class="small-11 small-centered columns">
             <div id="title" class="fullHeight">
                 <div class="heading">
                     <h1 class="heading__h1"><?php the_title(); ?></h1>
@@ -104,7 +104,7 @@
     </div>
 
     <div class="row">
-        <div class="small-12 medium-8 large-8 small-centered columns review removePadding">
+        <div class="small-12 medium-8 small-centered columns review removePadding">
             <div class="panel">
                 <h1 class="review__h1"><?php the_field('review_title'); ?></h1>
                 <?php the_content(); ?>
@@ -115,7 +115,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="small-12 medium-8 large-8 small-centered columns trailerWrapper removePadding">
+        <div class="small-12 medium-8 small-centered columns trailerWrapper removePadding">
             <?php
                 if(get_field('trailer_url'))
                 {

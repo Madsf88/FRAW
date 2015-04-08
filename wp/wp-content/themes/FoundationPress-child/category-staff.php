@@ -5,7 +5,7 @@
     <div class="icon menu header"></div>
     <a class="logo ituFilm header" href="../index.php">ITU.film</a>
     <div class="row">
-        <div class="large-12 columns">
+        <div class="small-11 small-centered columns">
             <div id="title">
                 <div class="heading">
                     <h1 class="heading__h1">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="row">
-        <div class="small-12 medium-8 large-8 small-centered columns removePadding aboutItufilm">
+        <div class="small-12 medium-8 small-centered columns removePadding aboutItufilm">
             <div class="panel">
                 <p>
                     <?php $post = get_page($pageid); echo $post->post_content; ?>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="large-12 columns">
+        <div class="small-11 small-centered columns">
             <div id="titleSecondary">
                 <div class="heading">
                     <h2 class="heading__h2"><?php the_field('secondary_title', $pageid); ?></h2>
@@ -35,7 +35,7 @@
         </div>        
     </div>
     <div class="row">
-        <div class="small-12 medium-8 large-8 small-centered columns removePadding crewList">
+        <div class="small-12 medium-8 small-centered columns removePadding crewList">
             <?php if ( have_posts() ) : ?>
 
                 <?php /* Start the Loop */ ?>
