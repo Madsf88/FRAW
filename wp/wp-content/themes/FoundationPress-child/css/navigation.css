@@ -24,10 +24,11 @@ ul.menu li a[href*="facebook.com"]:after{
     font-family: 'icomoon';
     font-size: 2.5rem;
     content: '\65';
-    width: 4rem;
+    width: 3.2rem;
     display: inline-block;
-    height: 4rem;
-    bottom: 2rem;
+    height: 3.2rem;
+    bottom: 1rem;
+    left: 1rem;
     
     transition: background-size .1s ease;
 }
