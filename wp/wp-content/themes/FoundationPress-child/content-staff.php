@@ -16,11 +16,7 @@
             <h3><?php the_title(); ?></h3>
             <?php the_content(); ?>
             <dl>
-                <dt>Favorite Movie:</dt>
-                <dd><?php  the_field('favorite_movie'); ?></dd>
-            </dl>
-            <dl>
-                <dt>Recommendations:</dt>
+                <dt>Favorite movies:</dt>
                 <dd><?php  the_field('recommendation1'); ?></dd>
                 <dd><?php  the_field('recommendation2'); ?></dd>
                 <dd><?php  the_field('recommendation3'); ?></dd>
