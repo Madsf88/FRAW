@@ -10,7 +10,7 @@
 <article id="authorid<?php the_author_ID(); ?>" <?php post_class(); ?>>
     <div class="row"  data-equalizer>
         <div class="small-12 medium-12 large-6 columns portrait" data-equalizer-watch>
-            <div style="background-image: url(<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "large", false )[0]; ?>);"></div>
+            <div style="background-image: url(<?php $large = wp_get_attachment_image_src( get_post_thumbnail_id(), "large", false ); echo $large[0]; ?>);"></div>
         </div>
         <div class="small-12 medium-12 large-6 columns text" data-equalizer-watch>
             <h3><?php the_title(); ?></h3>
