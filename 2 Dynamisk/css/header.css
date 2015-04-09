@@ -1,0 +1,70 @@
+#backgroundImage {
+    width: 100%;
+    background-size: cover;
+    z-index: 0;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+}
+#title, #titleSecondary {
+    display: table;
+    width: 100%;
+}
+.heading {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.heading__h1 {
+    color: inherit;
+    border-width: 6px;
+    border-style: solid;
+    border-color: inherit;
+    padding: .2em .4em;
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+}
+.heading__h2 {
+    color: inherit;
+    border-width: 6px;
+    border-style: solid;
+    border-color: inherit;
+    padding: .2em .4em;
+    display: inline-block;
+    font-size: 1.75rem;
+    text-align: center;
+}
+.heading__h2{
+    margin: 40px;
+}
+.heading__p {
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 70px;
+}
+
+
+.interfaceWhite {
+    color: white;
+}
+.interfaceShadow {
+    color: white;
+}
+.interfaceShadow .heading__h1,
+.interfaceShadow .heading__h2,
+.interfaceShadow .heading__p,
+.interfaceShadow .icon.header,
+.interfaceShadow .logo.header {
+    text-shadow: 2px 2px 0 rgba(0,0,0,.2);
+}
+.interfaceShadow .heading__h1,
+.interfaceShadow .heading__h2 {
+    box-shadow: 2px 2px 0 rgba(0,0,0,.2);
+}
+.interfaceDark {
+    color: #222;
+}

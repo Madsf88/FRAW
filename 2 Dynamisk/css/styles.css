@@ -1,0 +1,172 @@
+/* Frameworks */
+/*@import url("slideout.css");*/
+
+/* Own style sheets */
+@import url("header.css");
+@import url("navigation.css");
+@import url("movieInfo.css");
+@import url("event_list.css");
+@import url("staff.css");
+@import url("review.css");
+@import url("trailer.css");
+@import url("addtocal.css");
+@import url("icons.css");
+
+*, body, h1, h2, h3, h4, h5, h6 {
+    font-family: cabin, sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    
+    -webkit-font-smoothing: auto; /* This is turned off since it is part of Foundation, but not a standard */
+    -moz-osx-font-smoothing: auto;
+    font-smoothing: auto;
+    text-rendering: optimizelegibility;
+}
+h1, h2 {
+    font-weight: 700;
+    line-height: 1.1em;
+}
+.panel {
+    background: white;
+    padding: 50px;
+    margin: 0;
+    border: none;
+}
+.panel,
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6,
+.panel p,
+.panel li,
+.panel dl {
+    color: #222;
+}
+
+ul {
+   list-style: none;
+    padding: 0;
+    margin: 0;
+}
+dl b{
+    margin-bottom: 0;
+}
+
+footer.row {
+    margin-top: 0; /* Dette skal faktisk ikke være på undersiderne... */
+}
+.columns.small-12.removePadding{
+    padding: 0;
+}
+.category-staff img {
+    padding-bottom: 15px;
+}
+
+
+
+@media screen and (min-width: 641px){
+    .panel {
+        margin-bottom: 50px;
+    }
+    .heading__h1 {
+        font-size: 3.5rem;
+        border-width: 8px;
+    }
+    .heading__h2 {
+        font-size: 3rem;
+        border-width: 8px;
+    }
+    .heading__p {
+        font-size: 1.25rem;
+    }
+    .category-staff img {
+        padding-bottom: 0px;
+    }
+    .trailerWrapper {
+        margin-bottom: 50px;
+    }
+    
+    .icon.menu {
+        margin: 1rem;
+        display: block;
+        position: fixed;
+        background: transparent;
+        opacity: 1;
+    }
+    .icon.menu.bgFix{
+        margin: 1rem;
+        display: block;
+        position: fixed;
+        width: 4rem;
+        height: 3.5rem;
+        background: transparent;
+        opacity: 1;
+    }
+    .icon.menu.bgFix::before{
+        color: inherit;
+    }
+    .logo.ituFilm {
+        margin: 1.3rem;
+    }
+    .icon.trailer {
+        margin: 1rem;
+    }
+    
+    .icon.scrollDown {
+        margin-bottom: 1rem;
+    }
+    
+    /* Event list */
+    
+    .eventList figure {
+        margin-bottom: 50px;
+    }
+    
+    /* About */
+    
+    .crewList .panel {
+        overflow-x: visible;
+    }
+}
+@media screen and (min-width: 1025px){
+    .heading__h1 {
+        font-size: 5rem;
+        border-width: 10px;
+    }
+    .heading__h2 {
+        font-size: 4rem;
+        border-width: 10px;
+    }
+    .heading__p {
+        font-size: 1.5rem;
+    }
+    
+    blockquote {
+        border: none;
+        width: 130px;
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: -12px;
+        padding: 20px 0;
+
+        float: right; /* put it on the right side */
+    }
+    blockquote p {
+        background: none repeat scroll 0 0 white;
+/*        border: 2px solid black;*/
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, .2);
+        display: block;
+        font-size: 1.75em;
+        line-height: 1.1em;
+        padding: 30px;
+        position: relative;
+        width: 300px;
+
+        left: 30px; /* put it on the right side */
+    }
+    .crewList .text {
+        padding: 30px 45px 22px 15px;
+    }
+}

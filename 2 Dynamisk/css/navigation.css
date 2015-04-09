@@ -1,0 +1,81 @@
+/* Menu bar */
+
+ul.menu li a{
+    border-bottom: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: white;
+    padding: 0.6rem 0.6rem 0.6rem 1.2rem;
+    transition: all .1s;
+    display: block;
+}
+ul.menu li a:hover {
+    padding-left: 1.5rem;
+    background-color: rgba(0,0,0,.3);
+}
+ul.menu li a[href*="facebook.com"] {
+    padding: 0 0 0 1.2rem;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+ul.menu li a[href*="facebook.com"]:after{
+    position: absolute;
+    font-family: 'icomoon';
+    font-size: 2.5rem;
+    content: '\65';
+    width: 3.2rem;
+    display: inline-block;
+    height: 3.2rem;
+    bottom: 1rem;
+    left: 1rem;
+    
+    transition: background-size .1s ease;
+}
+
+ul.menu li a[href*="facebook.com"]:hover{
+    padding-left: 1.2rem;
+    background-color: transparent;
+}
+ul.menu li a[href*="facebook.com"]:hover:after{
+    background-size: 100%;
+}
+
+/* Menu bar - END */
+
+.menu-main-container {
+    background: none repeat scroll 0 0 #222;
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    z-index: 3;
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+
+.menu-active{
+    overflow: hidden;
+}
+.menu-active .menu-main-container {
+    -webkit-transform: none;
+    transform: none;
+}
+
+html.menu-active #wrapper{
+    cursor: url(../img/icons/AndroidL_x.svg), pointer;
+}
+.overlay{
+    opacity: 0;
+    transition: opacity .3s;
+}
+.menu-active .overlay{
+    opacity: 0.3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: white;    
+}
