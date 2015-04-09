@@ -25,7 +25,7 @@
                 <dd><?php  the_field('recommendation2'); ?></dd>
                 <dd><?php  the_field('recommendation3'); ?></dd>
             </dl>
-            <a href="#" data-options="align: top" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor icon comments"></span>Reviews</a>
+            <a href="#" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor icon comments"></span>Reviews</a>
             <ul id="<?php the_title(); ?>" class="f-dropdown" data-dropdown-content>
                 <?php
                     $var = 'category=4&author=';
