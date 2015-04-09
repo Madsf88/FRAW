@@ -109,7 +109,7 @@
                 <h1 class="review__h1"><?php the_field('review_title'); ?></h1>
                 <?php the_content(); ?>
                 <p class="author">
-                    <?php the_field('author_text'); ?> <a href="/wp/archives/category/staff#authorid<?php the_author_ID(); ?>"><?php the_author(); ?></a>
+                    <?php the_field('author_text'); ?> <a href="/category/staff#authorid<?php the_author_ID(); ?>"><?php the_author(); ?></a>
                 </p>
             </div>
         </div>
