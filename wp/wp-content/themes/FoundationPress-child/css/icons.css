@@ -102,6 +102,9 @@
     background: #222;
     opacity: 0.4;
 }
+.icon.menu.bgFix::before{
+    color: white;
+}
 
 .logo.ituFilm {
     height: 50px;
