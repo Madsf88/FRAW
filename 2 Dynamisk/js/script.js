@@ -12,27 +12,15 @@ function toggleScrollDown() {
     var offset = $(window).scrollTop(),
         treshold = 30,
         hasHide = $(".scrollDown").hasClass("hideScrollDown");
-//    console.log(hasHide);
     if (offset > treshold) {
         $(".scrollDown").addClass("hideScrollDown");
         if ($(window).width() < 641) {
-            console.log("test 1.1");
             $(".icon.trailer").addClass("hideScrollDown");
         }
     } else if (offset < treshold) {
         $(".scrollDown").removeClass("hideScrollDown");
         $(".icon.trailer").removeClass("hideScrollDown");
-        console.log("test 1.2");
     }
-    
-//    console.log("test 1");
-//    if ($(window).width() > 641) {
-//        console.log("test 1.1");
-//        $(".scrollDown").addClass("hideScrollDown");
-//    } else {
-//        console.log("test 1.2");
-//        $(".scrollDown").removeClass("hideScrollDown");
-//    }
 }
 function initiateScrollDown() {
     $(".scrollDown").click(function () {
@@ -49,17 +37,12 @@ function initiateScrollDown() {
 
 function backgroundHeight() {
     var windowHeight = $(window).height();
-//    console.log(windowHeight);
     $("#backgroundImage").css("height", windowHeight + 0 + "px");
     if ($("#title").hasClass("fullHeight")) {
         $("#title").css("height", windowHeight + "px");
-//        console.log("test01");
     } else {
         $("#title").css("height", windowHeight + "px");
-//        $("#title").css("margin-top", windowHeight / 4 + "px");
         $("#titleSecondary").css("height", windowHeight / 2 + "px");
-//        $("#titleSecondary").css("margin-top", windowHeight / 10 + "px");
-//        console.log("test02");
     }
 }
 
@@ -68,7 +51,6 @@ function backgroundHeight() {
 // Youtube
 
 function toggleVideo(state) {
-    // if state == 'hide', hide. Else: show video
     if ($("#popupVid")[0]){
     var div = document.getElementById("popupVid"),
         iframe = div.getElementsByTagName("iframe")[0].contentWindow;
@@ -115,27 +97,11 @@ function youtube_parser() {
         if (match && match[7].length === 11) {
             $(".trailerContainer").html('<iframe width="500" height="315" src="http://www.youtube.com/embed/' + match[7] + '?enablejsapi=1&showinfo=0&autohide=1&controls=0?modestbranding=1" frameborder="0" allowfullscreen></iframe>');
         } else {
-    //        console.log("Error parsing trailer url");
         }
     }
 }
 
 // Youtube - END
-
-// Navigation - Slideout.js
-
-//var slideout = new Slideout({
-//    'panel': document.getElementById('wrapper'),
-//    'menu': document.getElementById('menu'),
-//    'padding': 256,
-//    'tolerance': 70
-//});
-//
-//function initiateSlideout() {
-//    $(".menu-icon").click(function () {
-//        slideout.toggle();
-//    });
-//}
 
 // Navigation - Slideout.js - END
 
