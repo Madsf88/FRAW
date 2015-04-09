@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php if ( is_category() ) {
-        echo single_cat_title();
+        bloginfo( 'name' ); echo ' | '; single_cat_title();
     } elseif ( is_tag() ) {
         echo 'Tag Archive for &quot;'; single_tag_title(); echo '&quot; | '; bloginfo( 'name' );
     } elseif ( is_archive() ) {
@@ -13,7 +13,7 @@
     } elseif ( is_search() ) {
         echo 'Search for &quot;'.esc_html($s).'&quot; | '; bloginfo( 'name' );
     } elseif ( is_home() || is_front_page() ) {
-        bloginfo( 'name' ); echo ' | '; bloginfo( 'description' );
+        bloginfo( 'name' ); echo bloginfo( 'description' );
     }  elseif ( is_404() ) {
         echo 'Error 404 Not Found | '; bloginfo( 'name' );
     } elseif ( is_single() ) {
