@@ -92,7 +92,7 @@
                                 <var class="atc_organizer">ITU.film</var>
                                 <var class="atc_organizer_email">film@itu.dk</var>
                             </var>
-                            <a class="atcb-link" id="" tabindex="1"><span class="icon cal"></span></a>
+                            <a class="atcb-link" tabindex="1"><span class="icon cal"></span></a>
                         </span>
                     </li>
                     <li class="icons">

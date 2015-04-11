@@ -21,7 +21,7 @@
                 <dd><?php  the_field('recommendation2'); ?></dd>
                 <dd><?php  the_field('recommendation3'); ?></dd>
             </dl>
-            <a href="#" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor icon comments"></span>Reviews</a>
+            <a href="#" data-dropdown="<?php the_title(); ?>"  class="reviewAnchor icon comments">Reviews</a>
             <ul id="<?php the_title(); ?>" class="f-dropdown" data-dropdown-content>
                 <?php
                     $var = 'category=4&author=';
@@ -30,13 +30,9 @@
                     $lastposts = get_posts($var3);
                     foreach($lastposts as $post) :
                     setup_postdata($post); ?>
-
                     <li<?php if ( $post->ID == $wp_query->post->ID ) { echo ' class="current"'; } else {} ?>>
-
                         <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-
                     </li>
-
                 <?php endforeach; ?>
             </ul>
         </div>
