@@ -64,6 +64,15 @@ footer.row {
     padding-bottom: 15px;
 }
 
+/* iOS Safari bug fix */
+
+.iOS .panel,
+.iOS .columns {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/* iOS Safari bug fix - END */
 
 
 @media screen and (min-width: 641px){

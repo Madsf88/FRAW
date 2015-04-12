@@ -1,9 +1,10 @@
 #backgroundImage {
     width: 100%;
+    -webkit-background-size: cover;
     background-size: cover;
     z-index: 0;
     background-position: center;
-    background-attachment: fixed;
+/*    background-attachment: fixed;*/ /* This was causing a bug on iOS, this can be deleted if it is not causing problems that I commented it out */
     position: fixed;
 }
 #title, #titleSecondary {

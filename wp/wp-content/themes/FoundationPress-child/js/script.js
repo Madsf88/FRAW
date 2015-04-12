@@ -194,6 +194,13 @@ function hamburgerBG(){
     }
 }
 
+function checkIOS() {
+    var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+    if (iOS){
+        $("html").addClass("iOS");
+    }
+}
+
 
 // Ready
 $(document).ready(function () {
@@ -202,6 +209,7 @@ $(document).ready(function () {
     initiateScrollDown();
     initiateToggleMenu();
     // After the fold
+    checkIOS();
     trailerScroll();
     youtube_parser();
     animateHashtagScroll();
