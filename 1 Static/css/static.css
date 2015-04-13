@@ -8,6 +8,10 @@ body {
 }
 a {
     text-decoration: none;
+    color: #008CBA;
+}
+a:hover{
+    color: #0078a0;
 }
 #wrapper {
     width: 1280px;
