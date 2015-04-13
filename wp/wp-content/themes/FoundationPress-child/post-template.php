@@ -25,13 +25,10 @@
                         $.getJSON(imdbAPI, function (json) {
                             var rating = json.imdbRating;
                             $('#rating').text(rating+" / 10");
-
                             var director = json.Director;
                             $('#director').text(director);
-
                             var year = json.Year;
                             $('#year').text(year);
-
                             var startTime = ("<?php  the_field('start_time'); ?>");
                             var duration = json.Runtime;
                             var duration = duration.replace(' min','');
@@ -41,15 +38,11 @@
                             var firstPart = htmlString.substring(0, htmlString.length-8);
                             var Full = firstPart+timePrase+":00";
                             $( ".atc_date_end" ).html(Full);
-
                         }); 
                         function addMinutes(time, minsToAdd) {
                           function D(J){ return (J<10? '0':'') + J};
-
                           var piece = time.split(':');
-
                           var mins = piece[0]*60 + +piece[1] + +minsToAdd;
-
                           return D(mins%(24*60)/60 | 0) + ':' + D(mins%60);  
                         }  
 
