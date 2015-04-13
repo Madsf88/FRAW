@@ -10,7 +10,8 @@ a {
     text-decoration: none;
 }
 #wrapper {
-    width: 1280px;
+    width: 1024px;
+    margin: 0 auto;
 }
 .row {
     width: 80%;
@@ -45,5 +46,13 @@ a {
     width: 100%;
 }
 #backgroundImage {
-    width: 1280px;
+    width: 1024px;
+}
+.fixedInterface {
+    height: 100%;
+    position: fixed;
+    width: 1024px;
+}
+.icon.trailer.header {
+    position: absolute;
 }
