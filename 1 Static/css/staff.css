@@ -1,0 +1,53 @@
+.row .crewList .row {
+    margin: 0;
+}
+.crewList .columns {
+    padding-left: 0;
+    padding-right: 0;
+}
+.category-staff {
+    margin-bottom: 0;    
+}
+.category-staff dd {
+    margin-bottom: 0;
+}
+.reviewAnchor.icon.comments{
+    color: #222;
+    font-size: 1.1rem;
+    float: right;
+    width: auto !important;
+    height: auto !important;
+}
+.reviewAnchor.icon.comments:before{
+    padding-right: 5px;
+    font-size: 1.5em;
+}
+.crewList .portrait div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.crewList .columns.text {
+    padding: 30px 30px 22px 30px;
+}
+.crewList .text dl:last-of-type {
+    margin-bottom: 0;
+}
+.f-dropdown{
+    border: 1px solid #DADADA;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.f-dropdown li:first-child{
+    border-top: 0;
+}
+.f-dropdown li{
+    border-top: 1px solid #F0F0F0;
+    padding: 1em;
+}
+.f-dropdown li a{
+    padding: 0rem 0.5rem;
+    color: #222;
+}

@@ -1,0 +1,195 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- jQuery defined locally for train ride coding over Easter (: -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITU.Film</title>
+    <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+<!--    <link rel='stylesheet' id='parent-style-css' href='css/foundation.css' type='text/css' media='all' />-->
+    <link rel='stylesheet' id='child-style-css' href='css/styles.css' type='text/css' media='all' />
+    <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+    <script type='text/javascript' src='js/modernizr.js'></script>
+    <script type='text/javascript' src='js/fastclick.js'></script>
+</head>
+
+<body class="page-template-default">
+    <div id="menu" class="menu-main-container">
+        <ul id="menu-main" class="menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+            <li>
+                <a href="staff.html">About</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.facebook.com/itu.film">Facebook</a>
+            </li>
+        </ul>
+    </div>
+
+    <section class="container" id="wrapper">
+        <div class="interfaceShadow">
+            <div id="backgroundImage" data-bg-large="img/backgrounds/Interstellar-1024x665.jpg" data-bg-full="img/backgrounds/Interstellar.jpg"></div>
+            <div class="icon menu header"></div>
+            <a class="logo ituFilm header" href="index.html">ITU.film</a>
+            <div class="icon trailer header"></div>
+            <div class="icon scrollDown header"></div>
+            <div class="row">
+                <div class="small-11 small-centered columns">
+                    <div id="title" class="fullHeight">
+                        <div class="heading">
+                            <h1 class="heading__h1">Interstellar</h1>
+                            <p class="heading__p">April 11 at 11:00 in Analog</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 medium-6 large-5 columns small-centered movieInfo removePadding">
+                    <div class="panel">
+                        <script type="text/javascript">
+                            (function ($) {
+                                var imdbURL = "http://www.imdb.com/title/tt0816692/";
+                                var imdbURL = imdbURL.replace('http://', '').replace('www.imdb.com/title/', '').replace(imdbURL.substr(imdbURL.lastIndexOf('/')), '');
+                                var imdbAPI = "http://www.omdbapi.com/?i=" + imdbURL + "&plot=full&r=json";
+                                $.getJSON(imdbAPI, function (json) {
+                                    var rating = json.imdbRating;
+                                    $('#rating').text(rating + " / 10");
+                                    var director = json.Director;
+                                    $('#director').text(director);
+                                    var year = json.Year;
+                                    $('#year').text(year);
+                                    var startTime = ("11:00");
+                                    var duration = json.Runtime;
+                                    var duration = duration.replace(' min', '');
+                                    var timePrase = addMinutes(startTime, duration);
+                                    $('#duration').text(startTime + " - " + timePrase);
+                                    var htmlString = $(".atc_date_start").html();
+                                    var firstPart = htmlString.substring(0, htmlString.length - 8);
+                                    var Full = firstPart + timePrase + ":00";
+                                    $(".atc_date_end").html(Full);
+
+                                });
+
+                                function addMinutes(time, minsToAdd) {
+                                    function D(J) {
+                                        return (J < 10 ? '0' : '') + J
+                                    };
+
+                                    var piece = time.split(':');
+
+                                    var mins = piece[0] * 60 + +piece[1] + +minsToAdd;
+
+                                    return D(mins % (24 * 60) / 60 | 0) + ':' + D(mins % 60);
+                                }
+
+                            })(jQuery);
+                        </script>
+                        <dl>
+                            <dt>Director: </dt>
+                            <dd id="director"></dd>
+                            <dt>Running Time: </dt>
+                            <dd id="duration"></dd>
+                            <dt>IMDb rating: </dt>
+                            <dd id="rating" class="icon star"></dd>
+                            <dt>Year: </dt>
+                            <dd id="year"></dd>
+                        </dl>
+                        <ul>
+                            <li class="icons">
+                                <script type="text/javascript">
+                                    (function () {
+                                        if (window.addtocalendar)
+                                            if (typeof window.addtocalendar.start == "function") return;
+                                        if (window.ifaddtocalendar == undefined) {
+                                            window.ifaddtocalendar = 1;
+                                            var d = document,
+                                                s = d.createElement('script'),
+                                                g = 'getElementsByTagName';
+                                            s.type = 'text/javascript';
+                                            s.charset = 'UTF-8';
+                                            s.async = true;
+                                            s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://addtocalendar.com/atc/1.5/atc.min.js';
+                                            var h = d[g]('body')[0];
+                                            h.appendChild(s);
+                                        }
+                                    })();
+                                </script>
+                                <span class="addtocalendar atc-style-menu-wb">
+                            <var class="atc_event">
+                                <var class="atc_date_start">2015-04-11 11:00:00</var>
+                                <var class="atc_date_end">2015-04-11 11:00:00</var>
+                                <var class="atc_timezone">Europe/Copenhagen</var>
+                                <var class="atc_title">ITU.film: Interstellar</var>
+                                <var class="atc_description">Movie screening</var>
+                                <var class="atc_location">Analog</var>
+                                <var class="atc_organizer">ITU.film</var>
+                                <var class="atc_organizer_email">film@itu.dk</var>
+                            </var>
+                            <a class="atcb-link" id="" tabindex="1"><span class="icon cal"></span>
+                                </a>
+                                </span>
+                            </li>
+                            <li class="icons">
+                                <a href="https://www.facebook.com/" target="_blank"><span class="icon facebook"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-8 small-centered columns review removePadding">
+                    <div class="panel">
+                        <h1 class="review__h1">Interstellar Overdrive</h1>
+                        <p>Cooper has two children back on Earth and, like Leonardo DiCaprio’s Cobb, in “Inception,” he longs to return to his family. That leads to fights with Amelia, who wants to journey on to the planet where her lover, one of the astronauts on the earlier mission, was sent, in the hope of reuniting with him. McConaughey does his stylized, hyper-relaxed drawl, and Hathaway, with short Ph.D. hair, is crisp but also angry and passionate, and the two stars clash with professional skill. Cooper’s side of the argument sets up the movie’s finest scene. After paying a quick visit to a planet in another galaxy, the crew returns to the ship and discovers that on Earth more than twenty years has passed. Cooper watches video messages from his family, including his daughter, Murph, who was a young girl when he left but has grown up to be Jessica Chastain. Through her tears, she lashes out at him, as only Jessica Chastain can lash out, for leaving her. The Nolans take us into the farthest mysteries of space-time, where, they assure us, love joins gravity as a force that operates across interstellar distances. The Earth may die, but love will triumph. For all his dark scenarios, Christopher Nolan turns out to be a softie.</p>
+                        <p>The film is based on Jane Wilde Hawking’s 2007 memoir, “Travelling to Infinity: My Life with Stephen,” which the screenwriter, Anthony McCarten, and the director, James Marsh, have made into a physically detailed and touching but, all in all, rather conventional against-all-odds bio-pic. Some of the scenes are predictable: The hero commits prodigious feats of casual English genius, such as solving a difficult mathematical problem on the back of a railway timetable. He is wheeled before Cambridge dons and distinguished scientists, many of whom are amazed that the shrunken man at the front of the room, barely able to speak, has a remarkable talent for theoretical speculation. (It isn’t made clear, though, how Hawking does his calculations—his work can’t be all speculation.)</p>
+                        <blockquote>
+                            <p>We’re puzzled by the black hole in his character that causes him, after twenty-five years of loving marriage, to leave the devoted, accomplished, and beautiful Jane for a young nurse&#8230;</p>
+                        </blockquote>
+                        <p>Eddie Redmayne’s performance is astonishing, as eloquent, though in a different way, as Daniel Day-Lewis’s work in “My Left Foot.” Day-Lewis, playing the Irish artist Christy Brown, a man whose mobility is reduced to a single limb, deployed his left foot, a bushy black beard, and minimal, mangled speech to create a ferociously willful and sexually miserable man. Redmayne is a gentler actor; he was the noble youth in “Les Misérables” who sang, in a fine light tenor, the tear-stained but upbeat “Empty Chairs at Empty Tables.” Tall and slender, with freckles and a flattened upper lip, he wears his brown hair in a heavy mop that in this film falls across his forehead to meet enormous black-framed glasses. With his narrow shoulders, he initially looks like an abashed scarecrow. Redmayne uses his eyebrows, his mouth, a few facial muscles, and the fingers of one hand to suggest not only Hawking’s intellect and his humor but also the calculating vanity of a great man entirely conscious of his effect on the world.</p>
+                        <p>Eddie Redmayne’s performance is astonishing, as eloquent, though in a different way, as Daniel Day-Lewis’s work in “My Left Foot.” Day-Lewis, playing the Irish artist Christy Brown, a man whose mobility is reduced to a single limb, deployed his left foot, a bushy black beard, and minimal, mangled speech to create a ferociously willful and sexually miserable man. Redmayne is a gentler actor; he was the noble youth in “Les Misérables” who sang, in a fine light tenor, the tear-stained but upbeat “Empty Chairs at Empty Tables.” Tall and slender, with freckles and a flattened upper lip, he wears his brown hair in a heavy mop that in this film falls across his forehead to meet enormous black-framed glasses. With his narrow shoulders, he initially looks like an abashed scarecrow. Redmayne uses his eyebrows, his mouth, a few facial muscles, and the fingers of one hand to suggest not only Hawking’s intellect and his humor but also the calculating vanity of a great man entirely conscious of his effect on the world.</p>
+                        <p class="author">
+                            This review was brought to you by <a href="staff.html#authorid2">Chris</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 medium-8 small-centered columns trailerWrapper removePadding">
+                    <div class="trailerContainer flex-video" id="popupVid" data-url="https://www.youtube.com/watch?v=0vxOhd4qlnA"></div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <script type='text/javascript' src='js/foundation.js'></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- Web fonts -->
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: {
+                families: ['Cabin:400,500,700,400italic:latin', 'EB+Garamond::latin']
+            }
+        };
+        (function () {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <!-- Web fonts - END -->
+
+</body>
+</html>
