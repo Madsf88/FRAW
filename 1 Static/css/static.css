@@ -3,6 +3,10 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
 }
@@ -13,6 +17,14 @@ a {
 a:hover{
     color: #0078a0;
 }
+p {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizelegibility;
+}
 #wrapper {
     width: 1024px;
     margin: 0 auto;
@@ -20,6 +32,9 @@ a:hover{
 .row {
     width: 80%;
     margin: 0 auto;
+}
+.row .row {
+    width: 100%;
 }
 
 .large-5 {
@@ -32,6 +47,19 @@ a:hover{
 .columns {
     position: relative;
     margin: 0 auto;
+    float: left;
+}
+
+.row::before, .row::after {
+    content: " ";
+    display: table;
+}
+.row .row::after {
+    clear: both;
+}
+
+.column.small-centered:last-child, .columns.small-centered:last-child {
+    float: none;
 }
 
 .flex-video {
@@ -59,4 +87,31 @@ a:hover{
 }
 .icon.trailer.header {
     position: absolute;
+}
+
+/* Events page */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* About page */
+
+.large-6 {
+    width: 50%;
+}
+dl dt {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+.category-staff .portrait,
+.category-staff .text {
+    height: 300px;
+}
+.reviewAnchor {
+    bottom: 0;
+    margin: 10px 20px;
+    position: absolute;
+    right: 0;
 }
