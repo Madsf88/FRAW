@@ -1,38 +1,26 @@
 /*jslint browser: true*/
-/*global $, jQuery, alert, func, Slideout*/
+/*global $, jQuery, alert, func*/
 
 // Scroll Down Arrow in Header
-
 function scrollDown() {
     var windowHeight = $(window).height(),
         buffer = 50;
     $("html, body").animate({ scrollTop: windowHeight - buffer });
 }
+
 function toggleScrollDown() {
     var offset = $(window).scrollTop(),
         treshold = 30,
         hasHide = $(".scrollDown").hasClass("hideScrollDown");
-//    console.log(hasHide);
     if (offset > treshold) {
         $(".scrollDown").addClass("hideScrollDown");
         if ($(window).width() < 641) {
-            console.log("test 1.1");
             $(".icon.trailer").addClass("hideScrollDown");
         }
     } else if (offset < treshold) {
         $(".scrollDown").removeClass("hideScrollDown");
         $(".icon.trailer").removeClass("hideScrollDown");
-        console.log("test 1.2");
     }
-    
-//    console.log("test 1");
-//    if ($(window).width() > 641) {
-//        console.log("test 1.1");
-//        $(".scrollDown").addClass("hideScrollDown");
-//    } else {
-//        console.log("test 1.2");
-//        $(".scrollDown").removeClass("hideScrollDown");
-//    }
 }
 function initiateScrollDown() {
     $(".scrollDown").click(function () {
@@ -40,35 +28,24 @@ function initiateScrollDown() {
     });
     toggleScrollDown();
 }
-
 // Scroll Down Arrow in Header - END
 
 
-
 // Position Heading 1 on header
-
 function backgroundHeight() {
     var windowHeight = $(window).height();
-//    console.log(windowHeight);
     $("#backgroundImage").css("height", windowHeight + 0 + "px");
     if ($("#title").hasClass("fullHeight")) {
         $("#title").css("height", windowHeight + "px");
-//        console.log("test01");
     } else {
         $("#title").css("height", windowHeight + "px");
-//        $("#title").css("margin-top", windowHeight / 4 + "px");
         $("#titleSecondary").css("height", windowHeight / 2 + "px");
-//        $("#titleSecondary").css("margin-top", windowHeight / 10 + "px");
-//        console.log("test02");
     }
 }
-
 // Position Heading 1 on header - END
 
-// Youtube
-
+// Youtube auto start
 function toggleVideo(state) {
-    // if state == 'hide', hide. Else: show video
     if ($("#popupVid")[0]){
     var div = document.getElementById("popupVid"),
         iframe = div.getElementsByTagName("iframe")[0].contentWindow;
@@ -81,7 +58,6 @@ function toggleVideo(state) {
 var flag = 0;
 function videoControl() {
     if (Modernizr.touch) {
-            
     }else{
         var pos = $(window).scrollTop() + $(window).height();
         var bottomCheck = pos == $(document).height();
@@ -100,13 +76,17 @@ function videoControl() {
         }
     }
 }
+// Youtube auto start -END
 
+// Trailer scroll
 function trailerScroll() {
     $(".icon.trailer").bind('touchstart click', function () {
         $("html, body").animate({ scrollTop: $('.trailerWrapper').position().top}, 1000);
     });
 }
+// Trailer scroll - END
 
+// Parse youtube link to embed iframe 
 function youtube_parser() {
     if ($(".trailerContainer").length) {
         var url = $(".trailerContainer").attr("data-url"),
@@ -114,40 +94,22 @@ function youtube_parser() {
             match = url.match(regExp);
         if (match && match[7].length === 11) {
             $(".trailerContainer").html('<iframe width="500" height="315" src="http://www.youtube.com/embed/' + match[7] + '?enablejsapi=1&showinfo=0&autohide=1&controls=0?modestbranding=1" frameborder="0" allowfullscreen></iframe>');
-        } else {
-    //        console.log("Error parsing trailer url");
         }
     }
 }
+// Parse youtube link to embed iframe - END
 
-// Youtube - END
-
-// Navigation - Slideout.js
-
-//var slideout = new Slideout({
-//    'panel': document.getElementById('wrapper'),
-//    'menu': document.getElementById('menu'),
-//    'padding': 256,
-//    'tolerance': 70
-//});
-//
-//function initiateSlideout() {
-//    $(".menu-icon").click(function () {
-//        slideout.toggle();
-//    });
-//}
-
-// Navigation - Slideout.js - END
-
+// Toggle menu
 function menuToggle() {
     $("html").toggleClass("menu-active");
 }
+// Toggle menu - END 
 
+// Initiate menu
 function initiateToggleMenu() {
     $(".overlay").click(function () {
         if($("html").hasClass("menu-active")) {
             menuToggle();
-            
         }
     });
     $(".icon.menu").click(function () {
@@ -155,9 +117,9 @@ function initiateToggleMenu() {
         return false;
     });
 }
+// Initiate menu - END
 
 // Load the right background size
-
 function BackgroundImageSrc() {
     var attr = $("#backgroundImage").attr('data-bg-large');
     if (typeof attr !== "undefined" && typeof attr !== "false") {
@@ -170,7 +132,6 @@ function BackgroundImageSrc() {
         $("#backgroundImage").css("background-image", "url(" + bgSrc + ")");
     }
 }
-
 // Load the right background size - END
 
 // Change default scroll to hashtag behavior
@@ -182,7 +143,9 @@ function animateHashtagScroll(){
         }, 500);
     }
 }
+// Change default scroll to hashtag behavior - END
 
+// Add BG to hamburger
 function hamburgerBG(){
     var scrollTop = $(window).scrollTop(),
         treshold = 40,
@@ -193,13 +156,16 @@ function hamburgerBG(){
         $('.icon.menu').removeClass("bgFix");  
     }
 }
+// Add BG to hamburger - END
 
+// Add class on iOS
 function checkIOS() {
     var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
     if (iOS){
         $("html").addClass("iOS");
     }
 }
+// Add class on iOS -END
 
 
 // Ready
@@ -214,27 +180,21 @@ $(document).ready(function () {
     youtube_parser();
     animateHashtagScroll();
 });
-
 // Ready - END
 
 
 
 // Scroll
-
 $(window).scroll(function () {
     toggleScrollDown();
     videoControl();
     hamburgerBG();
 });
-
 // Scroll - END
 
 
 // Resize
-
 $(window).resize(function () {
     backgroundHeight();
 });
-
-
 //Resize - END
