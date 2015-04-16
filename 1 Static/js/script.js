@@ -160,6 +160,27 @@ function hamburgerBG(){
     }
 }
 
+// Dropdown toggle
+function dropdownToggle(){
+    $(".reviewAnchor").click(function() {
+        $(this).next().toggle();
+    });
+}
+// Dropdown toggle -END
+
+// Close dropdown on click outside div. 
+$(document).mouseup(function (e)
+{
+    var container = $(".f-dropdown");
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.hide();
+    }
+});
+// Close dropdown on click outside div - END
+
 
 // Ready
 $(document).ready(function () {
@@ -171,6 +192,7 @@ $(document).ready(function () {
     trailerScroll();
     youtube_parser();
     animateHashtagScroll();
+    dropdownToggle();
 });
 
 // Ready - END

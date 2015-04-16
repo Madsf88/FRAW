@@ -12,6 +12,7 @@
     margin-bottom: 0;
 }
 .reviewAnchor.icon.comments{
+    cursor: pointer;
     color: #222;
     font-size: 1.1rem;
     float: right;
@@ -35,9 +36,28 @@
     margin-bottom: 0;
 }
 .f-dropdown{
+    display: none;
     border: 1px solid #DADADA;
     border-radius: 2px;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    background: white;
+    z-index: 999;
+    position: relative;
+    top: 65px;
+    left: 125px;
+}
+.f-dropdown:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset 6px;
+  border-color: transparent transparent #FFFFFF transparent;
+  border-bottom-style: solid;
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  z-index: 89;
 }
 
 .f-dropdown li:first-child{
@@ -46,8 +66,12 @@
 .f-dropdown li{
     border-top: 1px solid #F0F0F0;
     padding: 1em;
+    font-size: 0.875rem;
 }
 .f-dropdown li a{
     padding: 0rem 0.5rem;
     color: #222;
+}
+.f-dropdown li:hover {
+    background: #EEEEEE;
 }
