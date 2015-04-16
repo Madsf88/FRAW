@@ -2,7 +2,6 @@
 /*global $, jQuery, alert, func, Slideout*/
 
 // Scroll Down Arrow in Header
-
 function scrollDown() {
     var windowHeight = $(window).height(),
         buffer = 50;
@@ -28,13 +27,9 @@ function initiateScrollDown() {
     });
     toggleScrollDown();
 }
-
 // Scroll Down Arrow in Header - END
 
-
-
 // Position Heading 1 on header
-
 function backgroundHeight() {
     var windowHeight = $(window).height();
     $("#backgroundImage").css("height", windowHeight + 0 + "px");
@@ -49,7 +44,6 @@ function backgroundHeight() {
 // Position Heading 1 on header - END
 
 // Youtube
-
 function toggleVideo(state) {
     if ($("#popupVid")[0]){
     var div = document.getElementById("popupVid"),
@@ -100,11 +94,9 @@ function youtube_parser() {
         }
     }
 }
-
 // Youtube - END
 
-// Navigation - Slideout.js - END
-
+// Toggle menu
 function menuToggle() {
     $("html").toggleClass("menu-active");
 }
@@ -121,9 +113,9 @@ function initiateToggleMenu() {
         return false;
     });
 }
+// Toggle menu - END
 
 // Load the right background size
-
 function BackgroundImageSrc() {
     var attr = $("#backgroundImage").attr('data-bg-large');
     if (typeof attr !== "undefined" && typeof attr !== "false") {
@@ -136,7 +128,6 @@ function BackgroundImageSrc() {
         $("#backgroundImage").css("background-image", "url(" + bgSrc + ")");
     }
 }
-
 // Load the right background size - END
 
 // Change default scroll to hashtag behavior
@@ -148,7 +139,9 @@ function animateHashtagScroll(){
         }, 500);
     }
 }
+// Change default scroll to hashtag behavior - END
 
+// Add BG to hamburger
 function hamburgerBG(){
     var scrollTop = $(window).scrollTop(),
         treshold = 40,
@@ -159,6 +152,7 @@ function hamburgerBG(){
         $('.icon.menu').removeClass("bgFix");  
     }
 }
+// Add BG to hamburger - END
 
 // Dropdown toggle
 function dropdownToggle(){
@@ -181,7 +175,6 @@ $(document).mouseup(function (e)
 });
 // Close dropdown on click outside div - END
 
-
 // Ready
 $(document).ready(function () {
     BackgroundImageSrc();
@@ -194,27 +187,18 @@ $(document).ready(function () {
     animateHashtagScroll();
     dropdownToggle();
 });
-
 // Ready - END
 
-
-
 // Scroll
-
 $(window).scroll(function () {
     toggleScrollDown();
     videoControl();
     hamburgerBG();
 });
-
 // Scroll - END
 
-
 // Resize
-
 $(window).resize(function () {
     backgroundHeight();
 });
-
-
 //Resize - END
