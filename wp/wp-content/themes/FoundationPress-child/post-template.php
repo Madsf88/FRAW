@@ -1,7 +1,7 @@
 <div class="<?php the_field('readability'); ?>">
     <div id="backgroundImage" data-bg-large="<?php $large = wp_get_attachment_image_src( get_post_thumbnail_id($pageid), "large", false ); echo $large[0]; ?>" data-bg-full="<?php $full = wp_get_attachment_image_src( get_post_thumbnail_id($pageid), "full", false ); echo $full[0]; ?>" style="background-position: <?php the_field('background_image_position_horizontal', $pageid); ?>% <?php the_field('background_image_position_vertical', $pageid); ?>%;"></div>
     <div class="icon menu header"></div>
-    <a class="logo ituFilm header" href="../index.php">ITU.film</a>
+    <a class="logo ituFilm header" href="/../index.php">ITU.film</a>
     <div class="icon trailer header"></div>    
     <div class="icon scrollDown header"></div>
     <div class="row">
