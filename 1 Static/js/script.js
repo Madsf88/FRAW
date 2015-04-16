@@ -82,18 +82,6 @@ function trailerScroll() {
         $("html, body").animate({ scrollTop: $('.trailerWrapper').position().top}, 1000);
     });
 }
-
-function youtube_parser() {
-    if ($(".trailerContainer").length) {
-        var url = $(".trailerContainer").attr("data-url"),
-            regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/,
-            match = url.match(regExp);
-        if (match && match[7].length === 11) {
-            $(".trailerContainer").html('<iframe width="500" height="315" src="http://www.youtube.com/embed/' + match[7] + '?enablejsapi=1&showinfo=0&autohide=1&controls=0?modestbranding=1" frameborder="0" allowfullscreen></iframe>');
-        } else {
-        }
-    }
-}
 // Youtube - END
 
 // Toggle menu
@@ -183,7 +171,6 @@ $(document).ready(function () {
     initiateToggleMenu();
     // After the fold
     trailerScroll();
-    youtube_parser();
     animateHashtagScroll();
     dropdownToggle();
 });

@@ -10,8 +10,13 @@
     <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
     <link rel='stylesheet' id='child-style-css' href='css/styles.css' type='text/css' media='all' />
     <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+    <!-- Feature and compatibility detection  -->
     <script type='text/javascript' src='js/modernizr.js'></script>
+    <!-- Feature and compatibility detection - END -->
+    
+    <!-- Remove tap delay on touch devices -->
     <script type='text/javascript' src='js/fastclick.js'></script>
+    <!-- Remove tap delay on touch devices - END -->
 </head>
 
 <body class="page-template-default">
@@ -31,15 +36,16 @@
             </li>
         </ul>
     </div>
+    <!-- Background-->
     <div id="backgroundImage" data-bg-large="img/backgrounds/Interstellar-1024x665.jpg" data-bg-full="img/backgrounds/Interstellar.jpg"></div>
+    <!-- Background - END -->
     <section class="container" id="wrapper">
         <div class="interfaceShadow">
             <a class="logo ituFilm header" href="index.html">ITU.film</a>
-<!--            <div class="fixedInterface">-->
-                <div class="icon menu header"></div>
-                <div class="icon trailer header"></div>
-                <div class="icon scrollDown header"></div>
-<!--            </div>-->
+            <div class="icon menu header"></div>
+            <div class="icon trailer header"></div>
+            <div class="icon scrollDown header"></div>
+            <!-- Movie heading -->
             <div class="row">
                 <div class="small-11 small-centered columns">
                     <div id="title" class="fullHeight">
@@ -50,9 +56,12 @@
                     </div>
                 </div>
             </div>
+            <!-- Movie heading - END -->
+            <!-- Movie info panel -->
             <div class="row">
                 <div class="small-12 medium-6 large-5 columns small-centered movieInfo removePadding">
                     <div class="panel">
+                        <!-- IMDb request, parsing and DOM munipulation -->
                         <script type="text/javascript">
                             (function ($) {
                                 var imdbURL = "http://www.imdb.com/title/tt0816692/";
@@ -91,6 +100,7 @@
 
                             })(jQuery);
                         </script>
+                        <!-- IMDb request, parsing and DOM munipulation - END -->
                         <dl>
                             <dt>Director: </dt>
                             <dd id="director"></dd>
@@ -103,6 +113,7 @@
                         </dl>
                         <ul>
                             <li class="icons">
+                                <!-- Add to calendar script -->
                                 <script type="text/javascript">
                                     (function () {
                                         if (window.addtocalendar)
@@ -121,29 +132,32 @@
                                         }
                                     })();
                                 </script>
+                                <!-- Add to calendar script - END -->
+                                <!-- Add to calendar input data -->
                                 <span class="addtocalendar atc-style-menu-wb">
-                            <var class="atc_event">
-                                <var class="atc_date_start">2015-04-11 11:00:00</var>
-                                <var class="atc_date_end">2015-04-11 11:00:00</var>
-                                <var class="atc_timezone">Europe/Copenhagen</var>
-                                <var class="atc_title">ITU.film: Interstellar</var>
-                                <var class="atc_description">Movie screening</var>
-                                <var class="atc_location">Analog</var>
-                                <var class="atc_organizer">ITU.film</var>
-                                <var class="atc_organizer_email">film@itu.dk</var>
-                            </var>
-                            <a class="atcb-link" id="" tabindex="1"><span class="icon cal"></span>
-                                </a>
+                                    <var class="atc_event">
+                                        <var class="atc_date_start">2015-04-11 11:00:00</var>
+                                        <var class="atc_date_end">2015-04-11 11:00:00</var>
+                                        <var class="atc_timezone">Europe/Copenhagen</var>
+                                        <var class="atc_title">ITU.film: Interstellar</var>
+                                        <var class="atc_description">Movie screening</var>
+                                        <var class="atc_location">Analog</var>
+                                        <var class="atc_organizer">ITU.film</var>
+                                        <var class="atc_organizer_email">film@itu.dk</var>
+                                    </var>
+                                    <a class="atcb-link" id="" tabindex="1"><span class="icon cal"></span></a>
                                 </span>
+                                <!-- Add to calendar input data - END -->
                             </li>
                             <li class="icons">
-                                <a href="https://www.facebook.com/" target="_blank"><span class="icon facebook"></span></a>
+                                <a href="https://www.facebook.com/interstallar_event" target="_blank"><span class="icon facebook"></span></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-
+            <!-- Movie info panel - END -->
+            <!-- Article -->
             <div class="row">
                 <div class="small-12 medium-8 small-centered columns review removePadding">
                     <div class="panel">
@@ -161,17 +175,25 @@
                     </div>
                 </div>
             </div>
+            <!-- Article - END -->
+            
+            <!-- Youtube -->
             <div class="row">
                 <div class="small-12 medium-8 small-centered columns trailerWrapper removePadding">
-                    <div class="trailerContainer flex-video" id="popupVid" data-url="https://www.youtube.com/watch?v=0vxOhd4qlnA"></div>
+                    <div class="trailerContainer flex-video" id="popupVid">
+                        <iframe width="500" height="315" src="http://www.youtube.com/embed/0vxOhd4qlnA?enablejsapi=1&amp;showinfo=0&amp;autohide=1&amp;controls=0?modestbranding=1" frameborder="0" allowfullscreen="" class="show"></iframe>
+                    </div>
                 </div>
             </div>
+            <!-- Youtube - END -->
         </div>
+        <!-- Menu white overlay -->
         <div class="overlay"></div>
+        <!-- Menu white overlay - END -->
     </section>
     <script type="text/javascript" src="js/script.js"></script>
 
-    <!-- Web fonts -->
+    <!-- Load web fonts asynchronous -->
     <script type="text/javascript">
         WebFontConfig = {
             google: {
@@ -188,7 +210,7 @@
             s.parentNode.insertBefore(wf, s);
         })();
     </script>
-    <!-- Web fonts - END -->
+    <!-- Load web fonts asynchronous - END -->
 
 </body>
 </html>
