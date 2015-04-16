@@ -1,0 +1,822 @@
+/*
+ Theme Name:   FoundationPress child
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  FoundationPress Theme
+ Author:       Mads og Chris
+ Template:     FoundationPress
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fifteen-child
+*/
+#backgroundImage {
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+    background-position: center;
+/*    background-attachment: fixed;*/ /* This was causing a bug on iOS, this can be deleted if it is not causing problems that I commented it out */
+    position: fixed;
+}
+#title, #titleSecondary {
+    display: table;
+    width: 100%;
+}
+.heading {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.heading__h1 {
+    color: inherit;
+    border-width: 6px;
+    border-style: solid;
+    border-color: inherit;
+    padding: .2em .4em;
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+}
+.heading__h2 {
+    color: inherit;
+    border-width: 6px;
+    border-style: solid;
+    border-color: inherit;
+    padding: .2em .4em;
+    display: inline-block;
+    font-size: 1.75rem;
+    text-align: center;
+}
+.heading__h2{
+    margin: 40px;
+}
+.heading__p {
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 70px;
+}
+
+
+.interfaceWhite {
+    color: white;
+}
+.interfaceShadow {
+    color: white;
+}
+.interfaceShadow .heading__h1,
+.interfaceShadow .heading__h2,
+.interfaceShadow .heading__p,
+.interfaceShadow .icon.header,
+.interfaceShadow .logo.header {
+    text-shadow: 2px 2px 0 rgba(0,0,0,.2);
+}
+.interfaceShadow .heading__h1,
+.interfaceShadow .heading__h2 {
+    box-shadow: 2px 2px 0 rgba(0,0,0,.2);
+}
+.interfaceDark {
+    color: #222;
+}
+
+/* Menu bar */
+
+ul.menu li a{
+    border-bottom: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: white;
+    padding: 0.6rem 0.6rem 0.6rem 1.2rem;
+    transition: all .1s;
+    display: block;
+}
+ul.menu li a:hover {
+    padding-left: 1.5rem;
+    background-color: rgba(0,0,0,.3);
+}
+ul.menu li a[href*="facebook.com"] {
+    padding: 0 0 0 1.2rem;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+ul.menu li a[href*="facebook.com"]:after{
+    position: absolute;
+    font-family: 'icomoon';
+    font-size: 2.5rem;
+    content: '\65';
+    width: 3.2rem;
+    display: inline-block;
+    height: 3.2rem;
+    bottom: 1rem;
+    left: 1rem;
+    
+    transition: background-size .1s ease;
+}
+
+ul.menu li a[href*="facebook.com"]:hover{
+    padding-left: 1.2rem;
+    background-color: transparent;
+}
+ul.menu li a[href*="facebook.com"]:hover:after{
+    background-size: 100%;
+}
+
+/* Menu bar - END */
+
+.menu-main-container {
+    background: none repeat scroll 0 0 #222;
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    z-index: 3;
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+
+.menu-active{
+    overflow: hidden;
+}
+.menu-active .menu-main-container {
+    -webkit-transform: none;
+    transform: none;
+}
+
+html.menu-active #wrapper{
+    cursor: url(img/icons/AndroidL_x.svg), pointer;
+}
+.overlay{
+    opacity: 0;
+    transition: opacity .3s;
+}
+.menu-active .overlay{
+    opacity: 0.3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: white;    
+}
+
+.movieInfo dl {
+    margin-bottom: .5rem;
+}
+.movieInfo dt,
+.movieInfo dd {
+    line-height: 1em;
+}
+.movieInfo dt {
+    clear: both;
+    float: left;
+}
+.movieInfo dd {
+    float: right;
+}
+
+.movieInfo dl:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.movieInfo ul{
+     text-align: right;   
+}
+li.icons {
+    display: inline-block;
+}
+
+.movieInfo .icon.cal:before,
+.movieInfo .icon.facebook:before {
+    color: #222;
+}
+.movieInfo li a span {
+    font-size: 2em;
+    color: #333;
+}
+.movieInfo li a span.icon.cal {
+    font-size: 2.2em;
+}
+#rating {
+    width: auto;
+    height: auto;
+    font-size: inherit;
+}
+#rating:before {
+    padding: 5px;
+    color: gold;
+    position: relative;
+    top: -3px;
+}
+
+article.category-events {
+/*    margin-bottom: 40px;*/
+}
+article.category-events p {
+    margin-bottom: 0;
+}
+.eventList figure {
+    margin: -50px -50px 30px -50px;
+}
+.eventList .panel, .crewList .panel {
+    padding: 0;
+}
+.eventList .panel a {
+    display: block;
+    padding: 50px;
+}
+.category-events a h3{
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    margin-bottom: 0;
+}
+.category-events a:hover h3{
+    border-bottom-color: #222;
+}
+
+.row .crewList .row {
+    margin: 0;
+}
+.crewList .columns {
+    padding-left: 0;
+    padding-right: 0;
+}
+.category-staff {
+    margin-bottom: 0;    
+}
+.category-staff dd {
+    margin-bottom: 0;
+}
+.reviewAnchor.icon.comments{
+    color: #222;
+    font-size: 1.1rem;
+    float: right;
+    width: auto !important;
+    height: auto !important;
+}
+.reviewAnchor.icon.comments:before{
+    padding-right: 5px;
+    font-size: 1.5em;
+}
+.crewList .portrait div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.crewList .columns.text {
+    padding: 30px 30px 22px 30px;
+}
+.crewList .text dl:last-of-type {
+    margin-bottom: 0;
+}
+.f-dropdown{
+    border: 1px solid #DADADA;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.f-dropdown li:first-child{
+    border-top: 0;
+}
+.f-dropdown li{
+    border-top: 1px solid #F0F0F0;
+    padding: 1em;
+}
+.f-dropdown li a{
+    padding: 0rem 0.5rem;
+    color: #222;
+}
+
+.panel .review__h1 {
+    font-size: 2.125rem;
+    margin: 1em 0;
+}
+.review p, .aboutItufilm p {
+    font-family: "EB Garamond", serif;
+}
+blockquote {
+    border: none;
+    padding: 20px;
+    margin: 0;
+}
+.review blockquote p {
+    background: none repeat scroll 0 0 white;
+    font-size: 1.5em;
+    line-height: 1.1em;
+}
+blockquote p:before, blockquote p:after {
+    content: "\"";
+}
+.review figure {
+    margin: 50px -50px;
+}
+.review .author {
+    font-family: cabin, sans-serif;
+    font-size: .8em;
+    font-style: italic;
+}
+.review .panel{
+    margin-bottom: 0;
+}
+
+
+.trailerContainer {
+    width: 100%;
+    margin: 0;
+}
+iframe {
+    background: black;
+}
+
+.addtocalendar var{
+    display: none;
+}
+
+.addtocalendar {
+    position: relative;
+    display: inline-block;
+    background: transparent!important;
+}
+
+.atcb-link {
+    display: block;
+    outline: none!important;
+    cursor: pointer;
+}
+
+.atcb-link:focus~ul,
+.atcb-link:active~ul,
+.atcb-list:hover{
+    visibility:visible;
+}
+
+.atcb-list {
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: -140px;
+    width: 170px;
+    z-index: 900;
+}
+.atcb-list:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 7px;
+    border-color: transparent transparent #FFFFFF transparent;
+    border-bottom-style: solid;
+    position: absolute;
+    top: -12px;
+    right: 4px;
+    z-index: 89;
+}
+.atcb-list:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 7px;
+    border-color: transparent transparent #cccccc transparent;
+    border-bottom-style: solid;
+    position: absolute;
+    top: -14px;
+    right: 4px;
+    z-index: 88;
+}
+.atcb-list,
+.atcb-item
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+.atcb-item {
+    float: none;
+    text-align: left;
+    padding: 1em;
+    border-top: 1px solid #F0F0F0;
+}
+.atcb-item:first-child {
+    border-top: 0;
+}
+
+.atcb-item-link
+{
+    text-decoration: none;
+    outline: none;
+    display: block;
+}
+
+.atcb-item.hover,
+.atcb-item:hover {
+    position: relative;
+    z-index: 900;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* Menu WB */
+
+.atc-style-menu-wb .atcb-list {
+    width: 170px;
+    border: 1px solid #DADADA;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.atc-style-menu-wb .atcb-list,
+.atc-style-menu-wb .atcb-item
+{
+    background: #fff;
+    color: #222;
+}
+
+.atc-style-menu-wb .atcb-item,
+.atc-style-menu-wb .atcb-item-link
+{
+    line-height: 1.3em;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+.atc-style-menu-wb .atcb-item-link,
+.atc-style-menu-wb .atcb-item-link:hover,
+.atc-style-menu-wb .atcb-item-link:active,
+.atc-style-menu-wb .atcb-item-link:focus
+{
+    font-size: 0.875rem;
+    text-decoration: none;
+    outline: none;
+    padding: 0rem 0.5rem;
+    color: #222;
+}
+
+.atc-style-menu-wb .atcb-item.hover,
+.atc-style-menu-wb .atcb-item:hover {
+    background: #EEEEEE;
+}
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('img/icons/icomoon.eot?-pkvlat');
+	src:url('img/icons/icomoon.eot?#iefix-pkvlat') format('embedded-opentype'),
+		url('img/icons/icomoon.woff?-pkvlat') format('woff'),
+		url('img/icons/icomoon.ttf?-pkvlat') format('truetype'),
+		url('img/icons/icomoon.svg?-pkvlat#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*[class^="icon"], [class*=" icon"] {*/
+.icon {
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+    font-size: 3rem;
+    text-align: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    
+    z-index: 2;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon.header,
+.logo.header {
+    cursor: pointer;
+}
+
+.icon:before {
+    font-family: 'icomoon';
+    vertical-align: middle;
+    transition: font-size .1s;
+    height: 1em;
+    width: 1em;
+}
+.icon.header:hover:before {
+    font-size: 1.2em;
+}
+
+.icon.close:before {
+	content: "\e600";
+}
+
+.icon.comments:before {
+	content: "\61";
+}
+
+.icon.scrollDown:before {
+	content: "\62";
+}
+
+.icon.cal:before {
+	content: "\64";
+}
+
+.icon.cancel:before {
+	content: "\63";
+}
+
+.icon.facebook:before {
+	content: "\65";
+}
+
+.icon.trailer:before {
+	content: "\66";
+}
+
+.icon.star:before {
+	content: "\67";
+}
+.icon.menu:before {
+    content: "\e601";
+}
+.menu-active .icon.menu:before {
+	content: "";;
+}
+
+.icon.menu{
+    margin: 0rem;
+    display: block;
+    position: fixed;
+    width: 4rem;
+    height: 3.8rem;
+    line-height: .85em;
+    transition: background .5s, opacity .5s;
+}
+
+.icon.menu.bgFix{
+    margin: 0rem;
+    display: block;
+    position: fixed;
+    width: 4rem;
+    height: 3.5rem;
+    background: #222;
+    opacity: 0.4;
+}
+.icon.menu.bgFix::before{
+    color: white;
+}
+
+.logo.ituFilm {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: inherit;
+    margin: 0.6rem;
+    line-height: 1em;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    z-index: 2;
+}
+.icon.trailer {
+    margin: 0rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: none;
+/*
+    width: 3.5rem;
+    height: 3.5rem;
+*/
+    
+    transition: opacity .3s 0s, height 0s 0s;
+}
+.icon.scrollDown {
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    bottom: 0;
+    opacity: 1;
+    z-index: 2;
+    display: none;
+    transition: opacity .3s 0s, height 0s 0s;
+
+    -webkit-animation: scrollDown 2s ease-out;
+    animation: scrollDown 2s ease-out;
+    -webkit-animation-iteration-count: 3;
+    animation-iteration-count: 3;
+}
+
+.menu-active .icon.trailer,
+.menu-active .icon.scrollDown,
+.icon.trailer.hideScrollDown,
+.scrollDown.hideScrollDown {
+    opacity: 0;
+    height: 0;
+    transition: opacity .3s 0s, height 0s .3s;
+}
+.page-template-page-event .icon.trailer,
+.page-template-default .icon.trailer,
+.single-post .icon.trailer,
+.page-template-page-event .icon.scrollDown,
+.page-template-default .icon.scrollDown,
+.single-post .icon.scrollDown,
+.icon.scrollDown {
+    display: block;
+}
+
+@-webkit-keyframes scrollDown {
+    0% { bottom: 0rem; }
+    50% { bottom: 1.5rem; }
+    100% { bottom: 0rem; }
+}
+@keyframes scrollDown {
+    0% { bottom: 0rem; }
+    50% { bottom: 1.5rem; }
+    100% { bottom: 0rem; }
+}
+
+*, body, h1, h2, h3, h4, h5, h6 {
+    font-family: cabin, sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    
+    -webkit-font-smoothing: auto; /* This is turned off since it is part of Foundation, but not a standard */
+    -moz-osx-font-smoothing: auto;
+    font-smoothing: auto;
+    text-rendering: optimizelegibility;
+}
+h1, h2 {
+    font-weight: 700;
+    line-height: 1.1em;
+}
+a {
+   font-family: inherit; 
+}
+.panel {
+    background: white;
+    padding: 50px;
+    margin: 0;
+    border: none;
+}
+.panel,
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6,
+.panel p,
+.panel li,
+.panel dl {
+    color: #222;
+}
+
+ul {
+   list-style: none;
+    padding: 0;
+    margin: 0;
+}
+dl b{
+    margin-bottom: 0;
+}
+
+footer.row {
+    margin-top: 0; /* Dette skal faktisk ikke være på undersiderne... */
+}
+.columns.small-12.removePadding{
+    padding: 0;
+}
+.category-staff img {
+    padding-bottom: 15px;
+}
+
+/* iOS Safari bug fix */
+
+.iOS .panel,
+.iOS .columns {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/* iOS Safari bug fix - END */
+
+
+@media screen and (min-width: 641px){
+    .panel {
+        margin-bottom: 50px;
+    }
+    .heading__h1 {
+        font-size: 3.5rem;
+        border-width: 8px;
+    }
+    .heading__h2 {
+        font-size: 3rem;
+        border-width: 8px;
+    }
+    .heading__p {
+        font-size: 1.25rem;
+    }
+    .category-staff img {
+        padding-bottom: 0px;
+    }
+    .trailerWrapper {
+        margin-bottom: 50px;
+    }
+    
+    .icon.menu {
+        margin: 1rem;
+        display: block;
+        position: fixed;
+        background: transparent;
+        opacity: 1;
+    }
+    .icon.menu.bgFix{
+        margin: 1rem;
+        display: block;
+        position: fixed;
+        width: 4rem;
+        height: 3.5rem;
+        background: transparent;
+        opacity: 1;
+    }
+    .icon.menu.bgFix::before{
+        color: inherit;
+    }
+    .logo.ituFilm {
+        margin: 1.3rem;
+    }
+    .icon.trailer {
+        margin: 1rem;
+    }
+    
+    .icon.scrollDown {
+        margin-bottom: 1rem;
+    }
+    
+    /* Event list */
+    
+    .eventList figure {
+        margin-bottom: 50px;
+    }
+    
+    /* About */
+    
+    .crewList .panel {
+        overflow-x: visible;
+    }
+}
+@media screen and (min-width: 1025px){
+    .heading__h1 {
+        font-size: 5rem;
+        border-width: 10px;
+    }
+    .heading__h2 {
+        font-size: 4rem;
+        border-width: 10px;
+    }
+    .heading__p {
+        font-size: 1.5rem;
+    }
+    
+    blockquote {
+        border: none;
+        width: 130px;
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: -12px;
+        padding: 20px 0;
+
+        float: right; /* put it on the right side */
+    }
+    blockquote p {
+        background: none repeat scroll 0 0 white;
+/*        border: 2px solid black;*/
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, .2);
+        display: block;
+        font-size: 1.75em;
+        line-height: 1.1em;
+        padding: 30px;
+        position: relative;
+        width: 300px;
+
+        left: 30px; /* put it on the right side */
+    }
+    .crewList .text {
+        padding: 30px 45px 22px 15px;
+    }
+}
