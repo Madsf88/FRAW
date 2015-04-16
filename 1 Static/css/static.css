@@ -6,6 +6,7 @@
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
     margin: 0;
     padding: 0;
+    font-weight: normal;
 }
 body {
     margin: 0;
@@ -16,6 +17,9 @@ a {
 }
 a:hover{
     color: #0078a0;
+}
+ul{
+    line-height: 1.6;
 }
 p {
     font-family: inherit;
@@ -30,7 +34,7 @@ p {
     margin: 0 auto;
 }
 .row {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 }
 .row .row {
@@ -76,18 +80,20 @@ p {
     position: absolute;
     top: 0;
     width: 100%;
-}
-#backgroundImage {
-    width: 1024px;
-}
+}    
+/*
 .fixedInterface {
     height: 100%;
-    position: fixed;
     width: 1024px;
+    position: fixed;
+    z-index: 2;
 }
-.icon.trailer.header {
-    position: absolute;
+*/
+/*
+.interfaceShadow, .interfaceWhite, .interfaceDark{
+    position: relative;
 }
+*/
 
 /* Events page */
 
@@ -105,6 +111,9 @@ dl dt {
     font-weight: bold;
     margin-bottom: 0.3rem;
 }
+dt, dd {
+    line-height: 1.6;
+}
 .category-staff .portrait,
 .category-staff .text {
     height: 300px;
@@ -114,4 +123,7 @@ dl dt {
     margin: 10px 20px;
     position: absolute;
     right: 0;
+}
+.overlay{
+    z-index: 2;
 }

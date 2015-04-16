@@ -44,7 +44,7 @@
     z-index: 999;
     position: relative;
     top: 65px;
-    left: 125px;
+    left: 175px;
 }
 .f-dropdown:before {
   content: "";

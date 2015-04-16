@@ -86,11 +86,12 @@
 .icon.menu{
     margin: 0rem;
     display: block;
-    position: fixed;
+    position: absolute;
     width: 4rem;
     height: 3.8rem;
     line-height: .85em;
     transition: background .5s, opacity .5s;
+    left: 0;
 }
 
 .icon.menu.bgFix{

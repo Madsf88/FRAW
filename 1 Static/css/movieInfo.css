@@ -8,9 +8,11 @@
 .movieInfo dt {
     clear: both;
     float: left;
+    
 }
 .movieInfo dd {
     float: right;
+    margin-bottom: 0.75rem;
 }
 
 .movieInfo dl:after {
