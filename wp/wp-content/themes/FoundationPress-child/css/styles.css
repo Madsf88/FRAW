@@ -26,6 +26,9 @@ h1, h2 {
     font-weight: 700;
     line-height: 1.1em;
 }
+a {
+   font-family: inherit; 
+}
 .panel {
     background: white;
     padding: 50px;
